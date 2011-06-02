@@ -1,11 +1,7 @@
-{% load positions %}
 <ul id="nav" role="navigation">
-	  <li><a href="/o-nas/">O nás</a>{% ifequal category.slug "o-nas" %}{% ifposition submenu for category nofallback %}{% position submenu for category nofallback %}{% endposition %}{% endifposition %}{% endifequal %}
-</li>
-	  <li><a href="/projekty/">Projekty</a>{% ifequal category.slug "projekty" %}{% ifposition submenu for category nofallback %}{% position submenu for category nofallback %}{% endposition %}{% endifposition %}{% endifequal %}
-</li>
-	  <li><a href="/spoluprace/">Spolupráce</a>{% ifequal category.slug "reference" %}{% ifposition submenu for category nofallback %}{% position submenu for category nofallback %}{% endposition %}{% endifposition %}{% endifequal %}
-</li>
-	  <li><a href="/kontakt/">Kontakt</a>{% ifequal category.slug "kontakty" %}{% ifposition submenu for category nofallback %}{% position submenu for category nofallback %}{% endposition %}{% endifposition %}{% endifequal %}</li>
+	  <li><a href="/"{% ifequal category.slug "uvod" %}class="active"{% endifequal %}>Úvod</a></li>
+	  <li><a href="/o-nas/"{% ifequal category.slug "o-nas" %}class="active"{% endifequal %}>O nás</a></li>
+	  <li><a href="/projekty/"{% ifequal category.slug "projekty" %}class="active"{% endifequal %}>Projekty</a></li>
+	  <li><a href="/spoluprace/"{% ifequal category.slug "reference" %}class="active"{% endifequal %}>Spolupráce</a></li>
+	  <li><a href="/kontakt/"{% ifequal category.slug "kontakty" %}class="active"{% endifequal %}>Kontakt</a></li>
 </ul>
-
