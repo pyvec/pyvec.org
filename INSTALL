@@ -1,0 +1,5 @@
+Requirements
+============
+
+Install requirements by running command: 
+> pip install -r requirements.txt

@@ -1,0 +1,6 @@
+*.pyc
+build/
+dist/
+development.sqlite
+.project
+.pydevproject

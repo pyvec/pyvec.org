@@ -1,0 +1,7 @@
+Django==1.1.1
+anyjson
+markdown2
+PIL
+
+-e git+http://github.com/ella/django-markup.git#egg=django-markup
+-e git+http://github.com/ella/ella.git#egg=ella
