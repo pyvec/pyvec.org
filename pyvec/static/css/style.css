@@ -1,0 +1,606 @@
+/** RESET **/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+header, footer, section, article, aside {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1.5;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+:focus {
+	outline: 0;
+}
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/** KONEC RESET **/
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:14px;
+  background:#fff;
+}
+body {
+    width: 970px;
+    margin:25px auto 0 auto;
+    position:relative;
+}
+a {
+  color:#000;	
+}
+a:hover,a:focus,a:active {
+  text-decoration:none;
+}
+/** HEADER **/
+#header {
+  margin:0 0 85px 0;	
+}
+#hp #header, #contacts #header {
+  margin:0 0 60px 0;	
+}
+/** END HEADER **/
+/** MENU **/
+ul#nav {
+  background:#ddd;
+  border:1px solid #999;
+  height:55px;
+  line-height:30px;	
+  -moz-border-radius:5px;
+  border-radius:5px;
+  position:absolute;
+  width:968px;
+  top:55px;
+  font-size:15px
+}
+ul#nav li {
+  display:block;
+  float:left;
+  margin:0 15px 0 15px;	
+}
+ul#nav li a {
+  color:#000;
+}
+ul#nav li a.active {
+  font-weight:bold;	
+}
+ul#nav ul {
+  position:absolute;
+  left:0;
+  font-size:13px;
+  line-height:25px;	
+  border-top:1px solid #999;
+  width:970px;
+}
+#hp ul#nav,#contacts ul#nav {
+  height:30px;
+}
+/** END MENU **/
+/** CONTENT **/
+#content {
+  padding:0 0 20px 0;	
+}
+#content h1 {
+  font-size:22px;
+  margin:0 0 15px 0;	
+}
+#content h2 {
+  font-size:18px;
+  margin:0 0 12px 0;	
+}
+#content h3 {
+  font-size:16px;
+  margin:0 0 10px 0;	
+}
+#content p {
+  margin:0 0 15px 0;	
+}
+a.button {
+  display:inline-block;
+  background:#ddd;
+  -moz-border-radius:5px;
+  border-radius:5px;
+  height:30px;
+  line-height:30px;
+  padding:0 25px 0 25px;
+  border:1px solid #999;
+  text-decoration:none;
+  font-weight:bold;
+}
+#content ul li {
+  margin:0 0 8px 20px;
+  list-style:disc;
+}
+#content ul.paginator {
+  text-align:center;	
+}
+#content ul.paginator li {
+  list-style:none;
+  display:inline;
+  margin:0;	
+}
+#content ul.check li {
+  list-style:none;
+  padding:0 0 0 20px;
+  background:url(../img/icon/check.gif) left center no-repeat;
+  margin:0 0 10px 0;	
+}
+/** HOME PAGE **/
+#hp #content .banner {
+  width:443px;
+  float:left;
+  margin:0 20px 20px 0;
+  background:#ddd;
+  border:1px solid #999;
+  height:90px;
+  padding:15px;
+  position:relative;
+  -moz-border-radius:5px;
+  border-radius:5px;
+}
+#hp #content .banner h2 {
+  font-size:20px;
+  font-style:italic;
+}
+#hp #content .banner h2 a {
+  text-decoration:none;	
+}
+#hp #content .banner h2 span {
+  display:block;
+  font-size:30px;	
+  font-style:normal;
+}
+#hp #content .banner#bannerFoster {
+  margin:0;	
+}
+#hp #content .banner ul {
+  position:absolute;
+  bottom:5px;
+  right:15px;
+}
+#hp #content .banner ul li {
+  display:inline;	
+  margin:0;
+}
+#hp #content h2 {
+  clear:both;
+  font-size:25px;
+  margin:0 0 15px 0;	
+}
+
+#hp #content .itemOffer {
+  width:300px;
+  float:left;
+  margin:0 35px 20px 0;	
+}
+#hp #content .itemOffer.last {
+  margin:0;	
+}
+#hp #content .itemOffer h3 {
+  font-size:16px;	
+  margin:0 0 10px 0;
+}
+#hp #content .itemOffer h3 a {
+  display:block;
+  padding:0 0 0 30px;	
+} 
+#hp #content .itemOffer.reseniNaMiru h3 a {
+  background:url(../img/icon/reseni-na-miru.gif) no-repeat;	
+}
+#hp #content .itemOffer.portalovaReseni h3 a {
+  background:url(../img/icon/portalova-reseni.gif) no-repeat;	
+}
+#hp #content .itemOffer.webovePrezentace h3 a {
+  background:url(../img/icon/webove-prezentace.gif) no-repeat;	
+}
+#hp #content .itemOffer a.button {
+  background:#ddd;
+  border:1px solid #999;
+  display:inline-block;
+  text-decoration:none;
+  -moz-border-radius:3px 35px 35px 3px / 3px 15px 15px 3px;
+  border-radius:3px 35px 35px 3px / 3px 15px 15px 3px;
+  height:25px;
+  padding:0 15px 0 10px;
+  line-height:25px;	
+  margin:00px 0 0 0;
+}
+#hp #content .item {
+  width:300px;
+  margin:0 35px 20px 0;
+  float:left;	
+}
+#hp #content .item.last {
+  margin:0;	
+}
+#hp #content .item h2 {
+  font-size:20px;
+  margin:0 0 10px 0;
+}
+#hp #content .item.news h2 {
+  background:url(../img/icon/rss.gif) right no-repeat;	
+}
+#hp #content .item h3 {
+  font-size:16px;
+  margin:0 0 8px 0;
+}
+#hp #content .item p {
+  margin:0 0 10px 0;	
+}
+
+.img {
+  background:#ddd;	
+}
+.img#referenceHp {
+  height:200px;
+  margin:0 0 10px 0;	
+}
+/** END HOME PAGE **/
+/** ABOUT US **/
+#aboutUs #content {
+  width:600px;
+  float:left;
+}
+#aboutUs #right {
+  margin:0 0 0 650px;	
+}
+#aboutUs a.button {
+  margin:0 15px 0 15px;	
+}
+#aboutUs #content h2 {
+  margin:20px 0 15px 0;
+  font-size:18px;	
+}
+#aboutUs #content .item {
+  float:left;
+  width:180px;
+  margin:0 30px 0 0;	
+}
+#aboutUs #content .item.last {
+  margin:0;	
+}
+#aboutUs .img.employPhoto {
+  height:100px;	
+}
+/** END ABOUT US **/
+/** CAREER **/
+#career #content {
+  width:600px;	
+}
+#career #content a.button, #careerDetail #right a.button {
+  padding:0 20px 0 10px;
+  font-weight:normal;
+  -moz-border-radius:5px 35px 35px 5px / 5px 12px 12px 5px;
+  border-radius:5px 35px 35px 5px / 5px 12px 12px 5px;
+  margin:0 0 20px 0;
+  height:20px;
+  line-height:20px;	
+}
+#careerDetail #content {
+  width:600px;
+  float:left;	
+}
+#careerDetail #right {
+  margin:0 0 0 650px;	
+}
+/** END CAREER **/
+/** NEWS **/
+#news #content {
+  width:600px;
+  float:left;	
+}
+#news #right {
+  margin:0 0 0 650px;	
+}
+#news .item .img {
+  width:100px;
+  height:100px;
+  float:left;
+  margin:0 20px 0 0;	
+}
+/** END NEWS **/
+/** PRODUCTS **/
+#products #content {
+  width:600px;
+  float:left;	
+}
+#products #right {
+  margin:0 0 0 650px;	
+}
+#products #content a.button {
+  padding:0 20px 0 10px;
+  font-weight:normal;
+  -moz-border-radius:5px 35px 35px 5px / 5px 12px 12px 5px;
+  border-radius:5px 35px 35px 5px / 5px 12px 12px 5px;
+  margin:0 0 20px 0;
+  height:20px;
+  line-height:20px;		
+}
+#products #content h2 a {
+  padding:0 0 0 30px;
+  display:block;	
+}
+#products #content h2.reseniNaMiru a {
+  background:url(../img/icon/reseni-na-miru.gif) no-repeat;	
+}
+#products #content h2.portalovaReseni a {
+  background:url(../img/icon/portalova-reseni.gif) no-repeat;	
+}
+#products #content h2.webovePrezentace a {
+  background:url(../img/icon/webove-prezentace.gif) no-repeat;	
+}
+#products #right .img {
+  height:200px;
+  margin:0 0 15px 0;	
+}
+/** END PRODUCTS **/
+/** PRODUCT DETAIL **/
+#productDetail #content {
+  width:600px;
+  float:left;	
+}
+#productDetail #right {
+  margin:0 0 0 650px;	
+}
+#productDetail #content h1.portalovaReseni {
+  background:url(../img/icon/portalova-reseni-big.gif) no-repeat;
+  padding:0 0 0 40px;	
+}
+#productDetail #content h1.reseniNaMiru {
+  background:url(../img/icon/reseni-na-miru-big.gif) left center no-repeat;
+  padding:0 0 0 40px;	
+}
+#productDetail #content .item {
+  width:285px;
+  margin:0 30px 0 0;
+  float:left;	
+}
+#productDetail #content .item.last {
+  margin:0;	
+}
+#productDetail #content .item h3 {
+  padding:0 0 0 30px;	
+}
+#productDetail #content .item h3.spolehlivost {
+  background:url(../img/icon/spolehlivost.gif) left center no-repeat;	
+}
+#productDetail #content .item h3.duvera {
+  background:url(../img/icon/duvera.gif) left center no-repeat;	
+}
+#productDetail #content .item h3.dalsiVlastnosti {
+  background:url(../img/icon/dalsiVlastnost.gif) left center no-repeat;	
+}
+#productDetail a.button {
+  margin:20px 10px 0 10px;	
+}
+#productDetail #right .img {
+  height:180px;
+  margin:0 0 10px 0;	
+
+}
+/** END PRODUCT DETAIL **/
+/** REFERENCE **/
+#reference .references {
+  border-top:1px solid #ddd;
+  border-bottom:1px solid #ddd;
+  padding:15px 0 15px 0;
+  margin:0 0 20px 0;	
+}
+#reference .references img {
+  margin:0 28px 0 28px;
+}
+#reference .mainItem {
+  margin:0 0 20px 0;
+  display:table;
+  width:100%;	
+}
+#reference .mainItem h3 {
+  float:right;
+  width:410px;	
+}
+#reference .mainItem p {
+  float:right;
+  width:410px;	
+}
+#reference .mainItem .img {
+  width:530px;
+  height:230px;
+  float:left;	
+}
+#reference .item {
+  width:300px;
+  float:left;
+  margin:0 35px 20px 0;	
+}
+#reference .item.last {
+  margin:0;	
+}
+#reference .item .img {
+  height:200px;	
+  margin:0 0 10px 0;
+}
+#reference .item a.button {
+  padding:0 20px 0 10px;
+  font-weight:normal;
+  -moz-border-radius:5px 35px 35px 5px / 5px 12px 12px 5px;
+  border-radius:5px 35px 35px 5px / 5px 12px 12px 5px;
+  margin:0 0 20px 0;
+  height:20px;
+  line-height:20px;	
+}
+
+#referenceDetail #content {
+  width:600px;
+  float:left;	
+}
+#referenceDetail #content a.button {
+  margin:0 10px 0 10px;	
+}
+#referenceDetail #right {
+  margin:0 0 0 650px;	
+}
+#referenceDetail #content .img {
+  height:300px;
+  margin:0 0 20px 0;	
+}
+#referenceDetail #right h4 {
+  margin:0 0 10px 0;	
+}
+#referenceDetail #right .img {
+  height:150px;
+  margin:0 0 10px 0;	
+}
+#referenceDetail #right a.button {
+  padding:0 20px 0 10px;
+  font-weight:normal;
+  -moz-border-radius:5px 35px 35px 5px / 5px 12px 12px 5px;
+  border-radius:5px 35px 35px 5px / 5px 12px 12px 5px;
+  margin:0 0 20px 0;
+  height:20px;
+  line-height:20px;	
+}
+/** END REFERENCE **/
+/** CONTACTS **/
+#contacts #content {
+  width:460px;
+  float:left;	
+}
+#contacts #right {
+  margin:0 0 0 510px;	
+}
+#contacts form {
+  background:#ddd;
+  padding:10px;	
+}
+#contacts form div {
+  display:table;
+  width:100%;
+  margin:0 0 10px 0;	
+}
+#contacts form div label {
+  display:block;
+  min-width:150px;
+  float:left;	
+}
+#contacts form div input {
+  width: 160px;	
+}
+#contacts form div textarea {
+  width:98%;
+  height:80px;	
+}
+#contacts form div input.button {
+  width:auto;
+  margin:0 0 0 150px;	
+}
+#contacts #right p {
+  margin:20px 0 0 0;	
+}
+#contacts #right a.button {
+  margin:0 10px 0 10px;	
+}
+/** END CONTACTS **/
+/** END CONTENT **/
+/** RIGHT **/
+#right h3 {
+  font-size:16px;
+  margin:0 0 10px 0;	
+}
+#right p {
+  margin:0 0 10px 0;	
+}
+#right ul li {
+  margin:0 0 8px 20px;
+  list-style:disc;	
+}
+/** END RIGHT **/
+hr {
+  height:1px;
+  color:#ddd;
+  background:#ddd;
+  border:0;
+  clear:both;
+}
+/** FORMAT **/
+.bold {font-weight:bold;}
+
+.textCenter {text-align:center;}
+/** END FORMAT **/
+/** FOOT **/
+#foot {
+  clear:both;
+  background:#ddd;
+  border:1px solid #999;
+  -moz-border-radius:5px;
+  border-radius:5px;
+  display:table;
+  width:928px;
+  padding:20px;	
+}
+#foot .item {
+  width:278px;
+  float:left;
+  margin:0 25px 0 0;	
+}
+#foot .item.last {
+  margin:0;	
+}
+#footer {
+  text-align:center;
+  padding:10px;	
+}
+#footer ul li {
+  display:inline;	
+}
+/** END FOOT **/
+.blind {
+	position:absolute;
+	left:-10000px;
+	margin:-1000px 0 0 0;
+	width:1px;
+	height:1px;
+}
+.reset {
+	border:0 none;
+	clear:both;
+	float:none;
+	font-size:0;
+	height:0;
+	line-height:0;
+	margin:0;
+	padding:0;
+	width:0;
+}
+
+
+/** pyvec **/
+#jde { float: right; }

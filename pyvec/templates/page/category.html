@@ -1,0 +1,6 @@
+{% extends "layout/base.html" %}
+
+{% block content %}
+	{% if category.description %}<p>{{ category.description|safe }}</p>{% endif %}
+{% endblock %}
+

@@ -1,0 +1,7 @@
+{% extends "layout/base.html" %}
+
+{% block content %}
+	<h1>{{ object.title }}</h1>
+	<p>Published on {{ placement.publish_from|date }} in category: <a href="{{ category.get_absolute_url }}">{{ category }}</a></p>
+	{{ object.description|safe }}
+{% endblock %}
