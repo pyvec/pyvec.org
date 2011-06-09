@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'ella.positions',
 
     'djangomarkup',
+    'pyvec.core',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
