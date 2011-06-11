@@ -164,7 +164,14 @@ a.button {
   background:url(../img/icon/check.gif) left center no-repeat;
   margin:0 0 10px 0;	
 }
-
+#content .web-info {
+  border:1px solid #cc0000;
+  padding:10px;
+  margin:20px 10px;
+  background:#f9efef;
+  -moz-border-radius:3px;
+  border-radius:3px;
+}
 hr {
   height:1px;
   color:#ddd;
