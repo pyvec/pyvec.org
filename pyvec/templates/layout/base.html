@@ -1,36 +1,35 @@
+{% load positions %}
 <!DOCTYPE html>
 <html lang="cs">
-  <head>
-	<title>{% block title %}{% endblock %}</title>
-        <meta charset="utf-8"/>
-	<meta name="description" content="{% block description %}{% endblock %}" />
-	<meta name="robots" content="index, follow" />
-	<meta name="googlebot" content="index,follow,snippet,archive" />
-	<meta name="author" content="(c) 2010 Fragaria s.r.o." />
-	<meta name="copyright" content="(c) 2010 Fragaria s.r.o." />
-	<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/style.css" media="screen,projection,tv"/>
-	<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/print.css" media="print"/>
+	<head>
+	    <title>{% block title %}{% endblock %}</title>
+	    <meta charset="utf-8"/>
+	    <meta name="description" content="{% block description %}{% endblock %}" />
+	    <meta name="robots" content="index, follow" />
+	    <meta name="googlebot" content="index,follow,snippet,archive" />
+	    <meta name="author" content="(c) 2011 pyvec.org" />
+	    <meta name="copyright" content="(c) 2011 pyvec.org" />
+	    <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/style.css" media="screen,projection,tv"/>
 	</head>
-{#  <body id="{% spaceless %}{% include "inc/body_tag_id.html" %}{% endspaceless %}">#}
-	<div id="header" role="banner">
-		<h1>
-			<a href="/">
-				<img src="{{ MEDIA_URL }}img/pyvec.gif" alt="pyvec"/>
-			</a>
-		</h1>
-
-		<div id="jde">
-			&ldquo;Jde o to, aby se python programátor nemusel učit javu aby mohl sehnat práci &rdquo;
-		</div>
-	</div>
+    <body>
+	    <div id="header" role="banner">
+	        <h1>
+	            <a href="/">
+	                <img src="{{ MEDIA_URL }}img/logo.png" alt="pyvec.org logo"/>
+	            </a>
+	        </h1>
+	        <div class="motto">
+				{% position motto for "" %}{% endposition %}
+	        </div>
+	    </div>
+	    
+	    <h5 class="blind">Hlavní menu</h5>
+	    {% include "inc/menu.html" %}
 	
-	<h5 class="blind">Hlavní menu</h5>
-	{% include "inc/menu.html" %}
-
-      <div id="content" role="main">
-	{% block content %}{% endblock %}
-      </div>
-	
-	{% include "inc/footer.html" %}
-  </body>
+	    <div id="content" role="main">
+	        {% block content %}{% endblock %}
+	    </div>
+	    
+	    {% include "inc/footer.html" %}
+    </body>
 </html>
