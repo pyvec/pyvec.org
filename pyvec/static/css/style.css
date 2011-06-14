@@ -193,6 +193,9 @@ hr {
   color:#999;
   font-size:12px;
 }
+#foot a {
+    color:#cc0000;
+}
 /** END FOOT **/
 .blind {
 	position:absolute;
