@@ -1,4 +1,11 @@
-<div id="foot">
-    {% load positions %}
-    {% position footer for "" %}{% endposition %}
+{% load positions %}
+<div class="wrap" id="footer">
+    <div class="footer_right">
+        {% position footer for "" %}{% endposition %}
+    </div>
+    <div class="footer_left">
+        <a href="/">
+            <img src="{{ STATIC_URL }}img/logo_dark.png" alt="Pyvec.org logo" />
+        </a>
+    </div>
 </div>

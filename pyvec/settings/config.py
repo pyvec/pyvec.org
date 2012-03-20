@@ -32,6 +32,14 @@ TIME_ZONE = 'Europe/Prague'
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = 'en-us'
 
+MEDIA_ROOT = p('static')
+MEDIA_URL = '/media/'
+STATIC_ROOT = p('staticc')
+STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    p('static'),
+)
+
 SITE_ID = 1
 
 # If you set this to False, Django will make some optimizations so as not
@@ -40,14 +48,6 @@ USE_I18N = True
 
 LANGUAGE_CODE="cs"
 
-# Absolute path to the directory that holds media.
-# Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = p('static')
-
-# URL that handles the media served from MEDIA_ROOT. Make sure to use a
-# trailing slash if there is a path component (optional in other cases).
-# Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = '/static/'
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
@@ -57,7 +57,10 @@ ADMIN_MEDIA_PREFIX = '/media/'
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'libj)6k5r^$+8b(if01l#!#=can9!t73#sd-m8!_5=7rydx#a3'
 
-
 NEWMAN_MEDIA_PREFIX = MEDIA_URL + 'newman/'
 
+NEWMAN_MEDIA_PREFIX = '/%s/newman/' % STATIC_URL.strip('/')
+
 DEFAULT_MARKUP = 'markdown'
+
+CACHE_BACKEND = 'dummy://'

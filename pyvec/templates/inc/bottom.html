@@ -1,0 +1,14 @@
+{% load positions %}
+        <div class="wrapper" id="bottom">
+            <div id="bottom_content">
+                <div class="wrap">
+                    <div class="right">
+                        <h2>Nadcházející akce</h2>
+                        {% position event for "" %}{% endposition %}
+                    </div>
+                    <div class="left">
+                        {% position bottom for "" %}{% endposition %}
+                    </div>
+                </div>
+            </div>
+        </div>

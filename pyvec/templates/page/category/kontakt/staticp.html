@@ -1,0 +1,43 @@
+{% extends "page/staticp.html" %}
+
+{% load positions %}
+
+{% block content %}
+
+<h1>{{ category.title }}</h1>
+
+<div class="right">
+    {% position sidebar for category %}{% endposition %}
+</div>
+
+<div class="left">
+    <p class="annotation">
+        {% render category.content %}
+    </p>
+    <div class="message">
+        Vaše zpráva byla úspěšně odeslána!
+    </div>
+    <form method="post" action="" id="contact_form">
+        <div class="item">
+            <label>Jméno a příjmení:</label>
+            <input type="text" class="inp_text" value="" />
+        </div>
+        <div class="item">
+            <label>E-mailová adresa:</label>
+            <input type="text" class="inp_text" value="@" />
+        </div>
+        <div class="item">
+            <label>Telefonní číslo:</label>
+            <input type="text" class="inp_text" value="" />
+        </div>
+        <div class="item">
+            <label>Text zprávy:</label>
+            <textarea rows="6" cols="10"></textarea>
+        </div>
+        <div class="item">
+            <input type="submit" class="button" value="Odeslat" />
+        </div>
+    </form>
+</div>
+
+{% endblock %}

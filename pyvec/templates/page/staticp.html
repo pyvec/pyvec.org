@@ -1,0 +1,12 @@
+{% extends "layout/base.html" %}
+
+{% block content %}
+    <h1>{{ category.title }}</h1>
+    {% if category.description %}
+    <p class="annotation">
+        {{ category.description|safe }}
+    </p>
+    <hr />
+    {% endif %}
+    {% render category.content %}
+{% endblock %}

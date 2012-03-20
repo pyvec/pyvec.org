@@ -1,7 +1,31 @@
 {% extends "layout/base.html" %}
 
+{% load positions %}
+
 {% block content %}
-    <h1>{{ category.title }}</h1>
-	{% if category.description %}{{ category.description|safe }}{% endif %}
+    {% if is_homepage %}
+        <div class="left">
+            <h2>Novinky</h2>
+            {% listing 2 for "clanky" as top_news %}
+            {% for listing in top_news %}
+                {% box hp_listing for listing.target %}{% endbox %}
+            {% endfor %}      
+            <a href="/clanky" class="button_archiv">Více novinek</a>
+        </div>
+        <div class="right">
+            {% position sidebar for "" %}{% endposition %}
+        </div>
+    {% else %}
+        <h1>{{ category.title }}</h1>
+        {% if category.description %}{
+        <p class="annotation">
+            { category.description|safe }}
+        </p>      
+        {% endif %}
+        {% listing 10 for category.slug as news %}
+        {% for listing in news %}
+            {% box listing for listing.target %}{% endbox %}
+        {% endfor %}  
+    {% endif %}
 {% endblock %}
 

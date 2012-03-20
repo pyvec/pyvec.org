@@ -4,3 +4,4 @@ dist/
 development.sqlite
 .project
 .pydevproject
+nbproject/
