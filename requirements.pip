@@ -1,0 +1,5 @@
+djangomarkup
+gunicorn
+
+-e git+https://github.com/ella/ella.git@5b68c1fc5525bfca0333b92cd8170c7e5f25d341#egg=ella
+-e git+https://github.com/ella/django-newman.git#egg=newman

@@ -13,9 +13,6 @@ Thus, we're changing module into package:
   * local.py contains (2) for your specific machine. File your defaults there.
 """
 
-# logging init - this options should be overriden somewhere
-LOGGING_CONFIG_FILE = None
-
 # load base configuration for whole app
 from pyvec.settings.base import *
 

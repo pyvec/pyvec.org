@@ -32,6 +32,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.redirects',
+    'django.contrib.staticfiles',
 
     'ella.core',
     'ella.photos',
