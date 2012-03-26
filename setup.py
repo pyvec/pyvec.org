@@ -6,10 +6,10 @@ __versionstr__ = '.'.join(map(str, VERSION))
 
 
 setup(
-    name = 'discount',
-    description = "zletaku.cz",
+    name = 'pyvec',
+    description = "pyvec.org",
     version = __versionstr__,
-    packages = ['discount'],
+    packages = ['pyvec'],
     zip_safe = False,
     include_package_data = True,
     setup_requires = [
