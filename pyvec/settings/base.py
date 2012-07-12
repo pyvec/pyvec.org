@@ -1,19 +1,19 @@
-import os,pyvec
+import os, pyvec
 
 PROJECT_ROOT = os.path.abspath(os.path.dirname(pyvec.__file__))
 p = lambda x: os.path.join(PROJECT_ROOT, x)
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.load_template_source',
-    'django.template.loaders.app_directories.load_template_source',
-#     'django.template.loaders.eggs.load_template_source',
+    'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader'
 )
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware'
 )
 
 ROOT_URLCONF = 'pyvec.urls'
@@ -39,28 +39,18 @@ INSTALLED_APPS = (
     'ella.articles',
     'ella.positions',
 
-    'newman',
-
     'djangomarkup',
     'pyvec.core',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
-    'django.core.context_processors.media',
-    'django.core.context_processors.auth',
+    "django.contrib.auth.context_processors.auth",
+    "django.core.context_processors.debug",
+    "django.core.context_processors.i18n",
+    "django.core.context_processors.media",
+    "django.core.context_processors.static",
+    "django.contrib.messages.context_processors.messages",
     'django.core.context_processors.request',
-    'ella.newman.context_processors.newman_media',
-)
-
-TEMPLATE_CONTEXT_PROCESSORS = (
-    "newman.context_processors.newman_media",
-	"django.contrib.auth.context_processors.auth",
-	"django.core.context_processors.debug",
-	"django.core.context_processors.i18n",
-	"django.core.context_processors.media",
-	"django.core.context_processors.static",
-	"django.contrib.messages.context_processors.messages",
-	'django.core.context_processors.request',
 )
 
 CATEGORY_TEMPLATES = (

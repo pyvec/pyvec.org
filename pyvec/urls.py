@@ -6,15 +6,11 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 # make sure to import ella error handlers
 from ella.core.urls import handler404, handler500
 
-import newman
-newman.autodiscover()
 # register ella's admin
 admin.autodiscover()
 
 # actual URL mappings
 urlpatterns = patterns('',
-    (r'^newman/', include(newman.site.urls)),
-                        
     (r'^admin/', include(admin.site.urls)),
 
     (r'^', include('ella.core.urls')),

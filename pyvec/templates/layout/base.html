@@ -47,28 +47,7 @@
                     </ul>
                 </div>
                 <div class="clear"></div>
-                {% if is_homepage %}
-                <div id="carousel">
-                    <h2>Mezi naše hlavní cíle patří:</h2>
-                    <ul>
-                        <li>
-                            podpora vybraných (adoptovaných) open source 
-                            projektů založených na python/django technologii
-                        </li>
-                        <li>
-                            podpora komunity python/django vývojářů (organizace 
-                            setkání, sprintů, komunikace...)
-                        </li>
-                        <li>
-                            šíření osvěty a slávy python/django technologie 
-                            (školení, propagace, rozšiřování komunity)
-                        </li>
-                    </ul>
-                </div>
-                <a href="/o-nas" class="button">
-                    Více o Pyvěc.org
-                </a>
-                {% endif %}
+                {% position header-banner for category nofallback %}{% endposition %}
             </div>
             <a href="http://twitter.com/pyvec" class="ico twitter blank">Twitter</a>
             <a href="http://github.com/pyvec" class="ico github blank">GitHub</a>

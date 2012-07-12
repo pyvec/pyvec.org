@@ -1,6 +1,6 @@
 # Django settings for pyvec project.
 
-import os,pyvec
+import os, pyvec
 
 PROJECT_ROOT = os.path.abspath(os.path.dirname(pyvec.__file__))
 p = lambda x: os.path.join(PROJECT_ROOT, x)
@@ -14,12 +14,14 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASE_ENGINE = 'sqlite3'           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-DATABASE_NAME = p(os.path.join('db','development.sqlite'))             # Or path to database file if using sqlite3.
-DATABASE_USER = ''             # Not used with sqlite3.
-DATABASE_PASSWORD = ''         # Not used with sqlite3.
-DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
-DATABASE_PORT = ''             # Set to empty string for default. Not used with sqlite3.
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'pyvec',
+        'USER': 'root',
+        'PASSWORD': '',
+    },
+}
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -46,7 +48,7 @@ SITE_ID = 1
 # to load the internationalization machinery.
 USE_I18N = True
 
-LANGUAGE_CODE="cs"
+LANGUAGE_CODE = "cs"
 
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
