@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="cs">
     <head>
-        <title>Pyvec.org - {{ category.title }}</title>
+        <title>pyvec.org - {{ category.title }}</title>
         <meta name="description" content="{% block description %}{% endblock %}" >
         <meta name="keywords" content="{% block keywords %}{% endblock %}" >
         <meta name="robots" content="index, follow" >
@@ -38,7 +38,7 @@
         <div class="wrapper" id="header">
             <div class="wrap">
                 <header>
-                    <{% if is_homepage %}h1{% else %}a href="/"{% endif %} id="logo">Pyvec.org - django / python community</h1>
+                    <{% if is_homepage %}h1{% else %}a href="/"{% endif %} id="logo">pyvec.org - django/python community</h1>
                     <p class="sr"><a href="#main_navigation">Přeskočit na hlavní navigaci</a></p>
                 </header>
                 <div id="main_navigation">
@@ -50,7 +50,6 @@
                 {% position header-banner for category nofallback %}{% endposition %}
             </div>
             <a href="http://twitter.com/pyvec" class="ico twitter blank">Twitter</a>
-            <a href="http://github.com/pyvec" class="ico github blank">GitHub</a>
         </div>        
         <div class="wrapper" id="main_content">
             <div class="wrap" id="{% block wrap_id %}{% endblock %}">

@@ -129,7 +129,7 @@ h4 {
 
 a {
         cursor: pointer;
-        color: #212D33;
+        color: #2facf5;
         text-decoration: underline;
 }
 
@@ -280,17 +280,17 @@ option {
 }
 
 #homepage #header .wrap {
-        height: 393px;
+        height: 270px;
 }
 
 #homepage #header {
-        height: 393px;
+        height: 270px;
 }
 
 #logo {
         float: left;
-        width: 224px; height: 66px;
-        margin: 26px 0;
+        width: 244px; height: 66px;
+        margin: 33px 0 10px 0;
         background: url('../img/logo.png') top left no-repeat;
         text-indent: -9000px;
 }
@@ -432,6 +432,10 @@ ul.nav {
         padding: 40px 0 100px;
         background: url('../img/bg-main_content.png') top left repeat-x #fff;
         color: #414c52;
+}
+
+#main_content ul {
+	margin-left: 20px;
 }
 
 #main_content h1, #main_content h2, #main_content h3 {
