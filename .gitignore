@@ -6,3 +6,4 @@ development.sqlite
 .pydevproject
 nbproject/
 pyvec/settings/local.py
+pyvec/media/
