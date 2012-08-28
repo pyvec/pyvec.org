@@ -5,3 +5,4 @@ development.sqlite
 .project
 .pydevproject
 nbproject/
+pyvec/settings/local.py

@@ -6,11 +6,11 @@
     {% if is_homepage %}
         <div class="left">
             <h2>Novinky</h2>
-            {% listing 2 for category as top_news %}
+            {% listing 5 for category as top_news %}
             {% for listing in top_news %}
                 {% box hp_listing for listing %}{% endbox %}
-            {% endfor %}      
-            <a href="/novinky" class="button_archiv">Více novinek</a>
+            {% endfor %}
+            {% comment %}<a href="/novinky" class="button_archiv">Více novinek</a>{% endcomment %}
         </div>
         <div class="right">
             {% position sidebar for "" %}{% endposition %}

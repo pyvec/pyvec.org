@@ -34,7 +34,7 @@ TIME_ZONE = 'Europe/Prague'
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = 'en-us'
 
-MEDIA_ROOT = p('static')
+MEDIA_ROOT = p('media')
 MEDIA_URL = '/media/'
 STATIC_ROOT = p('staticc')
 STATIC_URL = '/static/'

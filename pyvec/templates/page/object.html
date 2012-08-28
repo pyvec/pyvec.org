@@ -4,12 +4,10 @@
 <div class="article noborder">
 	<h1>{{ object.title }}</h1>
         
-        {% if object.description %}
-            {{ object.description|safe }}
-            <hr>
-        {% endif %}
-        
-        {{ object.content|safe }}
-	<p class="date">{{ object.publish_from|date:"j. n. Y" }} | kategorie: <a href="{{ category.get_absolute_url }}">{{ category.title }}</a></p>
+    {% render object.content %}
+    
+    <hr/>
+	{% comment %}<p class="date">{{ object.publish_from|date:"j. n. Y" }} | kategorie: <a href="{{ category.get_absolute_url }}">{{ category.title }}</a></p>{% endcomment %}
+    <p class="date">publikováno: {{ object.publish_from|date:"j. n. Y" }}</p>
 </div>
 {% endblock %}
