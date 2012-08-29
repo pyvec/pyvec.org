@@ -34,7 +34,7 @@
         </script>
 
     </head>
-    <body id="{% if is_homepage %}homepage{% else %}{% block body_id %}{% endblock %}{% endif %}">
+    <body id="{% if is_homepage %}homepage{% else %}{% ifequal category.tree_path "en" %}homepage{% else %}{% block body_id %}{% endblock %}{% endifequal %}{% endif %}">
         <div class="wrapper" id="header">
             <div class="wrap">
                 <header>
