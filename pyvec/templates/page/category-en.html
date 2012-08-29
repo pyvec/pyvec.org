@@ -1,0 +1,16 @@
+{% extends "layout/base.html" %}
+
+{% load positions %}
+
+{% block content %}
+    <div class="left">
+        <h2>News</h2>
+        {% listing 5 for category as top_news %}
+        {% for listing in top_news %}
+            {% box hp_listing for listing %}{% endbox %}
+        {% endfor %}
+    </div>
+    <div class="right">
+        {% position sidebar for category %}{% endposition %}
+    </div>
+{% endblock %}

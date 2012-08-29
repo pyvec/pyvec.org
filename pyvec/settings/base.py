@@ -55,5 +55,6 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 
 CATEGORY_TEMPLATES = (
     ('category.html', 'default (category.html)'),
+    ('category-en.html', 'english-homepage (category-en.html)'),
     ('staticp.html', 'static page (staticp.html)')
 )
