@@ -63,4 +63,3 @@ NEWMAN_MEDIA_PREFIX = MEDIA_URL + 'newman/'
 
 NEWMAN_MEDIA_PREFIX = '/%s/newman/' % STATIC_URL.strip('/')
 
-CACHE_BACKEND = 'dummy://'
