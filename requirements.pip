@@ -1,4 +1,3 @@
-djangomarkup
 gunicorn
 
 git+git://github.com/ella/ella.git#egg=ella
