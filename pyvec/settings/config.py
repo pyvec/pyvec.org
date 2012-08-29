@@ -50,16 +50,7 @@ USE_I18N = True
 
 LANGUAGE_CODE = "cs"
 
-
-# URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
-# trailing slash.
-# Examples: "http://foo.com/media/", "/media/".
-ADMIN_MEDIA_PREFIX = '/media/'
-
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'libj)6k5r^$+8b(if01l#!#=can9!t73#sd-m8!_5=7rydx#a3'
 
-NEWMAN_MEDIA_PREFIX = MEDIA_URL + 'newman/'
-
-NEWMAN_MEDIA_PREFIX = '/%s/newman/' % STATIC_URL.strip('/')
 
