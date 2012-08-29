@@ -11,13 +11,13 @@
         <meta name="author" content="(c) 2012 Fragaria s.r.o." />
         <meta name="copyright" content="(c) 2012 pyvec.org" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
-        <meta http-equiv="Content-Language" content="cs" >    	
+        <meta http-equiv="Content-Language" content="cs" >
         <meta property="og:image" content="{{ STATIC_URL }}img/logo.png" >
         <link href="{{ STATIC_URL }}css/style.css" media="screen" rel="stylesheet" type="text/css" >
-        <link href="/favicon.png" rel="shortcut icon" type="image/png" >
+        <link href="{{ STATIC_URL }}img/favicon.png" rel="shortcut icon" type="image/png" >
         <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.js"></script>
         <script type="text/javascript" src="{{ STATIC_URL }}js/function.js"></script>
-        
+
         <!--[if lt IE 9]>
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
@@ -50,15 +50,15 @@
                 {% position header-banner for category nofallback %}{% endposition %}
             </div>
             <a href="http://twitter.com/pyvec" class="ico twitter blank">Twitter</a>
-        </div>        
+        </div>
         <div class="wrapper" id="main_content">
             <div class="wrap" id="{% block wrap_id %}{% endblock %}">
                 {% block content %}{% endblock %}
             </div>
         </div>
-        
+
         {% include "inc/bottom.html" %}
-        
+
         {% include "inc/footer.html" %}
 
     </body>

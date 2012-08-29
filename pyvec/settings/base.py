@@ -39,7 +39,7 @@ INSTALLED_APPS = (
     'ella.articles',
     'ella.positions',
 
-    'djangomarkup',
+    'south',
     'pyvec.core',
 )
 
