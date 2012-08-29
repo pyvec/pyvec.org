@@ -53,4 +53,8 @@ LANGUAGE_CODE = "cs"
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'libj)6k5r^$+8b(if01l#!#=can9!t73#sd-m8!_5=7rydx#a3'
 
-
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
+    }
+}
