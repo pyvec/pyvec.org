@@ -418,6 +418,18 @@ ul.nav {
         background-position: 18px 13px;
 }
 
+#header .ico.lang_cz {
+        right: 80px;
+        background-image: url('../img/flag-cs.png');
+        background-position: 9px 17px;
+}
+
+#header .ico.lang_en {
+        right: 150px;
+        background-image: url('../img/flag-en.png');
+        background-position: 10px 18px;
+}
+
 #header .ico:hover {
         width: 70px;
         -webkit-transition: width 0.30s ease-in-out;

@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="cs">
     <head>
-        <title>pyvec.org - {{ category.description }}</title>
+        <title>Pyvec - {% if object %}{{ object.title }}{% else %}{{ category.description }}{% endif %}</title>
         <meta name="description" content="{% block description %}{% endblock %}" >
         <meta name="keywords" content="{% block keywords %}{% endblock %}" >
         <meta name="robots" content="index, follow" >
@@ -49,6 +49,8 @@
                 <div class="clear"></div>
                 {% position header-banner for category nofallback %}{% endposition %}
             </div>
+            <a href="/en/" class="ico lang_en">English</a>
+            <a href="/" class="ico lang_cz">Czech</a>
             <a href="http://twitter.com/pyvec" class="ico twitter blank">Twitter</a>
         </div>
         <div class="wrapper" id="main_content">
