@@ -57,4 +57,5 @@ CATEGORY_TEMPLATES = (
     ('category.html', 'default (category.html)'),
     ('category-en.html', 'english-homepage (category-en.html)'),
     ('staticp.html', 'static page (staticp.html)')
+    ('staticp_projekty.html', 'static page for projects section')
 )
