@@ -18,7 +18,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.cache.FetchFromCacheMiddleware',
 )
 CACHE_MIDDLEWARE_ANONYMOUS_ONLY = True
-CACHE_MIDDLEWARE_SECONDS = 60
+CACHE_MIDDLEWARE_SECONDS = 600
 
 
 ROOT_URLCONF = 'pyvec.urls'
