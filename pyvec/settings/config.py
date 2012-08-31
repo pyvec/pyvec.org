@@ -55,6 +55,11 @@ SECRET_KEY = 'libj)6k5r^$+8b(if01l#!#=can9!t73#sd-m8!_5=7rydx#a3'
 
 CACHES = {
     'default': {
-        'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
-    }
+        'BACKEND': 'redis_cache.cache.RedisCache',
+        'LOCATION': '127.0.0.1:6379',
+        'OPTIONS': {
+            'DB': 2,
+            'PARSER_CLASS': 'redis.connection.HiredisParser'
+        },
+    },
 }

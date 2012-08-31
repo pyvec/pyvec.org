@@ -1,3 +1,6 @@
 gunicorn
+hiredis
+redis
+django-redis
 
 git+git://github.com/ella/ella.git#egg=ella
