@@ -49,8 +49,11 @@
                 <div class="clear"></div>
                 {% position header-banner for category nofallback %}{% endposition %}
             </div>
-            <a href="/en/" class="ico lang_en">English</a>
-            <a href="/" class="ico lang_cz">Czech</a>
+            {% if "en/" in category.tree_path %}
+                <a href="/" class="ico lang_cs">Czech</a>
+            {% else %}
+                <a href="/en/" class="ico lang_en">English</a>
+            {% endif %}
             <a href="http://twitter.com/pyvec" class="ico twitter blank">Twitter</a>
         </div>
         <div class="wrapper" id="main_content">
