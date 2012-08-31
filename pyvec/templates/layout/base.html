@@ -49,7 +49,7 @@
                 <div class="clear"></div>
                 {% position header-banner for category nofallback %}{% endposition %}
             </div>
-            {% if "en/" in category.tree_path %}
+            {% if request.path|slice:"4" == "/en/" %}
                 <a href="/" class="ico lang_cs">Czech</a>
             {% else %}
                 <a href="/en/" class="ico lang_en">English</a>
