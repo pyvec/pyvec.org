@@ -668,23 +668,23 @@ ul.nav {
         font-size: 12px;
 }
 
-#projekty .item {
+#projekty .item, #projects .item {
         float: left;
         width: 100%;
         padding: 25px 0;
         border-bottom: 1px solid #EEEFF0;
 }
 
-#projekty .item.last {
+#projekty .item.last, #projects .item.last {
         border: 0;
 }
 
-#projekty .item .logo {
+#projekty .item .logo, #projects .item .logo {
         float: right;
         padding-left: 50px;
 }
 
-#projekty .item .button {
+#projekty .item .button, #projects .item .button {
         float: left;
         margin: 20px 15px 0 0;
         padding: 6px 25px;
@@ -699,7 +699,7 @@ ul.nav {
         transition: background-color 0.20s ease-in-out;
 }
 
-#projekty .item .button:hover {
+#projekty .item .button:hover, #projects .item .button:hover {
         background-color: #e0e2e3;
         -webkit-transition: background-color 0.20s ease-in-out;
         -moz-transition: background-color 0.20s ease-in-out;
@@ -707,11 +707,11 @@ ul.nav {
         transition: background-color 0.20s ease-in-out;
 }
 
-#projekty .item .button img {
+#projekty .item .button img, #projects .item .button img {
         float: left;
 }
 
-#projekty .item h2 {
+#projekty .item h2, #projects .item h2 {
         margin-top: 0px;
 }
 
@@ -719,12 +719,12 @@ ul.nav {
         margin: 0;
 }
 
-#kontakt .shadow_box {
+#kontakt .shadow_box, #contact .shadow_box {
         font-size: 14px;
         line-height: 22px;
 }
 
-#kontakt .shadow_box p {
+#kontakt .shadow_box p, #contact .shadow_box p {
         margin-bottom: 15px;
 }
 
