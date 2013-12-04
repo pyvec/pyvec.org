@@ -1,13 +1,1 @@
-<div class="article">
-    <h3><a href="{{ object.get_absolute_url }}">{{ object }}</a></h3>
-    <a href="{{ object.get_absolute_url }}" class="article_image">
-        {% if object.photo %}
-            {% box 174W_xH for object.photo %}{% endbox %}
-        {% endif %}
-    </a>
-    <div class="text">
-        <p>
-            {{ object.description|striptags }}
-        </p>
-    </div>
-</div>
+{% extends "box/listing.html" %}

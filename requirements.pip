@@ -2,5 +2,6 @@ gunicorn
 hiredis
 redis
 django-redis
-
-git+git://github.com/ella/ella.git#egg=ella
+django==1.4.1
+ella==3.0.3
+Pillow

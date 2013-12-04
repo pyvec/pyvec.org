@@ -1,13 +1,13 @@
 <div class="article">
-    <h2><a href="{{ object.get_absolute_url }}">{{ object }}</a></h2>
+    <h3><a href="{{ object.get_absolute_url }}">{{ object }}</a></h3>
     <a href="{{ object.get_absolute_url }}" class="article_image">
-        <img src="{{ STATIC_URL }}img/random.jpg" alt="Spouštíme nový web Pyvec.org" >
+        {% if object.photo %}
+            {% box 174W_xH for object.photo %}{% endbox %}
+        {% endif %}
     </a>
     <div class="text">
         <p>
             {{ object.description|striptags }}
         </p>
     </div>
-    <span class="date">{{ object.publish_from|date:"j. n. Y" }}</span>
 </div>
-
