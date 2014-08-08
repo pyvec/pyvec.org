@@ -1,7 +1,5 @@
+MySQL-python>=1.2.2
 gunicorn
-hiredis
-redis
-django-redis
 django==1.4.1
 ella==3.0.3
 Pillow
