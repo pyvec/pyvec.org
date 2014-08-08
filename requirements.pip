@@ -3,3 +3,4 @@ gunicorn
 django==1.4.1
 ella==3.0.3
 Pillow
+six==1.4.1
