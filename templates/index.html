@@ -18,7 +18,7 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arbutus+Slab&amp;subset=latin,latin-ext">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-	<link rel="stylesheet" href="static/main.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -106,25 +106,29 @@
             <h2>Sponzoři</h2>
             <div class="sponsor-logo">
                 <a href="https://jobs.redhat.com">
-                    <img src="static/sponsors/red-hat-logo.png"
+                    <img src="{{ url_for('static',
+                                filename='sponsors/red-hat-logo.png') }}"
                         alt="Red Hat">
                 </a>
             </div>
             <div class="sponsor-logo">
                 <a href="https://www.fragaria.cz/">
-                    <img src="static/sponsors/fragaria-logo.png"
+                    <img src="{{ url_for('static',
+                                filename='sponsors/fragaria-logo.png') }}"
                         alt="Fragaria">
                 </a>
             </div>
             <div class="sponsor-logo">
                 <a href="https://rosti.cz/">
-                    <img src="static/sponsors/rosticz-logo.png"
+                    <img src="{{ url_for('static',
+                                filename='sponsors/rosticz-logo.png') }}"
                         alt="Roští.cz">
                 </a>
             </div>
             <div class="sponsor-logo">
                 <a href="https://kiwi.com/">
-                    <img src="static/sponsors/kiwicom-logo.png"
+                    <img src="{{ url_for('static',
+                                filename='sponsors/kiwicom-logo.png') }}"
                         alt="Kiwi.com">
                 </a>
             </div>
@@ -194,8 +198,10 @@
 			<p>
                 Stanovy sdružení přijaté 21.&#8237; &#8236;března&#8237; &#8236;2012
                 jsou ke stažení ve formátech
-                <a href="stanovy.rtf">RTF</a> a
-                <a href="stanovy.pdf">PDF</a>.
+                <a href="{{ url_for('static',
+                                filename='charter/stanovy.rtf') }}">RTF</a> a
+                <a href="{{ url_for('static',
+                                filename='charter/stanovy.pdf') }}">PDF</a>.
             </p>
 		</div>
 	</div>
