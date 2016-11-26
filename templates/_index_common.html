@@ -1,14 +1,21 @@
 {% extends "_base.html" %}
 
+{% macro lang_switch(name, url) %}
+    <a href="{{ url }}">{{ name }}</a>
+{% endmacro %}
+
 {% block content %}
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
-    <div class="navbar-header">
-        <a class="navbar-brand" href="#">pyvec.org</a>
-    </div>
-    <div id="navbar">
-    </div>
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">pyvec.org</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                {% block lang_switch %}{% endblock %}
+            </li>
+        </ul>
     </div>
 </nav>
 

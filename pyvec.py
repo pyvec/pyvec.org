@@ -12,6 +12,11 @@ def index():
     return render_template('index.html')
 
 
+@app.route('/en/')
+def index_en():
+    return render_template('index_en.html')
+
+
 @app.template_filter('markdown')
 def convert_markdown(text):
     text = textwrap.dedent(text)

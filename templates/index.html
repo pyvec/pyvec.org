@@ -1,5 +1,9 @@
 {% extends "_index_common.html" %}
 
+{% block lang_switch %}
+    {{ lang_switch('\N{EARTH GLOBE AMERICAS} English', url_for('index_en')) }}
+{% endblock %}
+
 {% block lead_text %}
     Pyvec je občanské sdružení propagující open source a Python technologie, především v ČR.
 {% endblock lead_text %}
@@ -21,7 +25,7 @@
         ### [Srazy Pyvo][pyvo]
 
         Neformální programátorské srazy zaměřené na odborné přednášky,
-        networking nebo vzdělávání pořádáme ve třech městech: Praze,
+        networking nebo vzdělávání pořádáme měsíčně ve třech městech: Praze,
         Brně a Ostravě.
 
         V roce 2016 se účast v Praze a Brně se většinou pohybovala
@@ -32,7 +36,7 @@
         Konference PyCon CZ je největší setkání programátorů jazyka
         Python v ČR.
 
-        PyCon CZ 2016 přilákal 2016 nabídl 54 přednášek a workshopů,
+        PyCon CZ 2016 nabídl 54 přednášek a workshopů,
         a přilákal zhruba 380 účastníků.
 
         ### [PyLadies CZ][pyladies]
@@ -114,7 +118,7 @@
 
         Stanovy sdružení přijaté 21. března 2012 jsou ke stažení ve formátech
         [RTF]({{ url_for('static', filename='charter/stanovy.rtf') }}) a
-        [PDF]({{ url_for('static', filename='charter/stanovy.pdf') }})
+        [PDF]({{ url_for('static', filename='charter/stanovy.pdf') }}).
     {% endfilter %}
 {% endblock about_us %}
 
