@@ -33,6 +33,6 @@ body > footer {
     color: #aaa;
     display: block;
 }
-.sponsor-list .sponsor-text {
+.sponsor-list p {
     text-align: center;
 }
