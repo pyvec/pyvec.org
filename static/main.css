@@ -1,0 +1,11 @@
+body > nav.navbar-fixed-top {
+    position: absolute;
+}
+body > .jumbotron {
+    padding-top: 70px;
+}
+body > footer {
+    background-color: #eee;
+    margin-top: 3em;
+    padding-bottom: 3em;
+}
