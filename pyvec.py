@@ -26,4 +26,4 @@ def convert_markdown(text):
 
 if __name__ == '__main__':
     from elsa import cli
-    cli(app, base_url='https://example.com')
+    cli(app, base_url='http://pyvec.org')
