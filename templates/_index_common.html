@@ -40,7 +40,7 @@
 		<div class="col-md-3 sponsor-list">
             <h2>{% block sponsors_title %}{% endblock %}</h2>
             {% macro logo(name, alt, url) %}
-                <div class="sponsor-logo">
+                <div class="sponsor">
                     <a href="{{url}}">
                         <img src="{{ url_for('static',
                                     filename='sponsors/' + name + '-logo.png') }}"
