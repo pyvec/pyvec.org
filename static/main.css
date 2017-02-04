@@ -1,8 +1,16 @@
-body > nav.navbar-fixed-top {
-    position: absolute;
+.navbar {
+    margin-bottom: 0;
+    border-bottom: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
 }
-body > .jumbotron {
-    padding-top: 70px;
+.jumbotron {
+    background: #232f36;
+    color: #fff;
+}
+img {
+    max-width: 100%;
 }
 body > footer {
     background-color: #eee;

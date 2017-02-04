@@ -6,7 +6,7 @@
 
 {% block content %}
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar-inverse navbar-top">
     <div class="container">
         <div class="navbar-header">
             <a class="navbar-brand" href="#">pyvec.org</a>
@@ -21,7 +21,7 @@
 
 <div class="jumbotron">
     <div class="container">
-    <h1>Pyvec</h1>
+    <h1><img src="{{ url_for('static', filename='img/pyvec-logo.svg') }}" alt="Pyvec.org"></h1>
         <p>
             {% block lead_text %}
             {% endblock lead_text %}
@@ -61,7 +61,7 @@
             {% endblock sponsors_thanks %}
 		</div>
 	</div>
-	
+
 	<hr>
 
 	<div class="row">
