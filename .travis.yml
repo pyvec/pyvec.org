@@ -2,13 +2,13 @@ language: python
 python:
   - "3.5"
 script:
-  - "echo 'No tests!'"
+  - "python pyvec.py freeze"
 env:
   global:
-    - secure: "GoeDHoZRSku/plR4ENpg5KcuFJtLjFewDPSEvUAow/46CPPI++NU8T8be+B8+T+8gblEASRdT8uRHt2Ow0geQwRmYqAwNYUqyJ6hJmMgrDGQYDySNwDEJrZmAET28SdrI51TossiFBqe4DbpnY3OwjHP25zJrPT3FTfv5K1WmZg="
+    - secure: "G+uIvwFZuwToSLPQryVhXRL16GYznBN7AcKcf1nP2FaTrBp4pVnZuNIrQ1eyuAGgwICoOled9EluT7T+ABqZHLUUoU5lymFuQwQPgZyOKZQXF3USAuwa2kqcXRp477xrhUANPHk3qR1qeT+WCCRyfo9YB3AdXHD1p5JItsL2Ar0="
 deploy:
   provider: "script"
-  script: "python pyvec.py deploy"
+  script: "python pyvec.py deploy --push"
   on:
     branch: "master"
     repo: "pyvec/pyvec.org"
