@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "oneOf": [
+    {
+      "type": "object",
+      "properties": {
+        "text": {
+          "$ref": "translated_text_schema.json#"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "value": {
+          "type": "number"
+        },
+        "exactly": {
+          "type": "boolean"
+        },
+        "hint": {
+          "$ref": "translated_text_schema.json#"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "text",
+        "value"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "text": {
+          "$ref": "translated_text_schema.json#"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "sum": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "exactly": {
+          "type": "boolean"
+        },
+        "hint": {
+          "$ref": "translated_text_schema.json#"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "text",
+        "sum"
+      ]
+    }
+  ]
+}

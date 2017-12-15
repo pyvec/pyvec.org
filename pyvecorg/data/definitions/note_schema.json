@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "icon": {
+      "type": "string"
+    },
+    "heading": {
+      "$ref": "translated_text_schema.json#"
+    },
+    "text": {
+      "$ref": "translated_text_schema.json#"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "icon",
+    "heading",
+    "text"
+  ]
+}

@@ -1,0 +1,70 @@
+title:
+  cs: Pyvec, neziskovka české Python komunity
+  en: Pyvec, the nonprofit of the Czech Python user group
+
+claim:
+  cs: >-
+    Jsme servisní&nbsp;organizace české&nbsp;komunity<br>
+    kolem programovacího jazyka&nbsp;[Python](https://python.cz/)
+  en: >-
+    Service organization of&nbsp;the&nbsp;Czech<br>
+    [Python](https://python.cz/en/)&nbsp;programming&nbsp;language user&nbsp;group
+
+billing_address:
+  heading:
+    cs: Fakturační adresa
+    en: Billing address
+  directions:
+    cs: >-
+      Pyvec o.s. &mdash; [Impact Hub Praha](https://www.hubpraha.cz/)<br>
+      Drtinova 10/557<br>
+      15000 Praha 5
+    en: >-
+      Pyvec o.s. &mdash; [Impact Hub Praha](https://www.hubpraha.cz/en/)<br>
+      Drtinova 10/557<br>
+      15000 Prague<br>
+      Czech Republic, EU
+
+address:
+  heading:
+    cs: Adresa
+    en: Address
+  directions:
+    cs: >-
+      Pyvec o.s.<br>
+      Ječná 507/6<br>
+      12000 Praha 2
+    en: >-
+      Pyvec o.s.<br>
+      Ječná 507/6<br>
+      12000 Prague<br>
+      Czech Republic, EU
+
+reg_no:
+  label:
+    cs: IČO
+    en: Reg. No.
+  value: 22746668
+
+bank_account:
+  heading:
+    cs: Transparentní účet
+    en: Transparent account
+  number: 2600260438
+  bank_branch: 2010
+  iban: CZ5020100000002600260438
+  swift: FIOBCZPP
+  bank_name:
+    cs: Fio banka, a.s., V Celnici 1028/10, Praha 1
+    en: Fio banka, a.s., V Celnici 1028/10, Prague
+
+downloads:
+  heading:
+    cs: Ke stažení
+    en: Downloads
+  charter:
+    cs: stanovy
+    en: charter
+  resources:
+    cs: grafika
+    en: resources

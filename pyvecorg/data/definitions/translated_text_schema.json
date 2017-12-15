@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "oneOf": [
+    {
+      "type": "object",
+      "properties": {
+        "cs": {
+          "type": "string"
+        },
+        "en": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "cs",
+        "en"
+      ]
+    },
+    {
+      "type": "string"
+    }
+  ]
+}

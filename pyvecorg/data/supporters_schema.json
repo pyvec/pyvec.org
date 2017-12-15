@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "heading": {
+      "$ref": "definitions/translated_text_schema.json#"
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "$ref": "definitions/logo_schema.json#"
+      }
+    },
+    "note": {
+      "$ref": "definitions/note_schema.json#"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "heading",
+    "entries",
+    "note"
+  ]
+}

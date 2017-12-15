@@ -1,0 +1,17 @@
+heading:
+  cs: Podporujeme
+  en: We support
+
+entries:
+  - icon: comments
+    text:
+      cs: "**Setkávání expertů** a jejich kontakt s **mezinárodní** komunitou"
+      en: "**Networking of experts** and their contact with the **international** community"
+  - icon: graduation-cap
+    text:
+      cs: "**Výuku programování** na základě **otevřených** materiálů"
+      en: "**Education of programming** based on **open** materials"
+  - icon: female
+    text:
+      cs: "**Více žen v IT** a celkově **inkluzivní kulturu** mezi programátory"
+      en: "**More women in tech** and generally **inclusive culture** among programmers"

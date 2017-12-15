@@ -1,9 +1,0 @@
-Static website for Pyvec.org
-============================
-
-To run a test server, do the following in a Python 3 virtualenv:
-
-    pip install -r requirements.txt
-    python pyvec.py serve
-
-To deploy, follow instructions at https://github.com/pyvec/elsa
