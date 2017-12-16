@@ -88,8 +88,8 @@ entries:
   - text:
       cs: followerů
       en: followers
-    value: 3060  # @pyvec + @napyvo + @pyladiescz + @pyconcz
+    value: 1913  # @pyvec ∪ @napyvo ∪ @pyladiescz ∪ @pyconcz https://github.com/hroncok/twitter-uniq-followers
     icon: twitter
     hint:
-      cs: Součet followerů hlavních Twitterových účtů české Python komunity
-      en: Sum of followers of the main Czech Python user group Twitter accounts
+      cs: Počet unikátních followerů hlavních Twitterových účtů české Python komunity
+      en: Number of unique followers of the main Czech Python user group Twitter accounts
