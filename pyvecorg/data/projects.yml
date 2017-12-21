@@ -30,7 +30,7 @@ entries:
         jazyka Python. Jediné svého druhu v češtině, neustále udržované a rozšiřované.
       en: >-
         Open and freely accessible materials for beginner or advanced courses
-        of the Python language. In Czech, unique, continuously developing and growing.
+        of the Python language. In Czech. Continuously developing and growing.
     pyvec_help: [operations]
 
   - name: PyLadies CZ
@@ -59,7 +59,7 @@ entries:
         Neformální programátorské srazy zaměřené na odborné přednášky,
         networking nebo vzdělávání, konané pravidelně každý měsíc.
       en: >-
-        Non-formal developer meetups focused on talks on advanced topics,
+        Informal developer meetups focused on talks on advanced topics,
         networking, or education. Organized monthly.
     pyvec_help: [reimbursement, interconnection]
 
@@ -171,4 +171,4 @@ note:
       Pyvec **doesn't give orders**. Pyvec helps to those who want to achieve
       something &mdash; it's a **service organization**. Starting a meetup in your
       town? Course in your school? Workshop? Screencast? Let's come up with
-      a way how to make it happen! Email us to [info@pyvec.org](mailto:info@pyvec.org).
+      a way to make it happen! E-mail us at [info@pyvec.org](mailto:info@pyvec.org).
