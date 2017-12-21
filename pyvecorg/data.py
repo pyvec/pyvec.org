@@ -24,10 +24,7 @@ def select_language(data, lang):
     if isinstance(data, dict):
         keys = list(data.keys())
         if frozenset(keys) <= SUPPORTED_LANGS:
-            try:
-                return data[lang]
-            except KeyError:
-                return None
+            return data.get(lang)
         else:
             return dict(
                 [(key, select_language(data[key], lang)) for key in keys])
