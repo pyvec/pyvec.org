@@ -6,7 +6,10 @@ entries:
   # last update: Dec 2017
 
   - text:
-      cs: srazů
+      cs:
+        - sraz
+        - srazy
+        - srazů
       en: meetups
     value: 204  # https://pyvo.cz/api/pyvo.rss
     hint:
@@ -14,7 +17,10 @@ entries:
       en: All organized meetups, all locations
 
   - text:
-      cs: přispěvatelů
+      cs:
+        - přispěvatel
+        - přispěvatelé
+        - přispěvatelů
       en: contributors
     icon: github
     value: 195
@@ -23,7 +29,10 @@ entries:
       en: Commit authors and discussions participants on GitHub, Pyvec and PyLadiesCZ
 
   - text:
-      cs: konferencí
+      cs:
+        - konference
+        - konference
+        - konferencí
       en: conferences
     value: 3
     exactly: true
@@ -32,7 +41,10 @@ entries:
       en: All organized PyCon CZ conferences
 
   - text:
-      cs: diskutujících
+      cs:
+        - diskutující
+        - diskutující
+        - diskutujících
       en: participants
     icon: slack
     value: 136  # https://pyvec.slack.com/admin
@@ -41,7 +53,10 @@ entries:
       en: Members on Pyvec Slack dedicated to organizators
 
   - text:
-      cs: měst
+      cs:
+        - město
+        - města
+        - měst
       en: locations
     value: 5
     exactly: true
@@ -50,7 +65,10 @@ entries:
       en: All locations where there is a meetup or PyLadies present
 
   - text:
-      cs: diskutujících
+      cs:
+        - diskutující
+        - diskutující
+        - diskutujících
       en: participants
     icon: facebook
     sum: [
@@ -62,7 +80,10 @@ entries:
       en: Sum of members of the main Czech Python user group FB groups
 
   - text:
-      cs: kurzů
+      cs:
+        - kurz
+        - kurzy
+        - kurzů
       en: courses
     sum: [
       8,  # PyLadies Praha
@@ -74,7 +95,10 @@ entries:
       en: All beginner course tracks organized by PyLadies, all locations
 
   - text:
-      cs: workshopů
+      cs:
+        - workshop
+        - workshopy
+        - workshopů
       en: workshops
     sum: [
       5,  # Django Girls
@@ -86,7 +110,10 @@ entries:
       en: All main workshops organized with Pyvec support, Django Girls included
 
   - text:
-      cs: followerů
+      cs:
+        - follower
+        - followeři
+        - followerů
       en: followers
     value: 1913  # @pyvec ∪ @napyvo ∪ @pyladiescz ∪ @pyconcz https://github.com/hroncok/twitter-uniq-followers
     icon: twitter

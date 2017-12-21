@@ -5,7 +5,7 @@
       "type": "object",
       "properties": {
         "text": {
-          "$ref": "translated_text_schema.json#"
+          "$ref": "translated_text_with_cs_plurals_schema.json#"
         },
         "icon": {
           "type": "string"
@@ -30,7 +30,7 @@
       "type": "object",
       "properties": {
         "text": {
-          "$ref": "translated_text_schema.json#"
+          "$ref": "translated_text_with_cs_plurals_schema.json#"
         },
         "icon": {
           "type": "string"
