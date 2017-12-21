@@ -57,15 +57,14 @@ def format_number(number):
     else:
         n = number['value']
 
-    digits = len(str(n))
-    if digits > 2:
-        order = 10 ** (digits - 2)
-        n = round(n / order) * order
-    if digits == 2:
-        n = round(n / 10) * 10
-    else:
-        n = round(n)
-
     if number.get('exactly'):
         return str(n)
+
+    digits = len(str(int(n)))
+    if digits > 2:
+        order = 10 ** (digits - 2)
+        n = (n // order) * order
+    if digits == 2:
+        n = (n // 10) * 10
+
     return f'{n}+'
