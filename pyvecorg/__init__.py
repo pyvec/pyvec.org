@@ -22,5 +22,7 @@ class Flask(BaseFlask):
 
 app = Flask('pyvecorg')
 
-from pyvecorg import views  # NOQA
-from pyvecorg import templating  # NOQA
+from pyvecorg import views
+from pyvecorg import templating
+
+__all__ = ['app', 'views', 'templating']
