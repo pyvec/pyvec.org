@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="{{ lang }}">
+    <head>
+        <meta charset="utf-8">
+
+        <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+        <meta property="og:image" content="{{ url_for('static', filename='img/cover.jpg', _external=True) }}">
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:site" content="@pyvec">
+        <meta property="twitter:creator" content="@pyvec">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+        <script src="https://use.fontawesome.com/6620d97d37.js"></script>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>{{ meta.title }}</title>
+        <meta name="description" content="{{ meta.claim|markdown|striptags }}">
+    </head>
+    <body>
+        <div class="header">
+            <div class="container">
+                <div class="row">
+                    <h1 class="col">
+                        <img height="50" src="{{ url_for('static', filename='img/pyvec.svg') }}" alt="Pyvec">
+                    </h1>
+                    <p class="lang col">
+                        {% if lang == 'cs' %}
+                            <a href="{{ url_for('index', lang='en') }}">English</a>
+                        {% elif lang == 'en' %}
+                            <a href="{{ url_for('index', lang='cs') }}">Česky</a>
+                        {% endif %}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="cover">
+            <div class="cover-black">
+                <div class="container">
+                    <div class="claim">
+                        {{ meta.claim|markdown }}
+                    </div>
+
+                    <h2 id="objectives">{{ objectives.heading }}</h2>
+                    <div class="card-deck">
+                        {% for objective in objectives.entries %}
+                        <div class="card objective">
+                            <h3 aria-hidden="true">
+                                <i class="fa fa-{{ objective.icon }}" aria-hidden="true"></i>
+                            </h3>
+                            <div class="card-body">
+                                <div class="card-text">
+                                    {{ objective.text|markdown }}
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h2 id="numbers">{{ numbers.heading }}</h2>
+            <p class="numbers">
+                {% for number in numbers.entries %}
+                    <span class="number badge {% if number.icon %} number-{{ number.icon }}{% endif %}"{% if number.hint %} title="{{ number.hint }}"{% endif %}>
+                        {% if number.icon %}
+                            <i class="fa fa-{{ number.icon }}" aria-hidden="true"></i>
+                        {% endif %}
+                        {{ number|format_number_text }}
+                    </span>
+                {% endfor %}
+            </p>
+
+            <h2 id="projects">{{ projects.heading }}</h2>
+            <div class="media">
+                <div class="media-image">
+                    <i class="fa fa-{{ projects.note.icon }}" aria-hidden="true"></i>
+                </div>
+                <div class="media-body">
+                    <h3>{{ projects.note.heading }}</h3>
+                     {{ projects.note.text|markdown }}
+                </div>
+            </div>
+            <ul class="list row">
+            {% for project in projects.entries %}
+                <li class="list-item project col">
+                    <div class="project-header project-header-{{ project.photo }}">
+                        <img class="project-logo rounded-circle" src="{{ url_for('static', filename=project.logo) }}" alt="{{ project.name }}" height="100">
+                        <h3>{{ project.name }}</h3>
+                    </div>
+                    <div class="project-info">
+                        <p class="project-url">
+                            <a href="{{ project.url }}">{{ project.url|url }}</a>
+                        </p>
+                        {{ project.description|markdown }}
+                        <p class="project-pyvec-help">
+                            <strong>{{ projects.pyvec_help_heading }}:</strong>
+                            {% for help_item in project.pyvec_help %}
+                                {% if loop.first %}
+                                    {{ projects.pyvec_help[help_item]|capitalize -}}
+                                {% else %}
+                                    {{ projects.pyvec_help[help_item] -}}
+                                {% endif %}
+                                {%- if not loop.last %},{% endif %}
+                            {% endfor %}
+                        </p>
+                    </div>
+                </li>
+                {% if loop.index is divisibleby 2 %}
+                    <div class="w-100 d-block d-md-none"></div>
+                {% endif %}
+                {% if loop.index is divisibleby 3 %}
+                    <div class="w-100 d-none d-md-block d-lg-block d-xl-block"></div>
+                {% endif %}
+            {% endfor %}
+            </ul>
+
+            <h2 id="supporters">{{ supporters.heading }}</h2>
+            <ul class="list row">
+                {% for supporter in supporters.entries|sort(attribute='name') %}
+                <li class="list-item logo col">
+                    <a href="{{ supporter.url }}" title="{{ supporter.name }}">
+                        <img src="{{ url_for('static', filename=supporter.logo) }}" alt="{{ supporter.name }}" height="50">
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+            <div class="media">
+                <div class="media-image">
+                    <i class="fa fa-{{ supporters.note.icon }}" aria-hidden="true"></i>
+                </div>
+                <div class="media-body">
+                    <h3>{{ supporters.note.heading }}</h3>
+                    {{ supporters.note.text|markdown }}
+                </div>
+            </div>
+
+            <!-- XXX See https://github.com/pyvec/zapojse/issues/66
+            <h2 id="partners">{{ partners.heading }}</h2>
+            <ul class="list row">
+                {% for partner in partners.entries|sort(attribute='name') %}
+                <li class="list-item logo col">
+                    <a href="{{ partner.url }}" title="{{ partner.name }}">
+                        <img src="{{ url_for('static', filename=partner.logo) }}" alt="{{ partner.name }}" height="50">
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+            -->
+
+            <h2 id="members">{{ members.heading }}</h2>
+            <ul class="list row members">
+                {% for member in members.entries %}
+                <li class="list-item member col">
+                    <img src="{{ member|avatar_url }}" alt="{{ member.name }}" width="100" class="rounded-circle member-avatar">
+                    <p class="member-profiles">
+                        {% if member.github %}
+                        <a href="https://github.com/{{ member.github }}" title="GitHub" class="icon">
+                            <i class="fa fa-github" aria-hidden="true"></i><!--
+                            --><span>GitHub</span><!--
+                        --></a>
+                        {% endif %}
+                        {% if member.twitter %}
+                        <a href="https://twitter.com/{{ member.twitter }}" title="Twitter" class="icon">
+                            <i class="fa fa-twitter" aria-hidden="true"></i><!--
+                            --><span>Twitter</span><!--
+                        --></a>
+                        {% endif %}
+                        {% if member.linkedin %}
+                        <a href="https://linkedin.com/in/{{ member.linkedin }}" title="LinkedIn" class="icon">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i><!--
+                            --><span>LinkedIn</span><!--
+                        --></a>
+                        {% endif %}
+                    </p>
+                    <p class="member-info">
+                        <strong class="member-name">{{ member.name }}</strong><br>
+                        <small class="member-role">{{ members.roles[member.role] }}</small><br>
+                    </p>
+                </li>
+                {% if loop.index is divisibleby 2 %}
+                    <div class="w-100 d-block d-sm-none"></div>
+                {% endif %}
+                {% if loop.index is divisibleby 3 %}
+                    <div class="w-100 d-none d-sm-block d-md-none"></div>
+                {% endif %}
+                {% if loop.index is divisibleby 5 %}
+                    <div class="w-100 d-none d-md-block d-lg-block d-xl-block"></div>
+                {% endif %}
+                {% endfor %}
+            </ul>
+            <div class="media">
+                <div class="media-image">
+                    <i class="fa fa-{{ members.note.icon }}" aria-hidden="true"></i>
+                </div>
+                <div class="media-body">
+                    <h3>{{ members.note.heading }}</h3>
+                    {{ members.note.text|markdown }}
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col address">
+                        <h3>{{ meta.billing_address.heading }}</h3>
+                        {{ meta.billing_address.directions|markdown }}
+                        <p>
+                            {{ meta.reg_no.label }}: <a href="http://wwwinfo.mfcr.cz/cgi-bin/ares/darv_res.cgi?ico={{ meta.reg_no.value }}&amp;xml=1{% if lang == 'en' %}&amp;jazyk=en{% endif %}">{{ meta.reg_no.value }}</a><br>
+                        </p>
+                    </div>
+                    <div class="w-100 d-block d-md-none"></div>
+                    <div class="col address">
+                        <h3>{{ meta.address.heading }}</h3>
+                        {{ meta.address.directions|markdown }}
+                        <p>
+                            E-mail: <a href="mailto:info@pyvec.org">info@pyvec.org</a>
+                        </p>
+                    </div>
+                    <div class="w-100 d-block d-md-none"></div>
+                    <div class="col address">
+                        <h3>{{ meta.bank_account.heading }}</h3>
+                        <p>
+                            {% if lang == 'cs' %}
+                                <a href="https://www.fio.cz/scgi-bin/hermes/dz-transparent.cgi?ID_ucet={{ meta.bank_account.number }}">{{ meta.bank_account.number }}/{{ meta.bank_account.bank_branch }}</a><br>
+                                {{ meta.bank_account.bank_name }}
+                            {% else %}
+                                IBAN: {{ meta.bank_account.iban }}<br>
+                                SWIFT: {{ meta.bank_account.swift }}<br>
+                                {{ meta.bank_account.bank_name }}<br>
+                                <a href="https://www.fio.cz/scgi-bin/hermes/dz-transparent.cgi?ID_ucet={{ meta.bank_account.number }}&amp;l=ENGLISH">Transaction history</a>
+                            {% endif %}
+                        </p>
+                        <h3>{{ meta.downloads.heading }}</h3>
+                        <p class="downloads">
+                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                            <a href="{{ url_for('static', filename='charter/stanovy.pdf') }}">{{ meta.downloads.charter }}.pdf</a>
+
+                            <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                            <a href="{{ url_for('static', filename='charter/stanovy.rtf') }}">{{ meta.downloads.charter }}.rtf</a>
+
+                            <i class="fa fa-file-image-o" aria-hidden="true"></i>
+                            <a href="https://github.com/pyvec/resources">{{ meta.downloads.resources }}</a>
+                        </p>
+                    </div>
+                    <div class="w-100 d-block d-md-none"></div>
+                    <div class="col">
+                        <ul class="list profiles col d-flex justify-content-end">
+                            {% for profile in profiles.entries %}
+                            <li class="list-item icon">
+                                <a href="{{ profile.url }}" title="{{ profile.name }}">
+                                    <i class="fa fa-{{ profile.icon }}" aria-hidden="true"></i>
+                                    <span>{{ profile.name }}</span>
+                                </a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

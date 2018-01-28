@@ -1,0 +1,16 @@
+heading:
+  cs: Partnerské organizace
+  en: Partner organizations
+
+entries:
+  - name: Python Software Foundation
+    logo: img/partners/psf.svg
+    url: https://www.python.org/psf/
+
+  - name: PyLadies
+    logo: img/partners/pyladies.svg
+    url: http://www.pyladies.com/
+
+  - name: Django Girls Foundation
+    logo: img/partners/djangogirls.svg
+    url: https://djangogirls.org/foundation/

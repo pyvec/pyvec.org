@@ -1,0 +1,16 @@
+entries:
+  - name: Twitter
+    icon: twitter
+    url: https://twitter.com/pyvec/
+
+  - name: YouTube
+    icon: youtube
+    url: https://www.youtube.com/user/pyvec
+
+  - name: GitHub
+    icon: github
+    url: https://github.com/pyvec/
+
+  - name: Slack
+    icon: slack
+    url: https://pyvec.slack.com/

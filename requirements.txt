@@ -1,3 +1,0 @@
-Flask
-elsa>=0.1.2
-markdown

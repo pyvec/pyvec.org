@@ -1,0 +1,174 @@
+heading:
+  cs: Projekty
+  en: Projects
+
+entries:
+  - name:
+      cs: Konference PyCon CZ
+      en: PyCon CZ conference
+    logo: img/projects/pyconcz.svg
+    photo: pyconcz
+    url: https://cz.pycon.org/
+    description:
+      cs: >-
+        Každoroční největší setkání lidí se zájmem o jazyk Python v ČR.
+        Je součástí [mezinárodní sítě podobných konferencí](https://www.python.org/events/).
+      en: >-
+        The largest yearly gathering of people interested in Python in the Czech Republic.
+        Part of the [international PyCon series](https://www.python.org/events/).
+    pyvec_help: [reimbursement, accounting, contracts, legal]
+
+  - name:
+      cs: Nauč se Python
+      en: Learn Python
+    url: http://naucse.python.cz/
+    logo: img/projects/python.svg
+    photo: naucse
+    description:
+      cs: >-
+        Otevřené a volně dostupné materiály pro začátečnické i pokročilé kurzy
+        jazyka Python. Jediné svého druhu v češtině, neustále udržované a rozšiřované.
+      en: >-
+        Open and freely accessible materials for beginner or advanced courses
+        of the Python language. In Czech. Continuously developing and growing.
+    pyvec_help: [operations]
+
+  - name: PyLadies CZ
+    url: http://pyladies.cz/
+    logo: img/projects/pyladies.svg
+    photo: pyladies
+    description:
+      cs: >-
+        [Mezinárodní](http://pyladies.com/) aktivita, která se snaží s pomocí
+        jazyka Python sblížit ženy a IT. České skupiny pořádají několikaměsíční
+        bezplatné začátečnické kurzy.
+      en: >-
+        [International](http://pyladies.com/) activity supporting women to get
+        into tech with the help of the Python language. Czech groups hold
+        semester-long free-of-charge beginner courses.
+    pyvec_help: [reimbursement, contracts, interconnection]
+
+  - name:
+      cs: Srazy Pyvo
+      en: Pyvo meetups
+    url: https://pyvo.cz/
+    logo: img/projects/pyvo.svg
+    photo: pyvo
+    description:
+      cs: >-
+        Neformální programátorské srazy zaměřené na odborné přednášky,
+        networking nebo vzdělávání, konané pravidelně každý měsíc.
+      en: >-
+        Informal developer meetups focused on talks on advanced topics,
+        networking, or education. Organized monthly.
+    pyvec_help: [reimbursement, interconnection]
+
+  - name: PyWorking, NePyvo
+    url: https://pyworking.cz/
+    logo: img/projects/pyworking.svg
+    photo: pyworking
+    description:
+      cs: >-
+        Prakticky zaměřené srazy pro pokročilé začátečníky, kde si lze
+        cokoliv vyzkoušet nebo konzultovat. V Praze navíc doplněné o občasné
+        celodenní workshopy.
+      en: >-
+        Hands-on meetups for intermediate Python developers where anyone can
+        come and consult their solutions or try out anything they like. In Prague
+        these are complemented by occasional day-long workshops.
+    pyvec_help: [reimbursement, contracts]
+
+  - name: Django Girls
+    url: https://djangogirls.org/events/
+    logo: img/projects/djangogirls.svg
+    photo: djangogirls
+    description:
+      cs: >-
+        Jednodenní workshopy na Python & [Django](https://www.djangoproject.com/),
+        pod [mezinárodní](https://djangogirls.org/) hlavičkou, jejichž snahou
+        je usnadnit ženám první kontakt s technologiemi.
+      en: >-
+        Day-long Python & [Django](https://www.djangoproject.com/) workshops.
+        [International](https://djangogirls.org/) franchise, with a goal to
+        provide women with an easy first contact with tech.
+    pyvec_help: [reimbursement, contracts, interconnection]
+
+  - name: python.cz
+    url: https://python.cz/
+    logo: img/projects/python.svg
+    photo: pythoncz
+    description:
+      cs: >-
+        Hlavní zdroj informací a rozcestník pro českou Python komunitu.
+      en: >-
+        The main portal and source of information of the Czech Python user group.
+    pyvec_help: [operations]
+
+  - name:
+      cs: Komunitní blog
+      en: Community blog
+    url: http://blog.python.cz/
+    logo: img/projects/python.svg
+    photo: blog
+    description:
+      cs: >-
+        Zprávy ze světa české Python komunity. Kdokoliv může přispět svým článkem.
+      en: >-
+        Czech Python user group news. Anyone can contribute with their article.
+    pyvec_help: [operations]
+
+  - name:
+      cs: Komunitní příručka
+      en: Community Guide
+    url: https://pyvec-guide.readthedocs.io/
+    logo: img/projects/python.svg
+    photo: guide
+    description:
+      cs: >-
+        Příručka shrnující know-how pro organizátory komunitních akcí, jako jsou
+        srazy, workshopy, kurzy, apod.
+      en: >-
+        A guide summing up know-how for organizers of user group events, such as
+        meetups, workshops, courses, etc.
+    pyvec_help: [operations]
+
+pyvec_help_heading:
+  cs: Jak pomáháme
+  en: How Pyvec helps
+
+pyvec_help:
+  reimbursement:
+    cs: proplácení vybavení
+    en: reimbursing equipment
+  accounting:
+    cs: účetnictví
+    en: accounting
+  interconnection:
+    cs: propojení místních skupin
+    en: interconnection of local groups
+  operations:
+    cs: provoz
+    en: operations
+  contracts:
+    cs: smlouvy
+    en: contracts
+  legal:
+    cs: právní servis
+    en: legal service
+
+note:
+  icon: hand-stop-o
+  heading:
+    cs: Dobrovolník
+    en: Volunteer
+  text:
+    cs: |-
+      Pyvec nikomu **neříká, co má dělat**. Pomáhá těm, kteří se o něco snaží
+      &mdash; je to **servisní organizace**. Založení srazu ve tvém městě? Kurz
+      na tvé škole? Workshop? Screencast? Pojďmě spolu vymyslet, jak
+      to zrealizovat! Ozvi se nám na [info@pyvec.org](mailto:info@pyvec.org).
+    en: |-
+      Pyvec **doesn't give orders**. Pyvec helps to those who want to achieve
+      something &mdash; it's a **service organization**. Starting a meetup in your
+      town? Course in your school? Workshop? Screencast? Let's come up with
+      a way to make it happen! E-mail us at [info@pyvec.org](mailto:info@pyvec.org).

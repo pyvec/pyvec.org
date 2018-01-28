@@ -1,0 +1,122 @@
+heading:
+  cs: Náš dopad
+  en: Our impact
+
+entries:
+  # last update: Dec 2017
+
+  - text:
+      cs:
+        - sraz
+        - srazy
+        - srazů
+      en: meetups
+    value: 204  # https://pyvo.cz/api/pyvo.rss
+    hint:
+      cs: Počet všech konaných srazů, ve všech městech
+      en: All organized meetups, all locations
+
+  - text:
+      cs:
+        - přispěvatel
+        - přispěvatelé
+        - přispěvatelů
+      en: contributors
+    icon: github
+    value: 195
+    hint:
+      cs: Počet autorů commitů a účastniků diskusí na GitHubu, Pyvec a PyLadiesCZ
+      en: Commit authors and discussions participants on GitHub, Pyvec and PyLadiesCZ
+
+  - text:
+      cs:
+        - konference
+        - konference
+        - konferencí
+      en: conferences
+    value: 3
+    exactly: true
+    hint:
+      cs: Počet všech pořádaných PyCon CZ konferencí
+      en: All organized PyCon CZ conferences
+
+  - text:
+      cs:
+        - diskutující
+        - diskutující
+        - diskutujících
+      en: participants
+    icon: slack
+    value: 136  # https://pyvec.slack.com/admin
+    hint:
+      cs: Počet členů na Pyvec Slacku vyhrazeném pro organizátory
+      en: Members on Pyvec Slack dedicated to organizators
+
+  - text:
+      cs:
+        - město
+        - města
+        - měst
+      en: locations
+    value: 5
+    exactly: true
+    hint:
+      cs: Počet českých měst, ve kterých existují srazy nebo PyLadies
+      en: All locations where there is a meetup or PyLadies present
+
+  - text:
+      cs:
+        - diskutující
+        - diskutující
+        - diskutujících
+      en: participants
+    icon: facebook
+    sum: [
+      1744,  # https://www.facebook.com/groups/pyonieri/
+      155,  # https://www.facebook.com/groups/800923800012580/
+    ]
+    hint:
+      cs: Součet členů hlavních FB skupin české Python komunity
+      en: Sum of members of the main Czech Python user group FB groups
+
+  - text:
+      cs:
+        - kurz
+        - kurzy
+        - kurzů
+      en: courses
+    sum: [
+      8,  # PyLadies Praha
+      8,  # PyLadies Brno
+      2,  # PyLadies Ostrava
+    ]
+    hint:
+      cs: Počet všech několikaměsíčních kurzů pro začátečníky konaných PyLadies, ve všech městech
+      en: All beginner course tracks organized by PyLadies, all locations
+
+  - text:
+      cs:
+        - workshop
+        - workshopy
+        - workshopů
+      en: workshops
+    sum: [
+      5,  # Django Girls
+      4,  # MicroPython
+      8,  # https://pyworking.cz/
+    ]
+    hint:
+      cs: Počet všech hlavních Pyvcem podporovaných workshopů, včetně Django Girls
+      en: All main workshops organized with Pyvec support, Django Girls included
+
+  - text:
+      cs:
+        - follower
+        - followeři
+        - followerů
+      en: followers
+    value: 1913  # @pyvec ∪ @napyvo ∪ @pyladiescz ∪ @pyconcz https://github.com/hroncok/twitter-uniq-followers
+    icon: twitter
+    hint:
+      cs: Počet unikátních followerů hlavních Twitterových účtů české Python komunity
+      en: Number of unique followers of the main Czech Python user group Twitter accounts

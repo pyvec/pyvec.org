@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "name": {
+      "$ref": "translated_text_schema.json#"
+    },
+    "logo": {
+      "type": "string"
+    },
+    "photo": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "description": {
+      "$ref": "translated_text_schema.json#"
+    },
+    "pyvec_help": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "name",
+    "logo",
+    "photo",
+    "url",
+    "description",
+    "pyvec_help"
+  ]
+}

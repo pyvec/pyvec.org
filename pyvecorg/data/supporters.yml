@@ -1,0 +1,41 @@
+heading:
+  cs: Dlouhodobí podporovatelé
+  en: Long-term supporters
+
+entries:
+  - name: Fragaria
+    logo: img/supporters/fragaria.svg
+    url: https://www.fragaria.cz/
+
+  - name: Roští.cz
+    logo: img/supporters/rosticz.png
+    url: https://rosti.cz/
+
+  - name: Red Hat
+    logo: img/supporters/redhat.svg
+    url: https://jobs.redhat.com/
+
+  - name: Kiwi.com
+    logo: img/supporters/kiwicom.svg
+    url: https://kiwi.com/
+
+note:
+  icon: credit-card
+  heading:
+    cs: Podporovatel
+    en: Supporter
+  text:
+    cs: |-
+      Díky nám na českém trhu **stoupá počet programátorů**. Finanční podpora Pyvce
+      je vaše **investice do vzdělávání**, **zdravějšího trhu práce**, a do rozšiřování
+      Python komunity. Využijte náš
+      [transparentní účet](https://www.fio.cz/scgi-bin/hermes/dz-transparent.cgi?ID_ucet=2600260438),
+      [Benevity](https://causes.benevity.org/causes/203-5781337120921_0a4a),
+      nebo napište na [info@pyvec.org](mailto:info@pyvec.org).
+    en: |-
+      Thanks to us, **there are more programmers** on the Czech market.
+      Financial support of Pyvec is your **investment to eductation**, **healthier
+      job market**, and to grow of the Python community. Use our
+      [transparent bank account](https://www.fio.cz/scgi-bin/hermes/dz-transparent.cgi?ID_ucet=2600260438&l=ENGLISH),
+      [Benevity](https://causes.benevity.org/causes/203-5781337120921_0a4a),
+      or e-mail us at [info@pyvec.org](mailto:info@pyvec.org).

@@ -1,0 +1,16 @@
+{
+  "type": "object",
+  "properties": {
+    "icon": {
+      "type": "string"
+    },
+    "text": {
+      "$ref": "translated_text_schema.json#"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "icon",
+    "text"
+  ]
+}

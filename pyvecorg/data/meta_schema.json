@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "title": {
+      "$ref": "definitions/translated_text_schema.json#"
+    },
+    "claim": {
+      "$ref": "definitions/translated_text_schema.json#"
+    },
+    "billing_address": {
+      "$ref": "definitions/address_schema.json#"
+    },
+    "address": {
+      "$ref": "definitions/address_schema.json#"
+    },
+    "reg_no": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "$ref": "definitions/translated_text_schema.json#"
+        },
+        "value": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "bank_account": {
+      "type": "object",
+      "properties": {
+        "heading": {
+          "$ref": "definitions/translated_text_schema.json#"
+        },
+        "number": {
+          "type": "number"
+        },
+        "bank_branch": {
+          "type": "number"
+        },
+        "iban": {
+          "type": "string"
+        },
+        "swift": {
+          "type": "string"
+        },
+        "bank_name": {
+          "$ref": "definitions/translated_text_schema.json#"
+        }
+      }
+    },
+    "downloads": {
+      "type": "object",
+      "properties": {
+        "heading": {
+          "$ref": "definitions/translated_text_schema.json#"
+        },
+        "charter": {
+          "$ref": "definitions/translated_text_schema.json#"
+        },
+        "resources": {
+          "$ref": "definitions/translated_text_schema.json#"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

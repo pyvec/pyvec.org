@@ -1,14 +1,16 @@
-language: python
+language: "python"
 python:
-  - "3.5"
+  - "3.6"
+install:
+  - "pip install -e .[tests]"
 script:
-  - "python pyvec.py freeze"
+  - "pytest && python pyvecorg freeze"
 env:
   global:
     - secure: "G+uIvwFZuwToSLPQryVhXRL16GYznBN7AcKcf1nP2FaTrBp4pVnZuNIrQ1eyuAGgwICoOled9EluT7T+ABqZHLUUoU5lymFuQwQPgZyOKZQXF3USAuwa2kqcXRp477xrhUANPHk3qR1qeT+WCCRyfo9YB3AdXHD1p5JItsL2Ar0="
 deploy:
   provider: "script"
-  script: "python pyvec.py deploy --push"
+  script: "python pyvecorg deploy --push"
   on:
     branch: "master"
     repo: "pyvec/pyvec.org"
