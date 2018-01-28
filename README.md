@@ -55,7 +55,7 @@ the number,
 ### Twitter avatars
 
 To figure out correct URLs of Twitter avatars from Twitter usernames, the site
-needs to perfrom an HTTP request for each of them. This is not really an issue,
+needs to perform an HTTP request for each of them. This is not really an issue,
 because on production this is done only once - in the moment of deployment.
 However, it can get very annoying during development. Set `DISABLE_TWITTER_AVATARS`
 environment variable to truthy value to disable Twitter avatars for development.
