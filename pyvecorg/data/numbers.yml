@@ -34,7 +34,7 @@ entries:
         - konference
         - konferencí
       en: conferences
-    value: 3  # 2015, 2016, 2017
+    value: 4  # 2015, 2016, 2017, 2018
     exactly: true
     hint:
       cs: Počet všech pořádaných PyCon CZ konferencí
