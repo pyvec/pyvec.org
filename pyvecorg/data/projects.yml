@@ -6,8 +6,8 @@ entries:
   - name:
       cs: Konference PyCon CZ
       en: PyCon CZ conference
-    logo: img/projects/pyconcz18.svg
-    photo: pyconcz18
+    logo: img/projects/pyconcz.svg
+    photo: pyconcz
     url: https://cz.pycon.org/
     description:
       cs: >-
