@@ -30,4 +30,14 @@ def index(lang):
     context = select_language(data, lang)
     context['lang'] = lang
     context['now'] = datetime.now()
+    context['this'] = 'index'
     return render_template('index.html', **context)
+
+
+@app.route('/<lang>/coc/')
+def coc(lang):
+    context = select_language(data, lang)
+    context['lang'] = lang
+    context['now'] = datetime.now()
+    context['this'] = 'coc'
+    return render_template('coc.html', **context)

@@ -1,0 +1,10 @@
+{% extends "index.html" %}
+
+{% block cover %}{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h2 id="coc">{{ coc.heading }}</h2>
+        {{ coc.text|markdown }}
+    </div>
+{% endblock %}
