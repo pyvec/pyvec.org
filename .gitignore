@@ -1,4 +1,5 @@
-/_build/
+# Elsa output
+_build
 
 ### OSX
 *.DS_Store

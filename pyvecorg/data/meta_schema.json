@@ -60,6 +60,9 @@
         },
         "resources": {
           "$ref": "definitions/translated_text_schema.json#"
+        },
+        "json_data": {
+          "$ref": "definitions/translated_text_schema.json#"
         }
       },
       "additionalProperties": false
