@@ -3,7 +3,9 @@
     <head>
         <meta charset="utf-8">
 
-        <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+        <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="{{ url_for('static', filename='favicon.ico') }}">
+        <link rel="alternate" type="application/json" href="{{ url_for('api', lang=lang) }}">
+
         <meta property="og:image" content="{{ url_for('static', filename='img/cover.jpg', _external=True) }}">
         <meta property="twitter:card" content="summary_large_image">
         <meta property="twitter:site" content="@pyvec">
@@ -240,8 +242,13 @@
                             <i class="fa fa-file-text-o" aria-hidden="true"></i>
                             <a href="{{ url_for('static', filename='charter/stanovy.rtf') }}">{{ meta.downloads.charter }}.rtf</a>
 
+                            <br>
+
                             <i class="fa fa-file-image-o" aria-hidden="true"></i>
                             <a href="https://github.com/pyvec/resources">{{ meta.downloads.resources }}</a>
+
+                            <i class="fa fa-file-code-o" aria-hidden="true"></i>
+                            <a href="{{ url_for('api', lang=lang) }}">{{ meta.downloads.json_data }}</a>
                         </p>
                     </div>
                     <div class="w-100 d-block d-md-none"></div>

@@ -68,3 +68,6 @@ downloads:
   resources:
     cs: grafika
     en: resources
+  json_data:
+    cs: tato stránka jako JSON
+    en: this page as JSON

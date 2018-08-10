@@ -21,8 +21,11 @@ class Flask(BaseFlask):
 
 
 app = Flask('pyvecorg')
+app.config['JSON_AS_ASCII'] = False
+
 
 from pyvecorg import views
 from pyvecorg import templating
+
 
 __all__ = ['app', 'views', 'templating']
