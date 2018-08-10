@@ -31,11 +31,6 @@ def index(lang):
     return render_template('index.html', **context)
 
 
-@app.route('/api.json')
-def api_redirect():
-    return redirect(url_for('api', lang='cs'))
-
-
 @app.route('/<lang>/api.json')
 def api(lang):
     return jsonify(select_language(data, lang))
