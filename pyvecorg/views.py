@@ -20,7 +20,7 @@ def favicon():
 
 @app.route('/')
 def index_redirect():
-    return redirect(url_for('index', lang=detect_lang(request)))
+    return redirect(url_for('index', lang='cs'))
 
 
 @app.route('/<lang>/')
@@ -33,15 +33,9 @@ def index(lang):
 
 @app.route('/api.json')
 def api_redirect():
-    return redirect(url_for('api', lang=detect_lang(request)))
+    return redirect(url_for('api', lang='cs'))
 
 
 @app.route('/<lang>/api.json')
 def api(lang):
     return jsonify(select_language(data, lang))
-
-
-def detect_lang(request):
-    if request.accept_languages.best_match(['en', 'cs', 'sk']) == 'en':
-        return 'en'
-    return 'cs'
