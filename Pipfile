@@ -18,3 +18,8 @@ jsonschema = "~=2.6.0"
 
 [requires]
 python_version = "3.7"
+
+[scripts]
+test = "pipenv run pytest"
+freeze = "pipenv run python pyvecorg freeze"
+deploy = "pipenv run python pyvecorg deploy --push"

@@ -8,13 +8,13 @@ python:
 install:
   - "pipenv install --dev"
 script:
-  - "pytest && python pyvecorg freeze"
+  - "pipenv run test && pipenv run freeze"
 env:
   global:
     - secure: "G+uIvwFZuwToSLPQryVhXRL16GYznBN7AcKcf1nP2FaTrBp4pVnZuNIrQ1eyuAGgwICoOled9EluT7T+ABqZHLUUoU5lymFuQwQPgZyOKZQXF3USAuwa2kqcXRp477xrhUANPHk3qR1qeT+WCCRyfo9YB3AdXHD1p5JItsL2Ar0="
 deploy:
   provider: "script"
-  script: "python pyvecorg deploy --push"
+  script: "pipenv run deploy"
   on:
     branch: "master"
     repo: "pyvec/pyvec.org"
