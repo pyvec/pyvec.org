@@ -1,4 +1,5 @@
 import os
+import platform
 from datetime import datetime
 
 from flask import (request, render_template, redirect, url_for,
@@ -14,8 +15,10 @@ data = load_data()
 @app.route('/favicon.ico')
 def favicon():
     static = os.path.join(app.root_path, 'static')
+    mimetype = ('image/x-icon' if platform.system() == 'Darwin'
+                else 'image/vnd.microsoft.icon')
     return send_from_directory(static, 'favicon.ico',
-                               mimetype='image/vnd.microsoft.icon')
+                               mimetype=mimetype)
 
 
 @app.route('/')
