@@ -9,7 +9,7 @@ import jsonschema
 
 from pyvecorg.data import (load_data, select_language,
                            DATA_PATH, SUPPORTED_LANGS)
-from pyvecorg.templating import get_avatar_url
+from pyvecorg.avatars import get_avatar_url
 
 
 STATIC_PATH = os.path.join(DATA_PATH, '..', 'static')
