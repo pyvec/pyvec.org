@@ -6,19 +6,19 @@ Pyvec homepage.
 
 ## Installation
 
-The code is **Python 3.6**
+The code is **Python 3.7**
 
 ```sh
-$ pip install .
+$ pipenv install
 ```
 
 ## Development
 
 The site uses [elsa](https://github.com/pyvec/elsa).
 
-- Installation: `pip install -e .[tests]`
-- Development server: `python pyvecorg serve`
-- Tests: `pytest`
+- Installation: `pipenv install --dev`
+- Development server: `pipenv run serve`
+- Tests: `pipenv run test`
 
 ### Data and tests
 
