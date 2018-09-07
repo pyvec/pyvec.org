@@ -1,4 +1,0 @@
-graft pyvecorg/templates
-graft pyvecorg/static
-include pyvecorg/data/*.yml
-include LICENSE
