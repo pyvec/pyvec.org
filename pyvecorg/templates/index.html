@@ -206,18 +206,18 @@
             <div class="container">
                 <div class="row">
                     <div class="col address">
-                        <h3>{{ meta.billing_address.heading }}</h3>
-                        {{ meta.billing_address.directions|markdown }}
-                        <p>
-                            {{ meta.reg_no.label }}: <a href="http://wwwinfo.mfcr.cz/cgi-bin/ares/darv_res.cgi?ico={{ meta.reg_no.value }}&amp;xml=1{% if lang == 'en' %}&amp;jazyk=en{% endif %}">{{ meta.reg_no.value }}</a><br>
-                        </p>
-                    </div>
-                    <div class="w-100 d-block d-md-none"></div>
-                    <div class="col address">
                         <h3>{{ meta.address.heading }}</h3>
                         {{ meta.address.directions|markdown }}
                         <p>
                             E-mail: <a href="mailto:info@pyvec.org">info@pyvec.org</a>
+                        </p>
+                    </div>
+                    <div class="w-100 d-block d-md-none"></div>
+                    <div class="col address">
+                        <h3>{{ meta.billing_address.heading }}</h3>
+                        {{ meta.billing_address.directions|markdown }}
+                        <p>
+                            {{ meta.reg_no.label }}: <a href="http://wwwinfo.mfcr.cz/cgi-bin/ares/darv_res.cgi?ico={{ meta.reg_no.value }}&amp;xml=1{% if lang == 'en' %}&amp;jazyk=en{% endif %}">{{ meta.reg_no.value }}</a><br>
                         </p>
                     </div>
                     <div class="w-100 d-block d-md-none"></div>
