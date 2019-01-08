@@ -13,7 +13,7 @@ def load_data():
         name, ext = os.path.splitext(basename)
         if ext in ['.yml', '.yaml']:
             with open(os.path.join(DATA_PATH, basename)) as f:
-                data[name] = yaml.load(f)
+                data[name] = yaml.safe_load(f)
     return data
 
 
