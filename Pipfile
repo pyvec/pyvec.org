@@ -7,7 +7,7 @@ name = "pypi"
 flask = "~=0.12.2"
 elsa = "~=0.1.3"
 markdown = "~=2.6.9"
-pyyaml = "~=3.12"
+pyyaml = ">=4.2b1"
 requests = "~=2.20.1"
 python-slugify = "~=1.2.5"
 pillow = "~=5.2.0"
@@ -26,3 +26,6 @@ test = "pipenv run pytest"
 freeze = "pipenv run python pyvecorg freeze"
 serve = "pipenv run python pyvecorg serve"
 deploy = "pipenv run python pyvecorg deploy --push"
+
+[pipenv]
+allow_prereleases = true
