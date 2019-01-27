@@ -22,10 +22,10 @@ jsonschema = "~=2.6.0"
 python_version = "3.7"
 
 [scripts]
-test = "pipenv run pytest"
-freeze = "pipenv run python pyvecorg freeze"
-serve = "pipenv run python pyvecorg serve"
-deploy = "pipenv run python pyvecorg deploy --push"
+test = "pytest"
+freeze = "python pyvecorg freeze"
+serve = "python pyvecorg serve"
+deploy = "python pyvecorg deploy --push"
 
 [pipenv]
 allow_prereleases = true
