@@ -1,22 +1,25 @@
 import os
-from setuptools.command.egg_info import FileList
+import itertools
+from pathlib import Path
 
 from flask import Flask as BaseFlask
 
 
-# Makes sure everything included in the package is watched for changes
-# by the development server. See https://github.com/pyvec/elsa/issues/43
 class Flask(BaseFlask):
-    pkg_root = os.path.join(os.path.dirname(__file__), '..')
-    manifest = os.path.join(pkg_root, 'MANIFEST.in')
+    # Elsa watches only Python files by default, this adds certain directories
+    # https://github.com/pyvec/elsa/issues/43
+    extra_dirs = ['data', 'static', 'templates']
 
     def run(self, *args, **kwargs):
-        file_list = FileList()
-        with open(self.manifest) as f:
-            for line in f.readlines():
-                file_list.process_template_line(line)
-        kwargs['extra_files'] = [os.path.join(self.pkg_root, path)
-                                 for path in file_list.files]
+        pyvecorg_dir = Path(__file__).parent
+        extra_files = [
+            str(path) for path
+            in itertools.chain.from_iterable([
+                pyvecorg_dir.glob(dir + '/**/*') for dir
+                in self.extra_dirs
+            ])
+        ]
+        kwargs['extra_files'] = extra_files
         return super().run(*args, **kwargs)
 
 
