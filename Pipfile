@@ -14,7 +14,7 @@ pillow = "~=5.2.0"
 
 [dev-packages]
 pipfile = "~=0.0.2"
-pylama = "~=7.4.3"
+pylama = "~=7.6.6"
 pytest = "~=3.3.0"
 jsonschema = "~=2.6.0"
 
