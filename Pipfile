@@ -16,7 +16,7 @@ pillow = "~=5.2.0"
 pipfile = "~=0.0.2"
 pylama = "~=7.6.6"
 pytest = "~=3.3.0"
-jsonschema = "~=2.6.0"
+jsonschema = "~=3.0.1"
 
 [requires]
 python_version = "3.7"
