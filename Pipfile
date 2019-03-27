@@ -10,7 +10,7 @@ markdown = "~=2.6.9"
 pyyaml = ">=4.2b1"
 requests = "~=2.20.1"
 python-slugify = "~=1.2.5"
-pillow = "~=5.2.0"
+pillow = "~=5.4.1"
 
 [dev-packages]
 pipfile = "~=0.0.2"
