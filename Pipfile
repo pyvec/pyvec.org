@@ -15,7 +15,7 @@ pillow = "~=5.2.0"
 [dev-packages]
 pipfile = "~=0.0.2"
 pylama = "~=7.4.3"
-pytest = "~=3.3.0"
+pytest = "~=4.4.0"
 jsonschema = "~=2.6.0"
 
 [requires]
