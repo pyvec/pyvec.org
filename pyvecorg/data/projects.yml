@@ -63,7 +63,7 @@ entries:
         networking, or education. Organized monthly.
     pyvec_help: [reimbursement, interconnection]
 
-  - name: PyWorking, NePyvo
+  - name: PyWorking
     url: https://pyworking.cz/
     logo: img/projects/pyworking.svg
     photo: pyworking
