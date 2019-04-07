@@ -225,13 +225,13 @@
                         <h3>{{ meta.bank_account.heading }}</h3>
                         <p>
                             {% if lang == 'cs' %}
-                                <a href="https://www.fio.cz/scgi-bin/hermes/dz-transparent.cgi?ID_ucet={{ meta.bank_account.number }}">{{ meta.bank_account.number }}/{{ meta.bank_account.bank_branch }}</a><br>
+                                <a href="https://ib.fio.cz/ib/transparent?a={{ meta.bank_account.number }}">{{ meta.bank_account.number }}/{{ meta.bank_account.bank_branch }}</a><br>
                                 {{ meta.bank_account.bank_name }}
                             {% else %}
                                 IBAN: {{ meta.bank_account.iban }}<br>
                                 SWIFT: {{ meta.bank_account.swift }}<br>
                                 {{ meta.bank_account.bank_name }}<br>
-                                <a href="https://www.fio.cz/scgi-bin/hermes/dz-transparent.cgi?ID_ucet={{ meta.bank_account.number }}&amp;l=ENGLISH">Transaction history</a>
+                                <a href="https://ib.fio.cz/ib/transparent?a={{ meta.bank_account.number }}&amp;l=ENGLISH">Transaction history</a>
                             {% endif %}
                         </p>
                         <h3>{{ meta.downloads.heading }}</h3>
