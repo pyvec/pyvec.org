@@ -25,7 +25,7 @@ pillow = "~=6.0.0"
 # then pinning each version strictly with ==
 pipfile = "==0.0.2"
 pylama = "~=7.7.1"
-pytest = "~=4.4.0"
+pytest = "~=4.4.1"
 jsonschema = "~=3.0.1"
 
 [requires]
