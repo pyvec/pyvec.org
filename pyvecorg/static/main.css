@@ -185,7 +185,7 @@ a.icon, a.icon:hover, a.icon:focus,
 .project-header-pyworking { background-image: url('img/projects/pyworking.jpg') }
 .project-header-pythoncz { background-image: url('img/projects/pythoncz.jpg') }
 .project-header-blog { background-image: url('img/projects/blog.jpg') }
-.project-header-guide { background-image: url('img/projects/guide.jpg') }
+.project-header-docs { background-image: url('img/projects/docs.jpg') }
 
 .project-header h3 {
     background-color: #FFF;
