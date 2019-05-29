@@ -118,18 +118,18 @@ entries:
     pyvec_help: [operations]
 
   - name:
-      cs: Komunitní příručka
-      en: Community Guide
-    url: https://pyvec-guide.readthedocs.io/
+      cs: Komunitní dokumentace
+      en: Community Docs
+    url: https://docs.pyvec.org
     logo: img/projects/python.svg
-    photo: guide
+    photo: docs
     description:
       cs: >-
-        Příručka shrnující know-how pro organizátory komunitních akcí, jako jsou
-        srazy, workshopy, kurzy, apod.
+        Dokumentace fungování komunity, která shrnuje i know-how pro organizátory
+        akcí, jako jsou srazy, workshopy, kurzy, apod.
       en: >-
-        A guide summing up know-how for organizers of user group events, such as
-        meetups, workshops, courses, etc.
+        A documentation of community operations, which also sums up know-how
+        for organizers of user group events, such as meetups, workshops, courses, etc.
     pyvec_help: [operations]
 
 pyvec_help_heading:
