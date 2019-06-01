@@ -119,7 +119,7 @@ entries:
 
   - name:
       cs: Komunitní dokumentace
-      en: Community Docs
+      en: Community docs
     url: https://docs.pyvec.org
     logo: img/projects/python.svg
     photo: docs
