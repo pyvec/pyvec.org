@@ -4,6 +4,8 @@ from pathlib import Path
 import yaml
 import requests
 
+from pyvecorg.avatars import get_avatar_url
+
 
 MEMBERS_LIST_YAML = Path(__file__).parent / 'data' / 'members_list.yml'
 CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSWK18MlEy95sAGl1BM6BXWxPgJbIx2UH3tAyJjxES06hHuaXgpsmD5pRz9kkGcFupiZL_U_e7yv4t1/pub?gid=0&single=true&output=csv'  # noqa
@@ -36,6 +38,9 @@ if __name__ == '__main__':
     # Build data/members_list.yml
     response = requests.get(CSV_URL)
     response.raise_for_status()
-    members = parse_members_csv(response.content.decode('utf-8'))
+    members = (
+        dict(avatar_url=get_avatar_url(member), **member) for member
+        in parse_members_csv(response.content.decode('utf-8'))
+    )
     data = dict(entries=list(members))
     MEMBERS_LIST_YAML.write_text(generate_yaml(data))

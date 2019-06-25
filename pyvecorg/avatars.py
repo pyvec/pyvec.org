@@ -19,8 +19,6 @@ def get_avatar_url(member):
         email_hash = hashlib.md5(value.lower().strip().encode()).hexdigest()
         return f'https://www.gravatar.com/avatar/{email_hash}?size=100&d=404'
     elif key == 'twitter':
-        if os.getenv('DISABLE_TWITTER_AVATARS'):
-            return no_avatar
         username = quote(value)
         url = f'https://twitter.com/{username}/profile_image'
         url = requests.head(url).headers.get('location')

@@ -23,10 +23,14 @@
     },
     "avatar": {
       "type": "string"
+    },
+    "avatar_url": {
+      "type": "string"
     }
   },
   "additionalProperties": false,
   "required": [
-    "name"
+    "name",
+    "avatar_url"
   ]
 }

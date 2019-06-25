@@ -68,14 +68,6 @@ the number,
 1. ask him to run the script,
 2. bother him to Open Source the script code.
 
-### Twitter avatars
-
-To figure out correct URLs of Twitter avatars from Twitter usernames, the site
-needs to perform an HTTP request for each of them. This is not really an issue,
-because on production this is done only once - in the moment of deployment.
-However, it can get very annoying during development. Set `DISABLE_TWITTER_AVATARS`
-environment variable to truthy value to disable Twitter avatars for development.
-
 ## Deployment
 
 The site uses [elsa](https://github.com/pyvec/elsa). It gets automatically deployed

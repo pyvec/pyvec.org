@@ -51,10 +51,9 @@ def avatar(name):
     except IndexError:
         abort(404)
 
-    url = get_avatar_url(member)
-    res = requests.get(url)
-    res.raise_for_status()
-    file = create_thumbnail(io.BytesIO(res.content), 100)
+    response = requests.get(member['avatar_url'])
+    response.raise_for_status()
+    file = create_thumbnail(io.BytesIO(response.content), 100)
 
     return send_file(file, mimetype='image/png', as_attachment=True,
                            attachment_filename=f'{name}.png')
