@@ -17,25 +17,41 @@ $ pipenv install
 The site uses [elsa](https://github.com/pyvec/elsa).
 
 - Installation: `pipenv install --dev`
-- Development server: `pipenv run serve`
+- Download data from external sources: `pipenv run build`
 - Tests: `pipenv run test`
+- Development server: `pipenv run serve`
 
 ### Data and tests
 
 The site is just a single HTML page rendered on top of some static data.
-However, the data can get quite complex and most of the texts need to be
-translated into two languages.
+However, some of the data come from external sources, the data can get quite
+complex, and most of the texts need to be translated into two languages.
 
 The data is stored in multiple YAML files. When these are read, whenever
 an object has just `cs` and `en` properties, it is treated as a "translated text"
 and the property corresponding to a currently selected language becomes
 the actual value in place of the object.
 
-Also, to keep the complex structure of the YAML files organized and tested,
-there are schemas written in [JSON Schema](https://spacetelescope.github.io/understanding-json-schema/)
+To keep the complex structure of the YAML files organized and tested,
+there are schemas written in [JSON Schema](https://json-schema.org/understanding-json-schema/)
 ([spec](http://json-schema.org/)). In tests, the YAML files are validated
 against the schemas. There is also a couple of additional tests to ensure some
 logical rules which cannot be easily expressed by JSON Schema.
+
+### External sources
+
+Some data cannot be stored statically in a YAML file. There is a command
+`pipenv run build`, which downloads them from external sources and generates
+respective static YAML files. This is a separate step, which needs to be done
+before developing or deploying the site, otherwise it won't work properly.
+
+### Members
+
+Pyvec members are tracked in an internal Google Spreadsheet. The future
+intention is to have the list of members public, but we're not there yet (GDPR).
+So far only board members are being listed publicly. The `pipenv run build`
+command downloads the spreadsheet as CSV and generates the `members_list.yml`
+file.
 
 ### Numbers
 

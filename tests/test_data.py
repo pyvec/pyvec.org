@@ -63,14 +63,9 @@ def test_data_section_is_valid(section_name, section):
 
 
 @pytest.mark.parametrize('member', [
-    member for member in DATA['members']['entries']
+    member for member in DATA['members_list']['entries']
 ])
 def test_data_member_is_valid(member):
-    assert member['role'] in list(DATA['members']['roles'].keys())
-
-    assert member.get('avatar')
-    assert member['avatar'] in ('github', 'twitter', 'email')
-
     if member.get('email'):
         assert '@' in member['email']
     if member.get('linkedin'):
@@ -83,7 +78,17 @@ def test_data_member_is_valid(member):
 
 
 @pytest.mark.parametrize('member', [
-    member for member in DATA['members']['entries']
+    member for member in DATA['members_list']['entries']
+    if member.get('role')
+])
+def test_data_member_with_role_is_valid(member):
+    assert member['role'] in list(DATA['members']['roles'].keys())
+    assert member.get('avatar')
+    assert member['avatar'] in ('github', 'twitter', 'email')
+
+
+@pytest.mark.parametrize('member', [
+    member for member in DATA['members_list']['entries']
     if member.get('avatar') == 'github'
 ])
 def test_data_member_has_valid_github_avatar(member):
@@ -93,7 +98,7 @@ def test_data_member_has_valid_github_avatar(member):
 
 
 @pytest.mark.parametrize('member', [
-    member for member in DATA['members']['entries']
+    member for member in DATA['members_list']['entries']
     if member.get('avatar') == 'twitter'
 ])
 def test_data_member_has_valid_twitter_avatar(member):
@@ -104,7 +109,7 @@ def test_data_member_has_valid_twitter_avatar(member):
 
 
 @pytest.mark.parametrize('member', [
-    member for member in DATA['members']['entries']
+    member for member in DATA['members_list']['entries']
     if member.get('avatar') == 'email'
 ])
 def test_data_member_has_valid_gravatar(member):

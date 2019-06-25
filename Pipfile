@@ -4,6 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [scripts]
+build = "python pyvecorg/build.py"
 test = "pytest"
 freeze = "python pyvecorg freeze"
 serve = "python pyvecorg serve"

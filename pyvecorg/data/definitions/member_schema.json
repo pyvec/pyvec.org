@@ -27,8 +27,6 @@
   },
   "additionalProperties": false,
   "required": [
-    "name",
-    "role",
-    "avatar"
+    "name"
   ]
 }

@@ -5,12 +5,6 @@
     "heading": {
       "$ref": "definitions/translated_text_schema.json#"
     },
-    "entries": {
-      "type": "array",
-      "items": {
-        "$ref": "definitions/member_schema.json#"
-      }
-    },
     "roles": {
       "type": "object",
       "patternProperties": {
@@ -27,7 +21,6 @@
   "additionalProperties": false,
   "required": [
     "heading",
-    "entries",
     "roles",
     "note"
   ]

@@ -2,75 +2,6 @@ heading:
   cs: Kdo je Pyvec
   en: Who is Pyvec
 
-entries:
-  - name: Martin Bílek
-    role: chair
-    github: martinbilek
-    twitter: ajtea
-    linkedin: martin-b%C3%ADlek-47699542
-    avatar: github
-
-  - name: Jiří Bartoň
-    role: board
-    github: whiskybar
-    twitter: lurkingideas
-    avatar: github
-
-  - name: Aleš Zoulek
-    role: board
-    github: aleszoulek
-    twitter: aleszoulek
-    linkedin: zoulek
-    avatar: github
-
-  - name: Jakub Vysoký
-    role: board
-    github: kvbik
-    twitter: kvbik
-    linkedin: jakubvysoky
-    avatar: github
-
-  - name: Vítězslav Pliska
-    role: board
-    github: whit
-    twitter: whiteck
-    linkedin: vitekpliska
-    avatar: github
-
-  - name: Robin Gottfried
-    role: board
-    github: czervenka
-    twitter: czervenka
-    linkedin: robingottfried
-    avatar: github
-
-  - name: Honza Král
-    role: board
-    github: honzakral
-    twitter: honzakral
-    linkedin: honzakral
-    avatar: github
-
-  - name: Martin Burián
-    role: trustee
-    twitter: martin_burian
-    linkedin: martinburi8n
-    avatar: twitter
-
-  - name: Filip Vařecha
-    role: trustee
-    github: xaralis
-    twitter: xaralis
-    linkedin: filip-vařecha-51625031
-    avatar: github
-
-  - name: Jiří Suchan
-    role: trustee
-    github: yedpodtrzitko
-    twitter: yedpodtrzitko
-    linkedin: yedpodtrzitko
-    avatar: twitter
-
 roles:
   chair:
     cs: předseda
@@ -78,9 +9,6 @@ roles:
   board:
     cs: člen rady
     en: board member
-  trustee:
-    cs: člen dozorčí rady
-    en: board of trustees member
 
 note:
   icon: user-circle-o
