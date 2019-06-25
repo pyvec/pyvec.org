@@ -1,15 +1,11 @@
 import os
-import io
 import platform
 from datetime import datetime
 
 from flask import (request, render_template, redirect, url_for,
-                   send_from_directory, jsonify, abort, send_file)
-from slugify import slugify
-import requests
+                   send_from_directory, jsonify)
 
 from pyvecorg import app
-from pyvecorg.avatars import get_avatar_url, create_thumbnail
 from pyvecorg.data import load_data, select_language
 
 
@@ -41,19 +37,3 @@ def index(lang):
 @app.route('/<lang>/api.json')
 def api(lang):
     return jsonify(select_language(data, lang))
-
-
-@app.route('/static/img/avatars/<name>.png')
-def avatar(name):
-    try:
-        member = [member for member in data['members_list']['entries']
-                  if slugify(member['name']) == name][0]
-    except IndexError:
-        abort(404)
-
-    response = requests.get(member['avatar_url'])
-    response.raise_for_status()
-    file = create_thumbnail(io.BytesIO(response.content), 100)
-
-    return send_file(file, mimetype='image/png', as_attachment=True,
-                           attachment_filename=f'{name}.png')

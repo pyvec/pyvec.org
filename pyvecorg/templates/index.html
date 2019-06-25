@@ -155,7 +155,7 @@
             <ul class="list row members">
                 {% for member in members_list.entries %}
                 <li class="list-item member col">
-                    <img src="{{ member|avatar_url }}" alt="{{ member.name }}" width="100" class="rounded-circle member-avatar">
+                    <img src="{{ url_for('static', filename=member.avatar_filename) }}" alt="{{ member.name }}" width="100" class="rounded-circle member-avatar">
                     <p class="member-profiles">
                         {% if member.github %}
                         <a href="https://github.com/{{ member.github }}" title="GitHub" class="icon">

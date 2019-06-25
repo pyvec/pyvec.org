@@ -24,13 +24,13 @@
     "avatar": {
       "type": "string"
     },
-    "avatar_url": {
+    "avatar_filename": {
       "type": "string"
     }
   },
   "additionalProperties": false,
   "required": [
     "name",
-    "avatar_url"
+    "avatar_filename"
   ]
 }

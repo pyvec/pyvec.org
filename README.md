@@ -51,7 +51,7 @@ Pyvec members are tracked in an internal Google Spreadsheet. The future
 intention is to have the list of members public, but we're not there yet (GDPR).
 So far only board members are being listed publicly. The `pipenv run build`
 command downloads the spreadsheet as CSV and generates the `members_list.yml`
-file.
+file. It also downloads and caches avatars.
 
 ### Numbers
 
