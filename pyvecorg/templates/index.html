@@ -153,7 +153,7 @@
 
             <h2 id="members">{{ members.heading }}</h2>
             <ul class="list row members">
-                {% for member in members.entries %}
+                {% for member in members_list.entries %}
                 <li class="list-item member col">
                     <img src="{{ member|avatar_url }}" alt="{{ member.name }}" width="100" class="rounded-circle member-avatar">
                     <p class="member-profiles">

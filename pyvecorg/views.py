@@ -46,7 +46,7 @@ def api(lang):
 @app.route('/static/img/avatars/<name>.png')
 def avatar(name):
     try:
-        member = [member for member in data['members']['entries']
+        member = [member for member in data['members_list']['entries']
                   if slugify(member['name']) == name][0]
     except IndexError:
         abort(404)
