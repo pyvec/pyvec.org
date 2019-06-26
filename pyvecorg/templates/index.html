@@ -217,7 +217,7 @@
                         <h3>{{ meta.billing_address.heading }}</h3>
                         {{ meta.billing_address.directions|markdown }}
                         <p>
-                            {{ meta.reg_no.label }}: <a href="http://wwwinfo.mfcr.cz/cgi-bin/ares/darv_res.cgi?ico={{ meta.reg_no.value }}&amp;xml=1{% if lang == 'en' %}&amp;jazyk=en{% endif %}">{{ meta.reg_no.value }}</a><br>
+                            {{ meta.reg_no.label }}: <a href="{{ meta.reg_no.link }}">{{ meta.reg_no.value }}</a><br>
                         </p>
                     </div>
                     <div class="w-100 d-block d-md-none"></div>
@@ -237,10 +237,13 @@
                         <h3>{{ meta.downloads.heading }}</h3>
                         <p class="downloads">
                             <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                            <a href="{{ url_for('static', filename='bylaws/stanovy.pdf') }}">{{ meta.downloads.bylaws }}.pdf</a>
+                            <a href="{{ url_for('static', filename='bylaws.pdf') }}">{{ meta.downloads.bylaws }}.pdf</a>
 
-                            <i class="fa fa-file-text-o" aria-hidden="true"></i>
-                            <a href="{{ url_for('static', filename='bylaws/stanovy.rtf') }}">{{ meta.downloads.bylaws }}.rtf</a>
+                            <i class="fa fa-file-o" aria-hidden="true"></i>
+                            <a href="https://docs.pyvec.org/operations/bylaws.html">{{ meta.downloads.bylaws }}</a>
+
+                            <i class="fa fa-archive" aria-hidden="true"></i>
+                            <a href="https://or.justice.cz/ias/ui/vypis-sl-firma?subjektId=760829">{{ meta.downloads.filing }}</a>
 
                             <br>
 

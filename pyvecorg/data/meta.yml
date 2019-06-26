@@ -16,11 +16,11 @@ billing_address:
     en: Billing address
   directions:
     cs: >-
-      Pyvec o.s. &mdash; [Impact Hub Praha](https://www.hubpraha.cz/)<br>
+      Pyvec, z.s. &mdash; [Impact Hub Praha](https://www.hubpraha.cz/)<br>
       Drtinova 10/557<br>
       15000 Praha 5
     en: >-
-      Pyvec o.s. &mdash; [Impact Hub Praha](https://www.hubpraha.cz/en/)<br>
+      Pyvec, z.s. &mdash; [Impact Hub Praha](https://www.hubpraha.cz/en/)<br>
       Drtinova 10/557<br>
       15000 Prague<br>
       Czech Republic, EU
@@ -31,11 +31,11 @@ address:
     en: Address
   directions:
     cs: >-
-      Pyvec o.s.<br>
+      Pyvec, z.s.<br>
       Ječná 507/6<br>
       12000 Praha 2
     en: >-
-      Pyvec o.s.<br>
+      Pyvec, z.s.<br>
       Ječná 507/6<br>
       12000 Prague<br>
       Czech Republic, EU
@@ -45,6 +45,7 @@ reg_no:
     cs: IČO
     en: Reg. No.
   value: 22746668
+  link: https://or.justice.cz/ias/ui/vypis-sl-firma?subjektId=760829
 
 bank_account:
   heading:
@@ -65,6 +66,9 @@ downloads:
   bylaws:
     cs: stanovy
     en: bylaws
+  filing:
+    cs: sbírka listin
+    en: filing history
   resources:
     cs: grafika
     en: resources
