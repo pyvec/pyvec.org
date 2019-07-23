@@ -18,7 +18,7 @@ markdown = "~=3.1"
 pyyaml = "~=5.1"
 requests = "~=2.22.0"
 python-slugify = "~=3.0.2"
-pillow = "~=6.0.0"
+pillow = "~=6.1.0"
 
 [dev-packages]
 # Pinning packages with ~= unless their version starts with 0.,
