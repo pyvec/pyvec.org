@@ -12,7 +12,7 @@ deploy = "python pyvecorg deploy --push"
 [packages]
 # Pinning packages with ~= unless their version starts with 0.,
 # then pinning each version strictly with ==
-flask = "~=1.0.3"
+flask = "~=1.1.1"
 elsa = "==0.1.5"
 markdown = "~=3.1"
 pyyaml = "~=5.1"
