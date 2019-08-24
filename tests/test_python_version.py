@@ -1,20 +1,22 @@
 import os
+from pathlib import Path
 
 import yaml
 import pipfile
 
 
 def test_python_version():
-    project_dir = os.path.join(os.path.dirname(__file__), '..')
+    project_dir = Path(__file__).parent.parent
 
-    with open(os.path.join(project_dir, '.travis.yml')) as f:
-        travis_py_version = yaml.safe_load(f)['python'][0]
+    ci_config_file = project_dir / '.circleci' / 'config.yml'
+    ci_config = yaml.safe_load(ci_config_file.read_text())
+    ci_docker_image = ci_config['jobs']['build']['docker'][0]['image']
+    ci_py_version = ci_docker_image.replace('circleci/python:', '')
 
     pipfile_data = pipfile.load(os.path.join(project_dir, 'Pipfile')).data
     pipfile_py_version = pipfile_data['_meta']['requires']['python_version']
 
-    with open(os.path.join(project_dir, 'README.md')) as f:
-        readme = f.read()
+    readme = (project_dir / 'README.md').read_text()
 
-    assert travis_py_version == pipfile_py_version
-    assert f'Python {travis_py_version}' in readme
+    assert ci_py_version == pipfile_py_version
+    assert f'Python {ci_py_version}' in readme
