@@ -5,7 +5,7 @@ import yaml
 import pipfile
 
 
-def test_python_version():
+def test_python_version_is_consistent_accross_all_configuration_and_readme():
     project_dir = Path(__file__).parent.parent
 
     ci_config_file = project_dir / '.circleci' / 'config.yml'
