@@ -9,7 +9,6 @@ import jsonschema
 
 from pyvecorg.data import (load_data, select_language,
                            DATA_PATH, SUPPORTED_LANGS)
-from pyvecorg.avatars import get_avatar_url
 
 
 STATIC_PATH = os.path.join(DATA_PATH, '..', 'static')
@@ -63,54 +62,52 @@ def test_data_section_is_valid(section_name, section):
 
 
 @pytest.mark.parametrize('member', [
-    member for member in DATA['members']['entries']
+    member for member in DATA['members_list']['entries']
+    if member.get('email')
 ])
-def test_data_member_is_valid(member):
+def test_data_member_with_email_is_valid(member):
+    assert '@' in member['email']
+
+
+@pytest.mark.parametrize('member', [
+    member for member in DATA['members_list']['entries']
+    if member.get('linkedin')
+])
+def test_data_member_with_linkedin_is_valid(member):
+    assert not member['linkedin'].startswith('http')
+
+
+@pytest.mark.parametrize('member', [
+    member for member in DATA['members_list']['entries']
+    if member.get('github')
+])
+def test_data_member_with_github_is_valid(member):
+    assert not member['github'].startswith('http')
+
+
+@pytest.mark.parametrize('member', [
+    member for member in DATA['members_list']['entries']
+    if member.get('twitter')
+])
+def test_data_member_with_twitter_is_valid(member):
+    assert not member['twitter'].startswith('http')
+    assert not member['twitter'].startswith('@')
+
+
+@pytest.mark.parametrize('member', [
+    member for member in DATA['members_list']['entries']
+    if member.get('role')
+])
+def test_data_member_with_role_is_valid(member):
     assert member['role'] in list(DATA['members']['roles'].keys())
 
-    assert member.get('avatar')
+
+@pytest.mark.parametrize('member', [
+    member for member in DATA['members_list']['entries']
+    if member.get('avatar')
+])
+def test_data_member_with_avatar_is_valid(member):
     assert member['avatar'] in ('github', 'twitter', 'email')
-
-    if member.get('email'):
-        assert '@' in member['email']
-    if member.get('linkedin'):
-        assert not member['linkedin'].startswith('http')
-    if member.get('github'):
-        assert not member['github'].startswith('http')
-    if member.get('twitter'):
-        assert not member['twitter'].startswith('http')
-        assert not member['twitter'].startswith('@')
-
-
-@pytest.mark.parametrize('member', [
-    member for member in DATA['members']['entries']
-    if member.get('avatar') == 'github'
-])
-def test_data_member_has_valid_github_avatar(member):
-    assert member.get('github')
-    url = get_avatar_url(member)
-    is_working_link(url)
-
-
-@pytest.mark.parametrize('member', [
-    member for member in DATA['members']['entries']
-    if member.get('avatar') == 'twitter'
-])
-def test_data_member_has_valid_twitter_avatar(member):
-    assert member.get('twitter')
-    url = get_avatar_url(member)
-    is_working_link(url)
-    assert 'default_profile' not in url
-
-
-@pytest.mark.parametrize('member', [
-    member for member in DATA['members']['entries']
-    if member.get('avatar') == 'email'
-])
-def test_data_member_has_valid_gravatar(member):
-    assert member.get('email')
-    url = get_avatar_url(member)
-    is_working_link(url)
 
 
 @pytest.mark.parametrize('logo', frozenset(

@@ -2,10 +2,7 @@ import re
 import textwrap
 
 import jinja2
-import requests
-from slugify import slugify
 from markdown import markdown
-from flask import url_for
 
 from pyvecorg import app
 
@@ -15,11 +12,6 @@ def convert_markdown(text):
     text = textwrap.dedent(text)
     result = jinja2.Markup(markdown(text))
     return result
-
-
-@app.template_filter('avatar_url')
-def get_avatar_url(member):
-    return url_for('avatar', name=slugify(member['name']))
 
 
 @app.template_filter('url')

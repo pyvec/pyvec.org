@@ -5,6 +5,9 @@
     "name": {
       "type": "string"
     },
+    "nickname": {
+      "type": "string"
+    },
     "role": {
       "type": "string"
     },
@@ -23,12 +26,20 @@
     },
     "avatar": {
       "type": "string"
+    },
+    "avatar_filename": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "dob": {
+      "type": "string"
     }
   },
   "additionalProperties": false,
   "required": [
     "name",
-    "role",
-    "avatar"
+    "avatar_filename"
   ]
 }

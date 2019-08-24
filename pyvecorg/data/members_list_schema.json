@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "entries": {
+      "type": "array",
+      "items": {
+        "$ref": "definitions/member_schema.json#"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "entries"
+  ]
+}
