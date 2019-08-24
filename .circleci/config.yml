@@ -20,4 +20,6 @@ jobs:
       - run:
           name: deploy
           command: |
-            [[ "$CIRCLE_BRANCH" == "master" ]] && pipenv run deploy
+            if [[ "$CIRCLE_BRANCH" == "master" ]]; then
+              pipenv run deploy
+            fi
