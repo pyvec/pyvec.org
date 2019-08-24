@@ -21,6 +21,16 @@ RE_MISSING_LANG = re.compile(
 DATA = load_data()
 
 
+def is_working_link(url):
+    response = requests.head(url)  # this can raise connection-related errors
+
+    # if it's 5xx, it kinda means the link leads to an existing page, only
+    # the page is unavailable at the moment because of high load or internal
+    # error - we don't need to fail tests of pyvec.org because of that
+    if str(response.status_code)[0] == '4':
+        raise AssertionError(f'URL {url} returns HTTP {response.status_code}')
+
+
 @contextmanager
 def transform_missing_lang_exc():
     try:
@@ -79,7 +89,7 @@ def test_data_member_is_valid(member):
 def test_data_member_has_valid_github_avatar(member):
     assert member.get('github')
     url = get_avatar_url(member)
-    requests.head(url).raise_for_status()
+    is_working_link(url)
 
 
 @pytest.mark.parametrize('member', [
@@ -89,7 +99,7 @@ def test_data_member_has_valid_github_avatar(member):
 def test_data_member_has_valid_twitter_avatar(member):
     assert member.get('twitter')
     url = get_avatar_url(member)
-    requests.head(url).raise_for_status()
+    is_working_link(url)
     assert 'default_profile' not in url
 
 
@@ -100,7 +110,7 @@ def test_data_member_has_valid_twitter_avatar(member):
 def test_data_member_has_valid_gravatar(member):
     assert member.get('email')
     url = get_avatar_url(member)
-    requests.head(url).raise_for_status()
+    is_working_link(url)
 
 
 @pytest.mark.parametrize('logo', frozenset(
@@ -127,7 +137,7 @@ def test_data_entry_has_existing_logo(logo):
     if entry.get('url')
 ))
 def test_data_entry_has_valid_url(url):
-    requests.head(url).raise_for_status()
+    is_working_link(url)
 
 
 @pytest.mark.parametrize('photo', [
