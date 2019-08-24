@@ -2,8 +2,8 @@ import os
 import platform
 from datetime import datetime
 
-from flask import (request, render_template, redirect, url_for,
-                   send_from_directory, jsonify)
+from flask import (render_template, redirect, url_for, send_from_directory,
+                   jsonify)
 
 from pyvecorg import app
 from pyvecorg.data import load_data, select_language

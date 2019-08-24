@@ -1,4 +1,3 @@
-import os
 import itertools
 from pathlib import Path
 
@@ -27,8 +26,8 @@ app = Flask('pyvecorg')
 app.config['JSON_AS_ASCII'] = False
 
 
-from pyvecorg import views
-from pyvecorg import templating
+from pyvecorg import views  # noqa
+from pyvecorg import templating  # noqa
 
 
 __all__ = ['app', 'views', 'templating']

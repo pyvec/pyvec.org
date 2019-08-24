@@ -2,7 +2,6 @@ import re
 import textwrap
 
 import jinja2
-import requests
 from markdown import markdown
 
 from pyvecorg import app

@@ -1,4 +1,3 @@
-import os
 import io
 from urllib.parse import quote
 import hashlib
