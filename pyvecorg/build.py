@@ -1,6 +1,7 @@
 import io
 import os
 import json
+from textwrap import dedent
 from pathlib import Path
 
 import yaml
@@ -42,12 +43,12 @@ def parse_members(rows):
 
 
 def generate_yaml(data):
-    yaml_contents = '''\
-#
-#  This file has been generated from external sources
-#  using `pipenv run build`. Do not edit it manually!
-#
-'''
+    yaml_contents = dedent('''\
+        #
+        #  This file has been generated from external sources
+        #  using `pipenv run build`. Do not edit it manually!
+        #
+    ''')
     return yaml_contents + yaml.dump(data, allow_unicode=True)
 
 
@@ -57,6 +58,8 @@ if __name__ == '__main__':
     gsa_json = os.getenv('GOOGLE_SERVICE_ACCOUNT') or gsa_path.read_text()
     gsa = json.loads(gsa_json)
 
+    # Document key appears in the URL if you have the document open in your
+    # browser
     doc_key = '1n8hzBnwZ5ANkUCvwEy8rWsXlqeAAwu-5JBodT5OJx_I'
     rows = read_spreadsheet(doc_key, 'list', gsa)
     members = [member for member in parse_members(rows)

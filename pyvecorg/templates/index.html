@@ -152,46 +152,53 @@
             </ul>
 
             <h2 id="members">{{ members.heading }}</h2>
-            <ul class="list row members">
-                {% for member in members_list.entries %}
-                <li class="list-item member col">
-                    <img src="{{ url_for('static', filename=member.avatar_filename) }}" alt="{{ member.name }}" width="100" class="rounded-circle member-avatar">
-                    <p class="member-profiles">
-                        {% if member.github %}
-                        <a href="https://github.com/{{ member.github }}" title="GitHub" class="icon">
-                            <i class="fa fa-github" aria-hidden="true"></i><!--
-                            --><span>GitHub</span><!--
-                        --></a>
-                        {% endif %}
-                        {% if member.twitter %}
-                        <a href="https://twitter.com/{{ member.twitter }}" title="Twitter" class="icon">
-                            <i class="fa fa-twitter" aria-hidden="true"></i><!--
-                            --><span>Twitter</span><!--
-                        --></a>
-                        {% endif %}
-                        {% if member.linkedin %}
-                        <a href="https://linkedin.com/in/{{ member.linkedin }}" title="LinkedIn" class="icon">
-                            <i class="fa fa-linkedin" aria-hidden="true"></i><!--
-                            --><span>LinkedIn</span><!--
-                        --></a>
-                        {% endif %}
-                    </p>
-                    <p class="member-info">
-                        <strong class="member-name">{{ member.nickname|default(member.name) }}</strong><br>
-                        <small class="member-role">{{ members.roles[member.role] }}</small><br>
-                    </p>
-                </li>
-                {% if loop.index is divisibleby 2 %}
-                    <div class="w-100 d-block d-sm-none"></div>
-                {% endif %}
-                {% if loop.index is divisibleby 3 %}
-                    <div class="w-100 d-none d-sm-block d-md-none"></div>
-                {% endif %}
-                {% if loop.index is divisibleby 5 %}
-                    <div class="w-100 d-none d-md-block d-lg-block d-xl-block"></div>
-                {% endif %}
-                {% endfor %}
-            </ul>
+            {% if members_list %}
+                <ul class="list row members">
+                    {% for member in members_list.entries %}
+                    <li class="list-item member col">
+                        <img src="{{ url_for('static', filename=member.avatar_filename) }}" alt="{{ member.name }}" width="100" class="rounded-circle member-avatar">
+                        <p class="member-profiles">
+                            {% if member.github %}
+                            <a href="https://github.com/{{ member.github }}" title="GitHub" class="icon">
+                                <i class="fa fa-github" aria-hidden="true"></i><!--
+                                --><span>GitHub</span><!--
+                            --></a>
+                            {% endif %}
+                            {% if member.twitter %}
+                            <a href="https://twitter.com/{{ member.twitter }}" title="Twitter" class="icon">
+                                <i class="fa fa-twitter" aria-hidden="true"></i><!--
+                                --><span>Twitter</span><!--
+                            --></a>
+                            {% endif %}
+                            {% if member.linkedin %}
+                            <a href="https://linkedin.com/in/{{ member.linkedin }}" title="LinkedIn" class="icon">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i><!--
+                                --><span>LinkedIn</span><!--
+                            --></a>
+                            {% endif %}
+                        </p>
+                        <p class="member-info">
+                            <strong class="member-name">{{ member.nickname|default(member.name) }}</strong><br>
+                            <small class="member-role">{{ members.roles[member.role] }}</small><br>
+                        </p>
+                    </li>
+                    {% if loop.index is divisibleby 2 %}
+                        <div class="w-100 d-block d-sm-none"></div>
+                    {% endif %}
+                    {% if loop.index is divisibleby 3 %}
+                        <div class="w-100 d-none d-sm-block d-md-none"></div>
+                    {% endif %}
+                    {% if loop.index is divisibleby 5 %}
+                        <div class="w-100 d-none d-md-block d-lg-block d-xl-block"></div>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>
+                    Seznam členů se nepodařilo načíst.
+                    <!-- To fix this, you need to run 'pipenv run build' -->
+                </p>
+            {% endif %}
             <div class="media">
                 <div class="media-image">
                     <i class="fa fa-{{ members.note.icon }}" aria-hidden="true"></i>
