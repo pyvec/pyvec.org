@@ -12,6 +12,9 @@ jobs:
             pip install pipenv --upgrade
             pipenv install --dev
       - run:
+          name: build data
+          command: pipenv run build
+      - run:
           name: run tests
           command: pipenv run test
       - run:
