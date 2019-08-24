@@ -1,0 +1,25 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.7
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run:
+          name: install dependencies
+          command: |
+            pip install pipenv --upgrade
+            pipenv install --dev
+      - run:
+          name: run tests
+          command: pipenv run test
+      - run:
+          name: build HTML
+          command: pipenv run freeze
+      - run:
+          name: deploy
+          command: |
+            if [[ "$CIRCLE_BRANCH" == "master" ]]; then
+              pipenv run deploy
+            fi
