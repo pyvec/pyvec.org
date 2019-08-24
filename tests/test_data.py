@@ -110,35 +110,6 @@ def test_data_member_with_avatar_is_valid(member):
     assert member['avatar'] in ('github', 'twitter', 'email')
 
 
-@pytest.mark.parametrize('member', [
-    member for member in DATA['members_list']['entries']
-    if member.get('avatar') == 'github'
-])
-def test_data_member_has_valid_github_avatar(member):
-    assert member.get('github')
-    is_working_link(member['avatar_url'])
-
-
-@pytest.mark.parametrize('member', [
-    member for member in DATA['members_list']['entries']
-    if member.get('avatar') == 'twitter'
-])
-def test_data_member_has_valid_twitter_avatar(member):
-    assert member.get('twitter')
-    assert 'default_profile' not in member['avatar_url']
-    is_working_link(member['avatar_url'])
-
-
-@pytest.mark.parametrize('member', [
-    member for member in DATA['members_list']['entries']
-    if member.get('avatar') == 'email'
-])
-def test_data_member_has_valid_gravatar(member):
-    assert member.get('email')
-    assert '0000' not in member['avatar_url']
-    is_working_link(member['avatar_url'])
-
-
 @pytest.mark.parametrize('logo', frozenset(
     entry['logo'] for entry
     in (

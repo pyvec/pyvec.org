@@ -5,6 +5,9 @@
     "name": {
       "type": "string"
     },
+    "nickname": {
+      "type": "string"
+    },
     "role": {
       "type": "string"
     },
@@ -25,6 +28,12 @@
       "type": "string"
     },
     "avatar_filename": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "dob": {
       "type": "string"
     }
   },
