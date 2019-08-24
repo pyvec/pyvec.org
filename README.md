@@ -66,7 +66,16 @@ as well as it clones and analyzes all relevant repositories. If you need to upda
 the number,
 
 1. ask him to run the script,
-2. bother him to Open Source the script code.
+1. bother him to Open Source the script code.
+
+### Google Drive credentials
+
+1.  Follow the steps in the [gspread guide](https://gspread.readthedocs.io/en/latest/oauth2.html). Instead of Google Drive API, enable Google Sheets API.
+1.  Save the obtained JSON file into the `pyvecorg` package as `google_service_account.json`
+1.  Make sure it is ignored by Git
+1.  Run `cat pyvecorg/google_service_account.json | pbcopy` to copy the JSON into your clipboard (macOS)
+1.  Go to [Travis CI project settings](https://travis-ci.org/pyvec/pyvec.org/settings), section Environment Variables
+1.  Add `GOOGLE_SERVICE_ACCOUNT` variable and paste the JSON from your clipboard as a value
 
 ## Deployment
 

@@ -1,24 +1,37 @@
 import io
-import csv
+import os
+import json
 from pathlib import Path
 
 import yaml
 import requests
 from slugify import slugify
+import gspread
+from oauth2client.service_account import ServiceAccountCredentials
 
 from pyvecorg.avatars import get_avatar_url, create_thumbnail
 
 
-MEMBERS_LIST_YAML = Path(__file__).parent / 'data' / 'members_list.yml'
+PACKAGE_DIR = Path(__file__).parent
+MEMBERS_LIST_YAML = PACKAGE_DIR / 'data' / 'members_list.yml'
 MEMBERS_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSWK18MlEy95sAGl1BM6BXWxPgJbIx2UH3tAyJjxES06hHuaXgpsmD5pRz9kkGcFupiZL_U_e7yv4t1/pub?gid=0&single=true&output=csv'  # noqa
-STATIC_DIR = Path(__file__).parent / 'static'
+STATIC_DIR = PACKAGE_DIR / 'static'
 AVATARS_DIR = STATIC_DIR / 'img' / 'avatars'
 
 
-def parse_members_csv(content):
-    lines = content.splitlines()
-    rows = csv.reader(lines, delimiter=',')
+def read_spreadsheet(doc_key, sheet_name, google_service_account):
+    credentials = ServiceAccountCredentials.from_json_keyfile_dict(
+        google_service_account,
+        [
+            'https://spreadsheets.google.com/feeds',
+            'https://www.googleapis.com/auth/drive',
+        ]
+    )
+    doc = gspread.authorize(credentials).open_by_key(doc_key)
+    return doc.worksheet(sheet_name).get_all_values()
 
+
+def parse_members(rows):
     head = None
     for row in rows:
         if frozenset(['name', 'role', 'avatar']) < frozenset(row):
@@ -40,14 +53,14 @@ def generate_yaml(data):
 
 if __name__ == '__main__':
     # Build data/members_list.yml and avatar images
-    response = requests.get(MEMBERS_CSV_URL)
-    response.raise_for_status()
+    gsa_path = PACKAGE_DIR / 'google_service_account.json'
+    gsa_json = os.getenv('GOOGLE_SERVICE_ACCOUNT') or gsa_path.read_text()
+    gsa = json.loads(gsa_json)
 
-    members = [
-        member for member
-        in parse_members_csv(response.content.decode('utf-8'))
-        if member.get('role')  # currently we only display members with role
-    ]
+    doc_key = '1n8hzBnwZ5ANkUCvwEy8rWsXlqeAAwu-5JBodT5OJx_I'
+    rows = read_spreadsheet(doc_key, 'list', gsa)
+    members = [member for member in parse_members(rows)
+               if member.get('role') in ('board', 'chair')]
 
     AVATARS_DIR.mkdir(exist_ok=True)
     for member in members:

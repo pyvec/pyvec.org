@@ -177,7 +177,7 @@
                         {% endif %}
                     </p>
                     <p class="member-info">
-                        <strong class="member-name">{{ member.name }}</strong><br>
+                        <strong class="member-name">{{ member.nickname|default(member.name) }}</strong><br>
                         <small class="member-role">{{ members.roles[member.role] }}</small><br>
                     </p>
                 </li>
