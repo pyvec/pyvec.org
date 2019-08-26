@@ -24,5 +24,10 @@ jobs:
           name: deploy
           command: |
             if [[ "$CIRCLE_BRANCH" == "master" ]]; then
+              # https://github.com/pyvec/elsa/pull/65
+              export TRAVIS=1
+              export TRAVIS_REPO_SLUG=pyvec/pyvec.org
+
+              # run Elsa
               pipenv run deploy
             fi
