@@ -8,7 +8,7 @@ build = "python pyvecorg/build.py"
 test = "pytest"
 freeze = "python pyvecorg freeze"
 serve = "python pyvecorg serve"
-deploy = "python pyvecorg deploy --push --show-git-push-stderr"
+deploy = "python pyvecorg deploy --push"
 
 [packages]
 # Pinning packages with ~= unless their version starts with 0.,
