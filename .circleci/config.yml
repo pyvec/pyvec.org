@@ -15,7 +15,10 @@ jobs:
             pipenv install --dev
       - run:
           name: build data
-          command: pipenv run build
+          command: |
+            if [[ "$CIRCLE_BRANCH" == "master" ]]; then
+                pipenv run build
+            fi
       - run:
           name: run tests
           command: pipenv run test
