@@ -5,41 +5,26 @@
     "name": {
       "type": "string"
     },
-    "nickname": {
-      "type": "string"
-    },
     "role": {
       "type": "string"
     },
     "github": {
-      "type": "string"
+      "type": ["string", "null"]
     },
     "twitter": {
-      "type": "string"
+      "type": ["string", "null"]
     },
     "linkedin": {
-      "type": "string"
-    },
-    "email": {
-      "type": "string",
-      "format": "email"
-    },
-    "avatar": {
-      "type": "string"
+      "type": ["string", "null"]
     },
     "avatar_filename": {
-      "type": "string"
-    },
-    "address": {
-      "type": "string"
-    },
-    "dob": {
       "type": "string"
     }
   },
   "additionalProperties": false,
   "required": [
     "name",
+    "role",
     "avatar_filename"
   ]
 }
