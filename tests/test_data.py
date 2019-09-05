@@ -19,6 +19,11 @@ RE_MISSING_LANG = re.compile(
 )
 DATA = load_data()
 
+# If you run 'pipenv run build', memebers_list.yml gets generated and it will
+# be tested. If you don't have the file present, the relevant tests will be
+# skipped
+DATA_MEMBERS_LIST = DATA.get('members_list', {}).get('entries', [])
+
 
 def is_working_link(url):
     response = requests.head(url)  # this can raise connection-related errors
@@ -62,7 +67,7 @@ def test_data_section_is_valid(section_name, section):
 
 
 @pytest.mark.parametrize('member', [
-    member for member in DATA['members_list']['entries']
+    member for member in DATA_MEMBERS_LIST
     if member.get('email')
 ])
 def test_data_member_with_email_is_valid(member):
@@ -70,7 +75,7 @@ def test_data_member_with_email_is_valid(member):
 
 
 @pytest.mark.parametrize('member', [
-    member for member in DATA['members_list']['entries']
+    member for member in DATA_MEMBERS_LIST
     if member.get('linkedin')
 ])
 def test_data_member_with_linkedin_is_valid(member):
@@ -78,7 +83,7 @@ def test_data_member_with_linkedin_is_valid(member):
 
 
 @pytest.mark.parametrize('member', [
-    member for member in DATA['members_list']['entries']
+    member for member in DATA_MEMBERS_LIST
     if member.get('github')
 ])
 def test_data_member_with_github_is_valid(member):
@@ -86,7 +91,7 @@ def test_data_member_with_github_is_valid(member):
 
 
 @pytest.mark.parametrize('member', [
-    member for member in DATA['members_list']['entries']
+    member for member in DATA_MEMBERS_LIST
     if member.get('twitter')
 ])
 def test_data_member_with_twitter_is_valid(member):
@@ -95,7 +100,7 @@ def test_data_member_with_twitter_is_valid(member):
 
 
 @pytest.mark.parametrize('member', [
-    member for member in DATA['members_list']['entries']
+    member for member in DATA_MEMBERS_LIST
     if member.get('role')
 ])
 def test_data_member_with_role_is_valid(member):
@@ -103,7 +108,7 @@ def test_data_member_with_role_is_valid(member):
 
 
 @pytest.mark.parametrize('member', [
-    member for member in DATA['members_list']['entries']
+    member for member in DATA_MEMBERS_LIST
     if member.get('avatar')
 ])
 def test_data_member_with_avatar_is_valid(member):
