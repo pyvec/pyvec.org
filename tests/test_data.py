@@ -65,15 +65,7 @@ def test_data_section_is_valid(section_name, section):
 
 
 @pytest.mark.parametrize('member', [
-    member for member in DATA_MEMBERS_LIST
-    if member.get('email')
-])
-def test_data_member_with_email_is_valid(member):
-    assert '@' in member['email']
-
-
-@pytest.mark.parametrize('member', [
-    member for member in DATA_MEMBERS_LIST
+    member for member in DATA['members_list']['board']
     if member.get('linkedin')
 ])
 def test_data_member_with_linkedin_is_valid(member):
@@ -81,7 +73,7 @@ def test_data_member_with_linkedin_is_valid(member):
 
 
 @pytest.mark.parametrize('member', [
-    member for member in DATA_MEMBERS_LIST
+    member for member in DATA['members_list']['board']
     if member.get('github')
 ])
 def test_data_member_with_github_is_valid(member):
@@ -89,28 +81,19 @@ def test_data_member_with_github_is_valid(member):
 
 
 @pytest.mark.parametrize('member', [
-    member for member in DATA_MEMBERS_LIST
+    member for member in DATA['members_list']['board']
     if member.get('twitter')
 ])
 def test_data_member_with_twitter_is_valid(member):
-    assert not member['twitter'].startswith('http')
     assert not member['twitter'].startswith('@')
 
 
 @pytest.mark.parametrize('member', [
-    member for member in DATA_MEMBERS_LIST
+    member for member in DATA['members_list']['board']
     if member.get('role')
 ])
 def test_data_member_with_role_is_valid(member):
     assert member['role'] in list(DATA['members']['roles'].keys())
-
-
-@pytest.mark.parametrize('member', [
-    member for member in DATA_MEMBERS_LIST
-    if member.get('avatar')
-])
-def test_data_member_with_avatar_is_valid(member):
-    assert member['avatar'] in ('github', 'twitter', 'email')
 
 
 @pytest.mark.parametrize('logo', frozenset(
