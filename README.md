@@ -2,7 +2,7 @@
 
 Pyvec homepage.
 
-[![Build Status](https://travis-ci.org/pyvec/pyvec.org.svg?branch=master)](https://travis-ci.org/pyvec/pyvec.org)
+[![CircleCI](https://circleci.com/gh/pyvec/pyvec.org/tree/master.svg?style=svg)](https://circleci.com/gh/pyvec/pyvec.org/tree/master)
 
 ## Installation
 
