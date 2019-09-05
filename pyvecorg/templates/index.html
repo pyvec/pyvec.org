@@ -159,7 +159,8 @@
             <h2 id="members">{{ members.heading }}</h2>
             {% if members_list %}
                 <ul class="list row members">
-                    {% for member in members_list.entries %}
+                    {% for member in members_list.board %}
+
                     <li class="list-item member col">
                         <img src="{{ url_for('static', filename=member.avatar_filename) }}" alt="{{ member.name }}" width="100" class="rounded-circle member-avatar">
                         <p class="member-profiles">
@@ -196,11 +197,15 @@
                     {% if loop.index is divisibleby 5 %}
                         <div class="w-100 d-none d-md-block d-lg-block d-xl-block"></div>
                     {% endif %}
+
                     {% endfor %}
                 </ul>
+                <p class="note">
+                    {{ members.list.total_count_text }}: <strong>{{ members_list.total_count }}</strong>
+                </p>
             {% else %}
-                <p>
-                    Seznam členů se nepodařilo načíst.
+                <p class="note">
+                    {{ members.list.failure_text }}
                     <!-- To fix this, you need to run 'pipenv run build' -->
                 </p>
             {% endif %}

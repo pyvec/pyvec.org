@@ -325,3 +325,8 @@ a.icon, a.icon:hover, a.icon:focus,
         max-width: 100%;
     }
 }
+
+.note {
+    text-align: center;
+    margin: 4rem 0 -2rem 0;
+}

@@ -10,6 +10,14 @@ roles:
     cs: člen výboru
     en: board member
 
+list:
+  total_count_text:
+    cs: Celkový počet členů spolku
+    en: Total count of all members
+  failure_text:
+    cs: Seznam členů se nepodařilo načíst.
+    en: The list of members failed to load.
+
 note:
   icon: user-circle-o
   heading:
