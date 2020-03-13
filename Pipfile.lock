@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "22767943e799d53b1056a53287cbba4042e6a16c2b773117b8bc68e4755044f7"
+            "sha256": "be11ddc2e14f799ae49ebb009e275e499fda7047c810663740cef2a2317daaba"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -68,11 +68,11 @@
         },
         "gspread": {
             "hashes": [
-                "sha256:60829eb19e21269f0ecd30007d19fa223ff6d6c02637036ddcd51858885db945",
-                "sha256:c9997d4e7ca260e2e681db6a54f46a9d82c82f85fe05a0dcad8afd1ae713d003"
+                "sha256:b7501ee8769030258f9cd9174d28a5e9b92242cd7ffc00141efb3115eaad2d3e",
+                "sha256:cf4283f7f4291a73aca359852013997a1010ecf989331528b6c20469e97995da"
             ],
             "index": "pypi",
-            "version": "==3.2.0"
+            "version": "==3.3.0"
         },
         "httplib2": {
             "hashes": [
