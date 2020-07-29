@@ -21,7 +21,7 @@ jobs:
             fi
       - run:
           name: run tests
-          command: pipenv run test
+          command: pipenv run test -v
       - run:
           name: build HTML
           command: pipenv run freeze
