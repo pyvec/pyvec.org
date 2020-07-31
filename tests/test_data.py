@@ -31,7 +31,12 @@ def is_working_link(url):
     # if it's 5xx, it kinda means the link leads to an existing page, only
     # the page is unavailable at the moment because of high load or internal
     # error - we don't need to fail tests of pyvec.org because of that
-    if str(response.status_code)[0] == '4':
+
+    if response.status_code == 429:
+        # 429 (Too Many Requests) often happens on CI servers;
+        # it also means the page is overloaded.
+        return
+    elif str(response.status_code)[0] == '4':
         raise AssertionError(f'URL {url} returns HTTP {response.status_code}')
 
 
