@@ -72,8 +72,8 @@ the number,
 1.  Save the obtained JSON file into the `pyvecorg` package as `google_service_account.json`
 1.  Make sure it is ignored by Git
 1.  Run `cat pyvecorg/google_service_account.json | pbcopy` to copy the JSON into your clipboard (macOS)
-1.  Go to [Travis CI project settings](https://travis-ci.org/pyvec/pyvec.org/settings), section Environment Variables
-1.  Add `GOOGLE_SERVICE_ACCOUNT` variable and paste the JSON from your clipboard as a value
+1.  Go to [settings of secrets](https://github.com/pyvec/pyvec.org/settings/secrets)
+1.  Add `GOOGLE_SERVICE_ACCOUNT` secret and paste the JSON from your clipboard as a value
 
 ## Deployment
 
