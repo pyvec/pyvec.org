@@ -20,6 +20,8 @@ jobs:
     - if: ${{ github.ref == 'refs/heads/master' }}
       name: Build data
       run: pipenv run build
+      env:
+        GOOGLE_SERVICE_ACCOUNT: ${{ secrets.GOOGLE_SERVICE_ACCOUNT }}
     - name: Run tests
       run: pipenv run test -v
     - name: Build HTML
