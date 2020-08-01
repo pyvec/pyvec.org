@@ -2,8 +2,6 @@
 
 Pyvec homepage.
 
-[![CircleCI](https://circleci.com/gh/pyvec/pyvec.org/tree/master.svg?style=svg)](https://circleci.com/gh/pyvec/pyvec.org/tree/master)
-
 ## Installation
 
 The code is **Python 3.7**
