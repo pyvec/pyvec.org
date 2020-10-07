@@ -15,7 +15,7 @@ deploy = "python pyvecorg deploy --push"
 # then pinning each version strictly with ==
 flask = "~=1.1.2"
 elsa = "==0.1.6"
-markdown = "~=3.2"
+markdown = "~=3.3"
 pyyaml = "~=5.3"
 requests = "~=2.24.0"
 python-slugify = "~=4.0.1"
