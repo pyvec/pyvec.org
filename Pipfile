@@ -19,7 +19,7 @@ markdown = "~=3.3"
 pyyaml = "~=5.3"
 requests = "~=2.24.0"
 python-slugify = "~=4.0.1"
-pillow = "~=8.0.0"
+pillow = "~=8.0.1"
 gspread = "~=3.6.0"
 oauth2client = "~=4.1.3"
 
