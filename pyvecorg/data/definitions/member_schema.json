@@ -35,6 +35,9 @@
     },
     "dob": {
       "type": "string"
+    },
+    "gdpr_consent": {
+      "type": "string"
     }
   },
   "additionalProperties": false,
