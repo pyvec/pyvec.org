@@ -14,3 +14,7 @@ entries:
   - name: Django Girls Foundation
     logo: img/partners/djangogirls.svg
     url: https://djangogirls.org/foundation/
+
+  - name: NumFOCUS
+    logo: img/partners/numfocus.png
+    url: https://numfocus.org
