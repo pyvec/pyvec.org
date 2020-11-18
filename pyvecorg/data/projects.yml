@@ -93,6 +93,19 @@ entries:
         provide women with an easy first contact with tech.
     pyvec_help: [reimbursement, contracts, interconnection]
 
+  - name: PyData Prague
+    url: https://pydata.cz/
+    logo: img/projects/pydata.svg
+    photo: pydata
+    description:
+      cs: >-
+        Nepravidelná setkání s přednáškami pro milovníky dat, Pythonu a dalších jazyků, pořádaná
+        pod hlavičkou mezinárodního vzdělacího programu [PyData](https://pydata.org).
+      en: >-
+        Irregular meetups with talks for lovers of data, Python and other languages,
+        part of the [PyData](https://pydata.org) international educational programme.
+    pyvec_help: [contracts]
+
   - name: python.cz
     url: https://python.cz/
     logo: img/projects/python.svg
