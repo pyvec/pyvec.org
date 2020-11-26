@@ -26,18 +26,21 @@
             <div class="container">
                 <div class="row">
                     <h1 class="col">
-                        <img height="50" src="{{ url_for('static', filename='img/pyvec.svg') }}" alt="Pyvec">
+                        <a href="{{ url_for('index', lang=lang)}}">
+                            <img height="50" src="{{ url_for('static', filename='img/pyvec.svg') }}" alt="Pyvec">
+                        </a>
                     </h1>
                     <p class="lang col">
                         {% if lang == 'cs' %}
-                            <a href="{{ url_for('index', lang='en') }}">English</a>
+                            <a href="{{ url_for(this, lang='en') }}">English</a>
                         {% elif lang == 'en' %}
-                            <a href="{{ url_for('index', lang='cs') }}">Česky</a>
+                            <a href="{{ url_for(this, lang='cs') }}">Česky</a>
                         {% endif %}
                     </p>
                 </div>
             </div>
         </div>
+        {% block cover %}
         <div class="cover">
             <div class="cover-black">
                 <div class="container">
@@ -63,7 +66,9 @@
                 </div>
             </div>
         </div>
-        <div class="container">
+        {% endblock %}
+        {% block content %}
+        <div class="container page-index">
             <h2 id="numbers">{{ numbers.heading }}</h2>
             <p class="numbers">
                 {% for number in numbers.entries %}
@@ -209,6 +214,7 @@
                 </div>
             </div>
         </div>
+        {% endblock %}
         <div class="footer">
             <div class="container">
                 <div class="row">
@@ -273,6 +279,9 @@
                             </li>
                             {% endfor %}
                         </ul>
+                        <p class="extra-pages">
+                            <a href="{{ url_for('privacy_policy', lang=lang) }}">{{ privacy_policy.heading }}</a>
+                        </p>
                     </div>
                 </div>
             </div>
