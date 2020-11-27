@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "title": {
+      "$ref": "definitions/translated_text_schema.json#"
+    },
+    "text": {
+      "$ref": "definitions/translated_text_schema.json#"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "title",
+    "text"
+  ]
+}

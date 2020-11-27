@@ -31,7 +31,17 @@ def index(lang):
     context = select_language(data, lang)
     context['lang'] = lang
     context['now'] = datetime.now()
+    context['this'] = 'index'
     return render_template('index.html', **context)
+
+
+@app.route('/en/privacy-policy/', defaults={'lang': 'en'})
+@app.route('/cs/zpracovani-osobnich-udaju/', defaults={'lang': 'cs'})
+def privacy_policy(lang):
+    context = select_language(data, lang)
+    context['lang'] = lang
+    context['this'] = 'privacy_policy'
+    return render_template('privacy_policy.html', **context)
 
 
 @app.route('/<lang>/api.json')

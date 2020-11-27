@@ -1,0 +1,10 @@
+{% extends "index.html" %}
+
+{% block cover %}{% endblock %}
+
+{% block content %}
+    <div class="container page">
+        <h2>{{ privacy_policy.title }}</h2>
+        {{ privacy_policy.text|markdown }}
+    </div>
+{% endblock %}
