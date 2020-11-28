@@ -43,7 +43,7 @@
         {% block cover %}
         <div class="cover">
             <div class="cover-black">
-                <div class="container">
+                <div class="container page-index">
                     <div class="claim">
                         {{ meta.claim|markdown }}
                     </div>
@@ -280,7 +280,7 @@
                             {% endfor %}
                         </ul>
                         <p class="extra-pages">
-                            <a href="{{ url_for('privacy_policy', lang=lang) }}">{{ privacy_policy.heading }}</a>
+                            <a href="{{ url_for('privacy_policy', lang=lang) }}">{{ privacy_policy.title }}</a>
                         </p>
                     </div>
                 </div>
