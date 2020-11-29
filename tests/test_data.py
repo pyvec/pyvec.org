@@ -22,7 +22,9 @@ DATA = load_data()
 # If you run 'pipenv run build', memebers_list.yml gets generated and it will
 # be tested. If you don't have the file present, the relevant tests will be
 # skipped
-DATA_MEMBERS_LIST = DATA.get('members_list', {}).get('entries', [])
+DATA_BOARD = DATA.get('members_list', {}).get('board', [])
+DATA_PUBLIC_MEMBERS = DATA.get('members_list', {}).get('public_members', [])
+DATA_ALL_MEMBERS = DATA_BOARD + DATA_PUBLIC_MEMBERS
 
 
 @contextmanager
@@ -57,7 +59,7 @@ def test_data_section_is_valid(section_name, section):
 
 
 @pytest.mark.parametrize('member', [
-    member for member in DATA['members_list']['board']
+    member for member in DATA_ALL_MEMBERS
     if member.get('linkedin')
 ])
 def test_data_member_with_linkedin_is_valid(member):
@@ -65,7 +67,7 @@ def test_data_member_with_linkedin_is_valid(member):
 
 
 @pytest.mark.parametrize('member', [
-    member for member in DATA['members_list']['board']
+    member for member in DATA_ALL_MEMBERS
     if member.get('github')
 ])
 def test_data_member_with_github_is_valid(member):
@@ -73,7 +75,7 @@ def test_data_member_with_github_is_valid(member):
 
 
 @pytest.mark.parametrize('member', [
-    member for member in DATA['members_list']['board']
+    member for member in DATA_ALL_MEMBERS
     if member.get('twitter')
 ])
 def test_data_member_with_twitter_is_valid(member):
@@ -81,7 +83,7 @@ def test_data_member_with_twitter_is_valid(member):
 
 
 @pytest.mark.parametrize('member', [
-    member for member in DATA['members_list']['board']
+    member for member in DATA_BOARD
     if member.get('role')
 ])
 def test_data_member_with_role_is_valid(member):
