@@ -9,9 +9,6 @@ roles:
   board:
     cs: člen výboru
     en: board member
-  member:
-    cs: člen
-    en: member
 
 list:
   total_count_text:

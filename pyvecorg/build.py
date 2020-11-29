@@ -46,7 +46,7 @@ def parse_members(rows):
 def coerce_member(member):
     return {
         'name': member.get('nickname', member.get('name')),
-        'role': member.get('role'),
+        'role': member.get('role', 'member'),
         'github': member.get('github'),
         'twitter': member.get('twitter'),
         'linkedin': member.get('linkedin'),
