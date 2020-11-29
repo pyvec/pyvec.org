@@ -126,15 +126,6 @@
             </ul>
 
             <h2 id="supporters">{{ supporters.heading }}</h2>
-            <ul class="list row">
-                {% for supporter in supporters.entries|sort(attribute='name') %}
-                <li class="list-item logo col">
-                    <a href="{{ supporter.url }}" title="{{ supporter.name }}">
-                        <img src="{{ url_for('static', filename=supporter.logo) }}" alt="{{ supporter.name }}" height="50">
-                    </a>
-                </li>
-                {% endfor %}
-            </ul>
             <div class="media">
                 <div class="media-image">
                     <i class="fa fa-{{ supporters.note.icon }}" aria-hidden="true"></i>
@@ -144,6 +135,15 @@
                     {{ supporters.note.text|markdown }}
                 </div>
             </div>
+            <ul class="list row">
+                {% for supporter in supporters.entries|sort(attribute='name') %}
+                <li class="list-item logo col">
+                    <a href="{{ supporter.url }}" title="{{ supporter.name }}">
+                        <img src="{{ url_for('static', filename=supporter.logo) }}" alt="{{ supporter.name }}" height="50">
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
 
             <h2 id="partners">{{ partners.heading }}</h2>
             <ul class="list row">
@@ -157,6 +157,15 @@
             </ul>
 
             <h2 id="members">{{ members.heading }}</h2>
+            <div class="media">
+                <div class="media-image">
+                    <i class="fa fa-{{ members.note.icon }}" aria-hidden="true"></i>
+                </div>
+                <div class="media-body">
+                    <h3>{{ members.note.heading }}</h3>
+                    {{ members.note.text|markdown }}
+                </div>
+            </div>
             {% if members_list %}
                 <ul class="list row members">
                     {% for member in members_list.board %}
@@ -201,23 +210,57 @@
                     {% endfor %}
                 </ul>
                 <p class="note">
-                    {{ members.list.total_count_text }}: <strong>{{ members_list.total_count }}</strong>
+                    {{ members.list.total_count_text }}: <strong>{{ members_list.total_count }}</strong><br>
+                    {{ members.list.gdpr_note }}
                 </p>
+                <ul class="list row members">
+                    {% for member in members_list.public_members %}
+
+                    <li class="list-item member col">
+                        <img src="{{ url_for('static', filename=member.avatar_filename) }}" alt="{{ member.name }}" width="100" class="rounded-circle member-avatar">
+                        <p class="member-profiles">
+                            {% if member.github %}
+                            <a href="https://github.com/{{ member.github }}" title="GitHub" class="icon">
+                                <i class="fa fa-github" aria-hidden="true"></i><!--
+                                --><span>GitHub</span><!--
+                            --></a>
+                            {% endif %}
+                            {% if member.twitter %}
+                            <a href="https://twitter.com/{{ member.twitter }}" title="Twitter" class="icon">
+                                <i class="fa fa-twitter" aria-hidden="true"></i><!--
+                                --><span>Twitter</span><!--
+                            --></a>
+                            {% endif %}
+                            {% if member.linkedin %}
+                            <a href="https://linkedin.com/in/{{ member.linkedin }}" title="LinkedIn" class="icon">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i><!--
+                                --><span>LinkedIn</span><!--
+                            --></a>
+                            {% endif %}
+                        </p>
+                        <p class="member-info">
+                            <strong class="member-name">{{ member.nickname|default(member.name) }}</strong><br>
+                            <small class="member-role">{{ members.roles[member.role] }}</small><br>
+                        </p>
+                    </li>
+                    {% if loop.index is divisibleby 2 %}
+                        <div class="w-100 d-block d-sm-none"></div>
+                    {% endif %}
+                    {% if loop.index is divisibleby 3 %}
+                        <div class="w-100 d-none d-sm-block d-md-none"></div>
+                    {% endif %}
+                    {% if loop.index is divisibleby 5 %}
+                        <div class="w-100 d-none d-md-block d-lg-block d-xl-block"></div>
+                    {% endif %}
+
+                    {% endfor %}
+                </ul>
             {% else %}
                 <p class="note">
                     {{ members.list.failure_text }}
                     <!-- To fix this, you need to run 'pipenv run build' -->
                 </p>
             {% endif %}
-            <div class="media">
-                <div class="media-image">
-                    <i class="fa fa-{{ members.note.icon }}" aria-hidden="true"></i>
-                </div>
-                <div class="media-body">
-                    <h3>{{ members.note.heading }}</h3>
-                    {{ members.note.text|markdown }}
-                </div>
-            </div>
         </div>
         {% endblock %}
         <div class="footer">

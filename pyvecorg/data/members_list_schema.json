@@ -8,6 +8,12 @@
         "$ref": "definitions/member_schema.json#"
       }
     },
+    "public_members": {
+      "type": "array",
+      "items": {
+        "$ref": "definitions/member_schema.json#"
+      }
+    },
     "total_count": {
       "type": "number"
     }
@@ -15,6 +21,7 @@
   "additionalProperties": false,
   "required": [
     "board",
+    "public_members",
     "total_count"
   ]
 }

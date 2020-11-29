@@ -9,6 +9,9 @@ roles:
   board:
     cs: člen výboru
     en: board member
+  member:
+    cs: člen
+    en: member
 
 list:
   total_count_text:
@@ -17,6 +20,9 @@ list:
   failure_text:
     cs: Seznam členů se nepodařilo načíst.
     en: The list of members failed to load.
+  gdpr_note:
+    cs: Následují členové, kteří souhlasili s uvedením ve veřejném seznamu.
+    en: The following members consented with being listed publicly.
 
 note:
   icon: user-circle-o

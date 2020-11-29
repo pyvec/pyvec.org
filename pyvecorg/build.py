@@ -71,6 +71,14 @@ def create_member_sorting_key(member):
     )
 
 
+def is_board(member):
+    return member.get('role') in ('board', 'chair')
+
+
+def is_public_member(member):
+    return not is_board(member) and member.get('gdpr_consent') == 'yes'
+
+
 if __name__ == '__main__':
     # Build data/members_list.yml and avatar images
     gsa_path = PACKAGE_DIR / 'google_service_account.json'
@@ -87,7 +95,7 @@ if __name__ == '__main__':
 
     AVATARS_DIR.mkdir(exist_ok=True)
     for member in members:
-        if member.get('role') in ('board', 'chair'):
+        if is_board(member) or is_public_member(member):
             avatar_url = get_avatar_url(member)
             img_basename = slugify(member['name']) + '.png'
 
@@ -102,6 +110,8 @@ if __name__ == '__main__':
             member['avatar_filename'] = str(img_path.relative_to(STATIC_DIR))
 
     data = dict(board=[coerce_member(member) for member in members
-                       if member.get('role') in ('board', 'chair')],
+                       if is_board(member)],
+                public_members=[coerce_member(member) for member in members
+                                if is_public_member(member)],
                 total_count=len(members))
     MEMBERS_LIST_YAML.write_text(generate_yaml(data))
