@@ -25,14 +25,6 @@ DATA = load_data()
 DATA_MEMBERS_LIST = DATA.get('members_list', {}).get('entries', [])
 
 
-def is_working_link(url):
-    # This intentionally doesn't test status code, as websites are unreliable
-    # and various anti-scraping and anti-DDoS protections obfuscate real
-    # responses on too many websites, even though they work well with browsers
-    # or curl. The following test only raises on connection-related errors.
-    requests.head(url)
-
-
 @contextmanager
 def transform_missing_lang_exc():
     try:
@@ -120,7 +112,11 @@ def test_data_entry_has_existing_logo(logo):
     if entry.get('url')
 ))
 def test_data_entry_has_valid_url(url):
-    is_working_link(url)
+    # This intentionally doesn't test status code, as websites are unreliable
+    # and various anti-scraping and anti-DDoS protections obfuscate real
+    # responses on too many websites, even though they work well with browsers
+    # or curl. The following test only raises on connection-related errors.
+    requests.head(url)
 
 
 @pytest.mark.parametrize('photo', [
