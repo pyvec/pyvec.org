@@ -2,15 +2,26 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
-    "entries": {
+    "board": {
       "type": "array",
       "items": {
         "$ref": "definitions/member_schema.json#"
       }
+    },
+    "public_members": {
+      "type": "array",
+      "items": {
+        "$ref": "definitions/member_schema.json#"
+      }
+    },
+    "total_count": {
+      "type": "number"
     }
   },
   "additionalProperties": false,
   "required": [
-    "entries"
+    "board",
+    "public_members",
+    "total_count"
   ]
 }

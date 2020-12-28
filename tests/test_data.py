@@ -22,15 +22,9 @@ DATA = load_data()
 # If you run 'pipenv run build', memebers_list.yml gets generated and it will
 # be tested. If you don't have the file present, the relevant tests will be
 # skipped
-DATA_MEMBERS_LIST = DATA.get('members_list', {}).get('entries', [])
-
-
-def is_working_link(url):
-    # This intentionally doesn't test status code, as websites are unreliable
-    # and various anti-scraping and anti-DDoS protections obfuscate real
-    # responses on too many websites, even though they work well with browsers
-    # or curl. The following test only raises on connection-related errors.
-    requests.head(url)
+DATA_BOARD = DATA.get('members_list', {}).get('board', [])
+DATA_PUBLIC_MEMBERS = DATA.get('members_list', {}).get('public_members', [])
+DATA_ALL_MEMBERS = DATA_BOARD + DATA_PUBLIC_MEMBERS
 
 
 @contextmanager
@@ -65,15 +59,7 @@ def test_data_section_is_valid(section_name, section):
 
 
 @pytest.mark.parametrize('member', [
-    member for member in DATA_MEMBERS_LIST
-    if member.get('email')
-])
-def test_data_member_with_email_is_valid(member):
-    assert '@' in member['email']
-
-
-@pytest.mark.parametrize('member', [
-    member for member in DATA_MEMBERS_LIST
+    member for member in DATA_ALL_MEMBERS
     if member.get('linkedin')
 ])
 def test_data_member_with_linkedin_is_valid(member):
@@ -81,7 +67,7 @@ def test_data_member_with_linkedin_is_valid(member):
 
 
 @pytest.mark.parametrize('member', [
-    member for member in DATA_MEMBERS_LIST
+    member for member in DATA_ALL_MEMBERS
     if member.get('github')
 ])
 def test_data_member_with_github_is_valid(member):
@@ -89,28 +75,19 @@ def test_data_member_with_github_is_valid(member):
 
 
 @pytest.mark.parametrize('member', [
-    member for member in DATA_MEMBERS_LIST
+    member for member in DATA_ALL_MEMBERS
     if member.get('twitter')
 ])
 def test_data_member_with_twitter_is_valid(member):
-    assert not member['twitter'].startswith('http')
     assert not member['twitter'].startswith('@')
 
 
 @pytest.mark.parametrize('member', [
-    member for member in DATA_MEMBERS_LIST
+    member for member in DATA_BOARD
     if member.get('role')
 ])
 def test_data_member_with_role_is_valid(member):
     assert member['role'] in list(DATA['members']['roles'].keys())
-
-
-@pytest.mark.parametrize('member', [
-    member for member in DATA_MEMBERS_LIST
-    if member.get('avatar')
-])
-def test_data_member_with_avatar_is_valid(member):
-    assert member['avatar'] in ('github', 'twitter', 'email')
 
 
 @pytest.mark.parametrize('logo', frozenset(
@@ -137,7 +114,11 @@ def test_data_entry_has_existing_logo(logo):
     if entry.get('url')
 ))
 def test_data_entry_has_valid_url(url):
-    is_working_link(url)
+    # This intentionally doesn't test status code, as websites are unreliable
+    # and various anti-scraping and anti-DDoS protections obfuscate real
+    # responses on too many websites, even though they work well with browsers
+    # or curl. The following test only raises on connection-related errors.
+    requests.head(url)
 
 
 @pytest.mark.parametrize('photo', [
