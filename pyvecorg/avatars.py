@@ -22,7 +22,7 @@ def get_avatar_url(member):
                 'User-Agent': 'Googlebot/42 (+http://www.google.com/bot.html)',
             }).headers.get('location')
             return url.replace('_normal', '_200x200')
-        if key == 'github':
+        elif key == 'github':
             username = quote(value)
             return f'https://github.com/{username}.png'
 
