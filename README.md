@@ -4,7 +4,7 @@ Pyvec homepage.
 
 ## Installation
 
-The code is **Python 3.7**
+The code is **Python 3.9**
 
 ```sh
 $ pipenv install
