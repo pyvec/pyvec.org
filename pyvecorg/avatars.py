@@ -11,15 +11,28 @@ def get_avatar_url(member):
     value = member.get(key)
 
     if value:
-        if key == 'email':
-            hash = hashlib.md5(value.lower().strip().encode()).hexdigest()
-            return f'https://www.gravatar.com/avatar/{hash}?size=100&d=404'
-        elif key == 'github':
+        if key == 'github':
             username = quote(value)
             return f'https://github.com/{username}.png'
+        if key == 'email':
+            url = get_gravatar_url(value)
+            # if the person has set a gravatar, the function returns the URL
+            # else this falls back to the default gravatar URL below
+            if url:
+                return url
 
     # to disable avatar, specify it as 'none' or basically anything invalid
     return 'https://www.gravatar.com/avatar/0000?d=mm&f=y'
+
+
+def get_gravatar_url(email):
+    hash = hashlib.md5(email.lower().strip().encode()).hexdigest()
+    url = f'https://www.gravatar.com/avatar/{hash}?size=100&d=404'
+    try:
+        requests.head(url).raise_for_status()
+        return url
+    except:
+        return None
 
 
 def create_thumbnail(file, size):
