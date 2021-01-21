@@ -7,21 +7,13 @@ import requests
 
 
 def get_avatar_url(member):
-    key = member.get('avatar') or 'github'  # defaults to 'github'
+    key = member.get('avatar') or 'email'  # defaults to 'email'
     value = member.get(key)
 
     if value:
         if key == 'email':
             hash = hashlib.md5(value.lower().strip().encode()).hexdigest()
             return f'https://www.gravatar.com/avatar/{hash}?size=100&d=404'
-        elif key == 'twitter':
-            username = quote(value)
-            url = f'https://twitter.com/{username}/profile_image'
-            url = requests.head(url, headers={
-                # Twitter now only allows Googlebot to fetch avatars (facepalm)
-                'User-Agent': 'Googlebot/42 (+http://www.google.com/bot.html)',
-            }).headers.get('location')
-            return url.replace('_normal', '_200x200')
         elif key == 'github':
             username = quote(value)
             return f'https://github.com/{username}.png'
