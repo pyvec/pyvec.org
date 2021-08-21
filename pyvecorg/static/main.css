@@ -104,7 +104,7 @@ h4 {
 
 .claim {
     text-align: center;
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 1.2500rem + 1.2500vw, 2rem);
     padding: 5rem 10%;
     padding-bottom: 0;
 }
@@ -293,7 +293,7 @@ a.icon, a.icon:hover, a.icon:focus,
 }
 
 .number {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 1.2500rem + 1.2500vw, 2rem);
     margin: 0.3rem;
     color: #FFF;
     background-color: #3b4f5a;
