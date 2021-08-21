@@ -78,21 +78,6 @@ entries:
         these are complemented by occasional day-long workshops.
     pyvec_help: [reimbursement, contracts]
 
-  - name: Django Girls
-    url: https://djangogirls.org/events/
-    logo: img/projects/djangogirls.svg
-    photo: djangogirls
-    description:
-      cs: >-
-        Jednodenní workshopy na Python & [Django](https://www.djangoproject.com/),
-        pod [mezinárodní](https://djangogirls.org/) hlavičkou, jejichž snahou
-        je usnadnit ženám první kontakt s technologiemi.
-      en: >-
-        Day-long Python & [Django](https://www.djangoproject.com/) workshops.
-        [International](https://djangogirls.org/) franchise, with a goal to
-        provide women with an easy first contact with tech.
-    pyvec_help: [reimbursement, contracts, interconnection]
-
   - name: PyData Prague
     url: https://pydata.cz/
     logo: img/projects/pydata.svg
