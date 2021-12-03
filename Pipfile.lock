@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "c2c7fcdd058b62a7c839c4ef81a802774ac04aa8347e1b7ad574f49a7dcd00ab"
+            "sha256": "d0f08388c6194f726f87a9b2b30d79ff892e21a6e93d1d9dfbb33c36ca6c3857"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -546,11 +546,11 @@
         },
         "pylama": {
             "hashes": [
-                "sha256:4541cc8c601a55491ba3ffaa2c0bd83aa7c36dc5f0630d01a820ceaba79538d6",
-                "sha256:a7ced3c43cf2d67c32b1971e806585a9e387df60f337ffcee267ebf095d2d026"
+                "sha256:30d2517e708b4dcb682ae3a842373528c557e05ae9cf97fdf10948b08276afb2",
+                "sha256:7411ebc397a667a7443d075004b3a8658f578c67a62b5aa5ff52451de5ade82b"
             ],
             "index": "pypi",
-            "version": "==8.2.1"
+            "version": "==8.3.2"
         },
         "pyparsing": {
             "hashes": [
