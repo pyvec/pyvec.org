@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "07cde2e83502a067e44789de88e67c3eb2cc8667a5951ec541532258210b16f7"
+            "sha256": "f332e343af32814cb239ea507c2db2cc7b3c8d658df992da80595850f44fd960"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -403,11 +403,11 @@
         },
         "setuptools": {
             "hashes": [
-                "sha256:5c89b1a14a67ac5f0956f1cb0aeb7d1d3f4c8ba4e4e1ab7bf1af4933f9a2f0fe",
-                "sha256:675fcebecb43c32eb930481abf907619137547f4336206e4d673180242e1a278"
+                "sha256:2404879cda71495fc4d5cbc445ed52fdaddf352b36e40be8dcc63147cb4edabe",
+                "sha256:68eb94073fc486091447fcb0501efd6560a0e5a1839ba249e5ff3c4c93f05f90"
             ],
             "markers": "python_version >= '3.7'",
-            "version": "==60.2.0"
+            "version": "==60.5.0"
         },
         "six": {
             "hashes": [
@@ -426,11 +426,11 @@
         },
         "urllib3": {
             "hashes": [
-                "sha256:4987c65554f7a2dbf30c18fd48778ef124af6fab771a377103da0585e2336ece",
-                "sha256:c4fdf4019605b6e5423637e01bc9fe4daef873709a7973e195ceba0a62bbc844"
+                "sha256:000ca7f471a233c2251c6c7023ee85305721bfdf18621ebff4fd17a8653427ed",
+                "sha256:0e7c33d9a63e7ddfcb86780aac87befc2fbddf46c58dbb487e0855f7ceec283c"
             ],
             "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4' and python_version < '4'",
-            "version": "==1.26.7"
+            "version": "==1.26.8"
         },
         "werkzeug": {
             "hashes": [
@@ -537,11 +537,11 @@
         },
         "pylama": {
             "hashes": [
-                "sha256:7e1f533d345e1a353ecb06bfde8eddee1601396f77e0896ad5068a03c2b1524a",
-                "sha256:c8465cf992efb772026bbe9a435ce90f2890f627cc43992500395490dc400fb1"
+                "sha256:ca47a1d341ede3aafbe117dc69f9e573cd1b749b2bacf5ac99d8daf6657001ec",
+                "sha256:d6b48087c810db3be5267d44ac0e1998a8c015c5d3eee0524fec90fbfaf8ad26"
             ],
             "index": "pypi",
-            "version": "==8.3.6"
+            "version": "==8.3.7"
         },
         "pyparsing": {
             "hashes": [
