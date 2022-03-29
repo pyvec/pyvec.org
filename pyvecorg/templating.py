@@ -1,8 +1,8 @@
 import re
 import textwrap
 
-import jinja2
 from markdown import markdown
+from markupsafe import Markup
 
 from pyvecorg import app
 
@@ -10,7 +10,7 @@ from pyvecorg import app
 @app.template_filter('markdown')
 def convert_markdown(text):
     text = textwrap.dedent(text)
-    result = jinja2.Markup(markdown(text))
+    result = Markup(markdown(text))
     return result
 
 
