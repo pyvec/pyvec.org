@@ -29,7 +29,7 @@
                 "sha256:84c85a9078b11105f04f3036a9482ae10e4621616db313fe045dd24743a0820d",
                 "sha256:fe86415d55e84719d75f8b69414f6438ac3547d2078ab91b67e779ef69378412"
             ],
-            "markers": "python_version >= '3.6'",
+            "markers": "python_full_version >= '3.6.0'",
             "version": "==2022.6.15"
         },
         "charset-normalizer": {
@@ -37,7 +37,7 @@
                 "sha256:5189b6f22b01957427f35b6a08d9a0bc45b46d3788ef5a92e978433c7a35f8a5",
                 "sha256:575e708016ff3a5e3681541cb9d79312c416835686d054a23accb873b254f413"
             ],
-            "markers": "python_version >= '3.6'",
+            "markers": "python_full_version >= '3.6.0'",
             "version": "==2.1.0"
         },
         "click": {
@@ -91,7 +91,7 @@
                 "sha256:6d6161d0ec0a62e2abf2207c6071c117ec5897b300823c4bb2d963ee86e20e4f",
                 "sha256:d5e98a71203330699f92a26bc08847a92e8c3b1b8d82a021f1af34164db143ae"
             ],
-            "markers": "python_version >= '3.6'",
+            "markers": "python_full_version >= '3.6.0'",
             "version": "==0.5.2"
         },
         "gspread": {
@@ -144,11 +144,11 @@
         },
         "markdown": {
             "hashes": [
-                "sha256:cbb516f16218e643d8e0a95b309f77eb118cb138d39a4f27851e6a63581db874",
-                "sha256:f5da449a6e1c989a4cea2631aa8ee67caa5a2ef855d551c88f9e309f4634c621"
+                "sha256:08fb8465cffd03d10b9dd34a5c3fea908e20391a2a90b88d66362cb05beed186",
+                "sha256:3b809086bb6efad416156e00a0da66fe47618a5d6918dd688f53f40c8e4cfeff"
             ],
             "index": "pypi",
-            "version": "==3.3.7"
+            "version": "==3.4.1"
         },
         "markupsafe": {
             "hashes": [
@@ -209,7 +209,7 @@
                 "sha256:23a8208d75b902797ea29fd31fa80a15ed9dc2c6c16fe73f5d346f83f6fa27a2",
                 "sha256:6db33440354787f9b7f3a6dbd4febf5d0f93758354060e802f6c06cb493022fe"
             ],
-            "markers": "python_version >= '3.6'",
+            "markers": "python_full_version >= '3.6.0'",
             "version": "==3.2.0"
         },
         "pillow": {
@@ -396,7 +396,7 @@
                 "sha256:5c6bd9dc7a543b7fe4304a631f8a8a3b674e2bbfc49c2ae96200cdbe55df6b17",
                 "sha256:95c5d300c4e879ee69708c428ba566c59478fd653cc3a22243eeb8ed846950bb"
             ],
-            "markers": "python_version >= '3.6' and python_version < '4'",
+            "markers": "python_version < '4' and python_full_version >= '3.6.0'",
             "version": "==4.8"
         },
         "six": {
