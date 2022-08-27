@@ -24,16 +24,16 @@ list:
 note:
   icon: user-circle-o
   heading:
-    cs: Člen
-    en: Member
+    cs: Spolek
+    en: Organization
   text:
     cs: |-
-      Pyvec je spolek založený na **jaře roku 2012**. Fungujeme nyní tak,
-      že předseda se stará o účty a o významných věcech rozhoduje
-      výbor. [Staň se členem](https://docs.pyvec.org/operations/runbooks.html#jak-clenstvi)
-      a ovlivňuj jakým způsobem Pyvec podporuje českou Python komunitu!
+      Pyvec je spolek založený na **jaře roku 2012**.
+      Výbor spolku rozhoduje o využívání financí a dalších významných tématech.
+      [Staň se členem / členkou](https://docs.pyvec.org/operations/runbooks.html#jak-clenstvi)
+      a podílej se na tom, jak Pyvec podporuje českou Python komunitu!
     en: |-
-      Pyvec is a nonprofit founded in **spring 2012**. The current state of things
-      is that the chair is responsible for accounting and the board decides
-      about important matters. [Become a member](https://docs.pyvec.org/operations/runbooks.html#jak-clenstvi)
+      Pyvec is a nonprofit founded in **spring 2012**.
+      The board takes care of financial matters and makes decisions on other important issues.
+      [Become a member](https://docs.pyvec.org/operations/runbooks.html#jak-clenstvi)
       and influence how Pyvec supports the Czech Python user group!
