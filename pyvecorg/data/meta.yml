@@ -47,6 +47,12 @@ reg_no:
   value: 22746668
   link: https://or.justice.cz/ias/ui/vypis-sl-firma?subjektId=760829
 
+databox_no:
+  label:
+    cs: Datová schránka
+    en: “Datová schránka”
+  value: t94cfya
+
 bank_account:
   heading:
     cs: Transparentní účet
