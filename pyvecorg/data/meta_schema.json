@@ -29,6 +29,21 @@
       },
       "additionalProperties": false
     },
+    "databox_no": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "$ref": "definitions/translated_text_schema.json#"
+        },
+        "value": {
+          "type": "string"
+        },
+        "link": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
     "bank_account": {
       "type": "object",
       "properties": {
