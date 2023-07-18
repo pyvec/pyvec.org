@@ -391,11 +391,11 @@
         },
         "python-slugify": {
             "hashes": [
-                "sha256:003aee64f9fd955d111549f96c4b58a3f40b9319383c70fad6277a4974bbf570",
-                "sha256:7a0f21a39fa6c1c4bf2e5984c9b9ae944483fd10b54804cb0e23a3ccd4954f0b"
+                "sha256:70ca6ea68fe63ecc8fa4fcf00ae651fc8a5d02d93dcd12ae6d4fc7ca46c4d395",
+                "sha256:ce0d46ddb668b3be82f4ed5e503dbc33dd815d83e2eb6824211310d3fb172a27"
             ],
             "index": "pypi",
-            "version": "==7.0.0"
+            "version": "==8.0.1"
         },
         "pyyaml": {
             "hashes": [
