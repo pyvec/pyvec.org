@@ -179,6 +179,12 @@
                                 --><span>GitHub</span><!--
                             --></a>
                             {% endif %}
+                            {% if member.mastodon %}
+                            <a href="{{ member.mastodon|mastodon_link }}" title="Mastodon" class="icon">
+                                <i class="fa fa-mastodon" aria-hidden="true"></i><!--
+                                --><span>Mastodon</span><!--
+                            --></a>
+                            {% endif %}
                             {% if member.twitter %}
                             <a href="https://twitter.com/{{ member.twitter }}" title="Twitter" class="icon">
                                 <i class="fa fa-twitter" aria-hidden="true"></i><!--

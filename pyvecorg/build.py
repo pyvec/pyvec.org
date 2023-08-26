@@ -15,7 +15,6 @@ from pyvecorg.avatars import get_avatar_url, create_thumbnail
 
 PACKAGE_DIR = Path(__file__).parent
 MEMBERS_LIST_YAML = PACKAGE_DIR / 'data' / 'members_list.yml'
-MEMBERS_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSWK18MlEy95sAGl1BM6BXWxPgJbIx2UH3tAyJjxES06hHuaXgpsmD5pRz9kkGcFupiZL_U_e7yv4t1/pub?gid=0&single=true&output=csv'  # noqa
 STATIC_DIR = PACKAGE_DIR / 'static'
 AVATARS_DIR = STATIC_DIR / 'img' / 'avatars'
 
@@ -49,6 +48,7 @@ def coerce_member(member):
         'role': member.get('role', 'member'),
         'github': member.get('github'),
         'twitter': member.get('twitter'),
+        'mastodon': member.get('mastodon'),
         'linkedin': member.get('linkedin'),
         'avatar_filename': member.get('avatar_filename'),
     }

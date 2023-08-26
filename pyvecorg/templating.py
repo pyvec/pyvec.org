@@ -73,3 +73,9 @@ def format_number_text(number):
     text = choose_plural(number['text'], n)
 
     return f'{n}{plus} {text}'
+
+
+@app.template_filter('mastodon_link')
+def mastodon_link(handle) -> str:
+    username, server = handle[1:].split('@')
+    return f'https://{server}/@{username}'

@@ -14,6 +14,9 @@
     "twitter": {
       "type": ["string", "null"]
     },
+    "mastodon": {
+      "type": ["string", "null"]
+    },
     "linkedin": {
       "type": ["string", "null"]
     },

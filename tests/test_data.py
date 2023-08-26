@@ -83,6 +83,15 @@ def test_data_member_with_twitter_is_valid(member):
 
 
 @pytest.mark.parametrize('member', [
+    member for member in DATA_ALL_MEMBERS
+    if member.get('mastodon')
+])
+def test_data_member_with_mastodon_is_valid(member):
+    assert member['mastodon'].startswith('@')
+    assert '@' in member['mastodon'][1:]
+
+
+@pytest.mark.parametrize('member', [
     member for member in DATA_BOARD
     if member.get('role')
 ])
