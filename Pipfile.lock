@@ -177,11 +177,11 @@
         },
         "gspread": {
             "hashes": [
-                "sha256:0d00c5060fd03d735e4db773d402b99600ab27c3ff3f4e685d4f29ca86b182f2",
-                "sha256:565a66915147f360060efd432c4ba8017ed344b531b3003ce0b6c2490054b66d"
+                "sha256:525a9d3ef712d5747867d32b61f5d7aa035ead0835b56cd1ae2a6d310eaef077",
+                "sha256:fdc477cbda48bc9ea77eb8a4bf737985bfdba44f04677e4d791eb70bcbae2b95"
             ],
             "index": "pypi",
-            "version": "==5.11.1"
+            "version": "==5.11.2"
         },
         "httplib2": {
             "hashes": [
@@ -526,11 +526,11 @@
         },
         "zipp": {
             "hashes": [
-                "sha256:679e51dd4403591b2d6838a48de3d283f3d188412a9782faadf845f298736ba0",
-                "sha256:ebc15946aa78bd63458992fc81ec3b6f7b1e92d51c35e6de1c3804e73b799147"
+                "sha256:0e923e726174922dce09c53c59ad483ff7bbb8e572e00c7f7c46b88556409f31",
+                "sha256:84e64a1c28cf7e91ed2078bb8cc8c259cb19b76942096c8d7b84947690cabaf0"
             ],
             "markers": "python_version >= '3.8'",
-            "version": "==3.16.2"
+            "version": "==3.17.0"
         }
     },
     "develop": {
