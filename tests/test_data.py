@@ -6,6 +6,7 @@ from contextlib import contextmanager
 import pytest
 import requests
 import jsonschema
+from pyvecorg.build import coerce_member, strip_whitespace
 
 from pyvecorg.data import (load_data, select_language,
                            DATA_PATH, SUPPORTED_LANGS)
@@ -180,3 +181,25 @@ def test_select_language_missing():
     }}]}}
     data_out = {'deep': {'nested': [{'key': None}]}}
     assert select_language(data_in, 'en') == data_out
+
+
+def test_coerce_member_name():
+    member = {'name': 'Jan Python', 'nickname': 'Honza P.'}
+
+    assert coerce_member(member)['name'] == 'Honza P.'
+
+
+def test_coerce_member_whitespace():
+    member = {'mastodon': ' @pyconcz@floss.social  '}
+
+    assert coerce_member(member)['mastodon'] == '@pyconcz@floss.social'
+
+
+@pytest.mark.parametrize('value, expected', [
+    (None, None),
+    ('', None),
+    ('      ', None),
+    ('     @pyconcz    ', '@pyconcz'),
+])
+def test_strip_whitespace(value: str, expected: str):
+    assert strip_whitespace(value) == expected

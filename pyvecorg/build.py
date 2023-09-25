@@ -44,14 +44,21 @@ def parse_members(rows):
 
 def coerce_member(member):
     return {
-        'name': member.get('nickname', member.get('name')),
-        'role': member.get('role', 'member'),
-        'github': member.get('github'),
-        'twitter': member.get('twitter'),
-        'mastodon': member.get('mastodon'),
-        'linkedin': member.get('linkedin'),
-        'avatar_filename': member.get('avatar_filename'),
+        'name': strip_whitespace(member.get('nickname', member.get('name'))),
+        'role': strip_whitespace(member.get('role', 'member')),
+        'github': strip_whitespace(member.get('github')),
+        'twitter': strip_whitespace(member.get('twitter')),
+        'mastodon': strip_whitespace(member.get('mastodon')),
+        'linkedin': strip_whitespace(member.get('linkedin')),
+        'avatar_filename': strip_whitespace(member.get('avatar_filename')),
     }
+
+
+def strip_whitespace(value):
+    try:
+        return value.strip() or None
+    except AttributeError:
+        return value
 
 
 def generate_yaml(data):
