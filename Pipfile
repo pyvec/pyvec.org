@@ -21,6 +21,7 @@ pillow = "*"
 gspread = "*"
 oauth2client = "*"
 markupsafe = "*"
+werkzeug = "<3"  # werkzeug 3.0.0 removes .charset, which breaks Frozen-Flask, which breaks elsa
 
 [dev-packages]
 pipfile = "*"
