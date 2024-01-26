@@ -442,12 +442,12 @@
         },
         "python-slugify": {
             "hashes": [
-                "sha256:70ca6ea68fe63ecc8fa4fcf00ae651fc8a5d02d93dcd12ae6d4fc7ca46c4d395",
-                "sha256:ce0d46ddb668b3be82f4ed5e503dbc33dd815d83e2eb6824211310d3fb172a27"
+                "sha256:428ea9b00c977b8f6c097724398f190b2c18e2a6011094d1001285875ccacdbf",
+                "sha256:a1a02b127a95c124fd84f8f88be730e557fd823774bf19b1cd5e8704e2ae0e5e"
             ],
             "index": "pypi",
             "markers": "python_version >= '3.7'",
-            "version": "==8.0.1"
+            "version": "==8.0.2"
         },
         "pyyaml": {
             "hashes": [
