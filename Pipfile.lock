@@ -193,12 +193,12 @@
         },
         "gspread": {
             "hashes": [
-                "sha256:6c3af32b753fe75d9dd513ea9e088e9e043e09b9e3bf04d61d77213f37e67b79",
-                "sha256:8c8bf83be676a019d3a483455d8b17b442f2acfc620172f245422ca4fc960dd0"
+                "sha256:0238ba43f3bd45e7fa96fd206e9ceb73b03c2896eb143d7f4373c6d0cfe6fddf",
+                "sha256:0982beeb07fa3ec4482a3aaa96ca13a1e6b427a0aca4058beab4cdc33c0cbb64"
             ],
             "index": "pypi",
             "markers": "python_version >= '3.8'",
-            "version": "==6.0.1"
+            "version": "==6.0.2"
         },
         "httplib2": {
             "hashes": [
