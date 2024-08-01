@@ -16,13 +16,13 @@ billing_address:
     en: Billing address
   directions:
     cs: >-
-      Pyvec, z.s. &mdash; [Impact Hub Praha](https://www.hubpraha.cz/)<br>
-      Drtinova 10/557<br>
-      15000 Praha 5
+      Pyvec, z.s.<br>
+      Korunní&nbsp;2569/108<br>
+      101&nbsp;00 Praha&nbsp;10 &ndash; Vinohrady
     en: >-
-      Pyvec, z.s. &mdash; [Impact Hub Praha](https://www.hubpraha.cz/en/)<br>
-      Drtinova 10/557<br>
-      15000 Prague<br>
+      Pyvec, z.s.<br>
+      Korunní&nbsp;2569/108<br>
+      101&nbsp;00 Prague&nbsp;10 &ndash; Vinohrady<br>
       Czech Republic, EU
 
 address:
