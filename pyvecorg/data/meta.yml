@@ -20,11 +20,11 @@ billing_address:
     cs: >-
       Pyvec, z.s.<br>
       Korunní&nbsp;2569/108<br>
-      101&nbsp;00 Praha&nbsp;10 &ndash; Vinohrady
+      101&nbsp;00 Praha&nbsp;10
     en: >-
       Pyvec, z.s.<br>
       Korunní&nbsp;2569/108<br>
-      101&nbsp;00 Prague&nbsp;10 &ndash; Vinohrady<br>
+      101&nbsp;00 Prague&nbsp;10<br>
       Czech Republic, EU
 
 address:
@@ -35,11 +35,11 @@ address:
     cs: >-
       Pyvec, z.s.<br>
       Korunní&nbsp;2569/108<br>
-      101&nbsp;00 Praha&nbsp;10 &ndash; Vinohrady
+      101&nbsp;00 Praha&nbsp;10
     en: >-
       Pyvec, z.s.<br>
       Korunní&nbsp;2569/108<br>
-      101&nbsp;00 Prague&nbsp;10 &ndash; Vinohrady<br>
+      101&nbsp;00 Prague&nbsp;10<br>
       Czech Republic, EU
 
 reg_no:
