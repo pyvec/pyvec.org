@@ -10,6 +10,8 @@ claim:
     Service non-profit organization of&nbsp;the&nbsp;Czech<br>
     [Python](https://python.cz/en/)&nbsp;programming&nbsp;language user&nbsp;group
 
+# Billing address is not used in the template, but it was part of the JSON API response.
+# Keeping it does not hurt us, therefore we should keep it for compatibility.
 billing_address:
   heading:
     cs: Fakturační adresa
@@ -32,12 +34,12 @@ address:
   directions:
     cs: >-
       Pyvec, z.s.<br>
-      Ječná 507/6<br>
-      12000 Praha 2
+      Korunní&nbsp;2569/108<br>
+      101&nbsp;00 Praha&nbsp;10 &ndash; Vinohrady
     en: >-
       Pyvec, z.s.<br>
-      Ječná 507/6<br>
-      12000 Prague<br>
+      Korunní&nbsp;2569/108<br>
+      101&nbsp;00 Prague&nbsp;10 &ndash; Vinohrady<br>
       Czech Republic, EU
 
 reg_no:
