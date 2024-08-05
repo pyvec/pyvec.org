@@ -155,9 +155,14 @@ h4 {
 }
 
 a.icon, a.icon:hover, a.icon:focus,
-.icon a, .icon:hover a, .icon:focus a {
+.icon a, .icon:hover a, .icon:focus a,
+a i.link-icon, a:hover i.link-icon, a:focus i.link-icon {
     text-decoration: none;
     box-shadow: none;
+}
+
+a i.link-icon {
+    margin-right: 1ex;
 }
 
 .icon span {
@@ -258,6 +263,20 @@ a.icon, a.icon:hover, a.icon:focus,
 .address {
     font-size: 80%;
     padding: 2rem 1rem 2rem 0.5rem;
+}
+
+/*
+ Decrease vertical paddings on mobile to give more condensed look.
+ max-width breakpoint taken from Bootstrap Docs:
+
+ https://getbootstrap.com/docs/4.6/layout/overview/#responsive-breakpoints
+ (see We occasionally use media queries that go in the other direction (the given screen size or smaller):)
+ */
+@media (max-width: 767.98px) {
+    .address {
+        padding-top: 1rem;
+        padding-bottom: 0rem;
+    }
 }
 
 .address h3 {

@@ -12,7 +12,7 @@
         <meta property="twitter:creator" content="@pyvec">
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}?v=2024-08-05">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -281,16 +281,44 @@
                         <h3>{{ meta.address.heading }}</h3>
                         {{ meta.address.directions|markdown }}
                         <p>
-                            E-mail: <a href="mailto:info@pyvec.org">info@pyvec.org</a>
+                            {{ meta.reg_no.label }}: <a href="{{ meta.reg_no.link }}">{{ meta.reg_no.value }}</a><br>
+                            {{ meta.databox_no.label }}: {{ meta.databox_no.value }}
                         </p>
+                        <p>E-mail: <a href="mailto:info@pyvec.org">info@pyvec.org</a></p>
                     </div>
                     <div class="w-100 d-block d-md-none"></div>
                     <div class="col address">
-                        <h3>{{ meta.billing_address.heading }}</h3>
-                        {{ meta.billing_address.directions|markdown }}
-                        <p>
-                            {{ meta.reg_no.label }}: <a href="{{ meta.reg_no.link }}">{{ meta.reg_no.value }}</a><br>
-                            {{ meta.databox_no.label }}: {{ meta.databox_no.value }}<br>
+                        <h3>{{ meta.downloads.heading }}</h3>
+                        <p class="downloads">
+                            <a href="{{ url_for('static', filename='bylaws-2024-01-23.pdf') }}">
+                                <i class="link-icon fa fa-file-pdf-o" aria-hidden="true"></i>
+                                {{- meta.downloads.bylaws }}.pdf
+                                {# {{- removes the whitespace between icon and the text, otherwise the white space would be underlined #}
+                            </a>
+                            <br>
+
+                            <a href="https://docs.pyvec.org/operations/bylaws.html">
+                                <i class="link-icon fa fa-file-o" aria-hidden="true"></i>
+                                {{- meta.downloads.bylaws }}
+                            </a>
+                            <br>
+
+                            <a href="https://or.justice.cz/ias/ui/vypis-sl-firma?subjektId=760829">
+                                <i class="link-icon fa fa-archive" aria-hidden="true"></i>
+                                {{- meta.downloads.filing }}
+                            </a>
+                            <br>
+
+                            <a href="https://github.com/pyvec/resources">
+                                <i class="link-icon fa fa-file-image-o" aria-hidden="true"></i>
+                                {{- meta.downloads.resources }}
+                            </a>
+                            <br>
+
+                            <a href="{{ url_for('api', lang=lang) }}">
+                                <i class="link-icon fa fa-file-code-o" aria-hidden="true"></i>
+                                {{- meta.downloads.json_data }}
+                            </a>
                         </p>
                     </div>
                     <div class="w-100 d-block d-md-none"></div>
@@ -306,25 +334,6 @@
                                 {{ meta.bank_account.bank_name }}<br>
                                 <a href="https://ib.fio.cz/ib/transparent?a={{ meta.bank_account.number }}&amp;l=ENGLISH">Transaction history</a>
                             {% endif %}
-                        </p>
-                        <h3>{{ meta.downloads.heading }}</h3>
-                        <p class="downloads">
-                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                            <a href="{{ url_for('static', filename='bylaws-2024-01-23.pdf') }}">{{ meta.downloads.bylaws }}.pdf</a>
-
-                            <i class="fa fa-file-o" aria-hidden="true"></i>
-                            <a href="https://docs.pyvec.org/operations/bylaws.html">{{ meta.downloads.bylaws }}</a>
-
-                            <i class="fa fa-archive" aria-hidden="true"></i>
-                            <a href="https://or.justice.cz/ias/ui/vypis-sl-firma?subjektId=760829">{{ meta.downloads.filing }}</a>
-
-                            <br>
-
-                            <i class="fa fa-file-image-o" aria-hidden="true"></i>
-                            <a href="https://github.com/pyvec/resources">{{ meta.downloads.resources }}</a>
-
-                            <i class="fa fa-file-code-o" aria-hidden="true"></i>
-                            <a href="{{ url_for('api', lang=lang) }}">{{ meta.downloads.json_data }}</a>
                         </p>
                     </div>
                     <div class="w-100 d-block d-md-none"></div>
