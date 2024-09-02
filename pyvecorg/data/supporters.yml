@@ -15,9 +15,9 @@ entries:
     logo: img/supporters/redhat.svg
     url: https://jobs.redhat.com/
 
-  - name: Kiwi.com
-    logo: img/supporters/kiwicom.svg
-    url: https://kiwi.com/
+  - name: Lynt services
+    logo: img/supporters/lynt-logo.svg
+    url: https://lynt.cz/
 
 note:
   icon: credit-card
