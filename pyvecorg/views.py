@@ -47,3 +47,11 @@ def privacy_policy(lang):
 @app.route('/<lang>/api.json')
 def api(lang):
     return jsonify(select_language(data, lang))
+
+@app.route('/en/coc/', defaults={'lang': 'en'})
+@app.route('/cs/kodex-chovani/', defaults={'lang': 'cs'})
+def coc(lang):
+    context = select_language(data, lang)
+    context['lang'] = lang
+    context['this'] = 'coc'
+    return render_template('coc.html', **context)
