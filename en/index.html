@@ -1,0 +1,1782 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/static/favicon.ico">
+        <link rel="alternate" type="application/json" href="/en/api.json">
+
+        <meta property="og:image" content="http://pyvec.org/static/img/cover.jpg">
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:site" content="@pyvec">
+        <meta property="twitter:creator" content="@pyvec">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="/static/main.css?v=2024-08-05">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Pyvec, the nonprofit of the Czech Python user group</title>
+        <meta name="description" content="Service non-profit organization of the Czech Python programming language user group">
+    </head>
+    <body>
+        <div class="header">
+            <div class="container">
+                <div class="row">
+                    <h1 class="col">
+                        <a href="/en/">
+                            <img height="50" src="/static/img/pyvec.svg" alt="Pyvec">
+                        </a>
+                    </h1>
+                    <p class="lang col">
+                        
+                            <a href="/cs/">Česky</a>
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cover">
+            <div class="cover-black">
+                <div class="container page-index">
+                    <div class="claim">
+                        <p>Service non-profit organization of&nbsp;the&nbsp;Czech<br> <a href="https://python.cz/en/">Python</a>&nbsp;programming&nbsp;language user&nbsp;group</p>
+                    </div>
+
+                    <h2 id="objectives">We support</h2>
+                    <div class="card-deck">
+                        
+                        <div class="card objective">
+                            <h3 aria-hidden="true">
+                                <i class="fa fa-comments" aria-hidden="true"></i>
+                            </h3>
+                            <div class="card-body">
+                                <div class="card-text">
+                                    <p><strong>Networking of experts</strong> and their contact with the <strong>international</strong> community</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card objective">
+                            <h3 aria-hidden="true">
+                                <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                            </h3>
+                            <div class="card-body">
+                                <div class="card-text">
+                                    <p><strong>Education of programming</strong> based on <strong>open</strong> materials</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card objective">
+                            <h3 aria-hidden="true">
+                                <i class="fa fa-female" aria-hidden="true"></i>
+                            </h3>
+                            <div class="card-body">
+                                <div class="card-text">
+                                    <p><strong>More women in tech</strong> and generally <strong>inclusive culture</strong> among programmers</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="container page-index">
+            <h2 id="numbers">Our impact</h2>
+            <p class="numbers">
+                
+                    <span class="number badge " title="All organized meetups, all locations">
+                        
+                        210+ meetups
+                    </span>
+                
+                    <span class="number badge  number-github" title="Commit authors and discussions participants on GitHub, Pyvec and PyLadiesCZ">
+                        
+                            <i class="fa fa-github" aria-hidden="true"></i>
+                        
+                        190+ contributors
+                    </span>
+                
+                    <span class="number badge " title="All organized PyCon CZ conferences">
+                        
+                        4 conferences
+                    </span>
+                
+                    <span class="number badge  number-slack" title="Members on Pyvec Slack dedicated to organizators">
+                        
+                            <i class="fa fa-slack" aria-hidden="true"></i>
+                        
+                        150+ participants
+                    </span>
+                
+                    <span class="number badge " title="All locations where there is a meetup or PyLadies present">
+                        
+                        6 locations
+                    </span>
+                
+                    <span class="number badge  number-facebook" title="Sum of members of the main Czech Python user group FB groups">
+                        
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        
+                        2000+ participants
+                    </span>
+                
+                    <span class="number badge " title="All beginner course tracks organized by PyLadies, all locations">
+                        
+                        20+ courses
+                    </span>
+                
+                    <span class="number badge " title="All main workshops organized with Pyvec support, Django Girls included">
+                        
+                        20+ workshops
+                    </span>
+                
+                    <span class="number badge  number-twitter" title="Number of unique followers of the main Czech Python user group Twitter accounts">
+                        
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        
+                        2000+ followers
+                    </span>
+                
+            </p>
+
+            <h2 id="projects">Projects</h2>
+            <div class="media">
+                <div class="media-image">
+                    <i class="fa fa-hand-stop-o" aria-hidden="true"></i>
+                </div>
+                <div class="media-body">
+                    <h3>Volunteer</h3>
+                     <p>Pyvec <strong>doesn't give orders</strong>. Pyvec helps to those who want to achieve
+something &mdash; it's a nonprofit <strong>service organization</strong>. Starting a meetup in your
+town? Course in your school? Workshop? Screencast? Let's come up with
+a way to make it happen! E-mail us at <a href="mailto:info@pyvec.org">info@pyvec.org</a>.</p>
+                </div>
+            </div>
+            <ul class="list row">
+            
+                <li class="list-item project col">
+                    <div class="project-header project-header-pyconcz">
+                        <img class="project-logo rounded-circle" src="/static/img/projects/pyconcz.svg" alt="PyCon CZ conference" height="100">
+                        <h3>PyCon CZ conference</h3>
+                    </div>
+                    <div class="project-info">
+                        <p class="project-url">
+                            <a href="https://cz.pycon.org/">cz.pycon.org</a>
+                        </p>
+                        <p>The largest yearly gathering of people interested in Python in the Czech Republic. Part of the <a href="https://www.python.org/events/">international PyCon series</a>.</p>
+                        <p class="project-pyvec-help">
+                            <strong>How Pyvec helps:</strong>
+                            
+                                
+                                    Reimbursing equipment,
+                            
+                                
+                                    accounting,
+                            
+                                
+                                    contracts,
+                            
+                                
+                                    legal service
+                            
+                        </p>
+                    </div>
+                </li>
+                
+                
+            
+                <li class="list-item project col">
+                    <div class="project-header project-header-naucse">
+                        <img class="project-logo rounded-circle" src="/static/img/projects/python.svg" alt="Learn Python" height="100">
+                        <h3>Learn Python</h3>
+                    </div>
+                    <div class="project-info">
+                        <p class="project-url">
+                            <a href="http://naucse.python.cz/">naucse.python.cz</a>
+                        </p>
+                        <p>Open and freely accessible materials for beginner or advanced courses of the Python language. In Czech. Continuously developing and growing.</p>
+                        <p class="project-pyvec-help">
+                            <strong>How Pyvec helps:</strong>
+                            
+                                
+                                    Operations
+                            
+                        </p>
+                    </div>
+                </li>
+                
+                    <div class="w-100 d-block d-md-none"></div>
+                
+                
+            
+                <li class="list-item project col">
+                    <div class="project-header project-header-pyladies">
+                        <img class="project-logo rounded-circle" src="/static/img/projects/pyladies.svg" alt="PyLadies CZ" height="100">
+                        <h3>PyLadies CZ</h3>
+                    </div>
+                    <div class="project-info">
+                        <p class="project-url">
+                            <a href="http://pyladies.cz/">pyladies.cz</a>
+                        </p>
+                        <p><a href="http://pyladies.com/">International</a> activity supporting women to get into tech with the help of the Python language. Czech groups hold semester-long free-of-charge beginner courses.</p>
+                        <p class="project-pyvec-help">
+                            <strong>How Pyvec helps:</strong>
+                            
+                                
+                                    Reimbursing equipment,
+                            
+                                
+                                    contracts,
+                            
+                                
+                                    interconnection of local groups
+                            
+                        </p>
+                    </div>
+                </li>
+                
+                
+                    <div class="w-100 d-none d-md-block d-lg-block d-xl-block"></div>
+                
+            
+                <li class="list-item project col">
+                    <div class="project-header project-header-pyvo">
+                        <img class="project-logo rounded-circle" src="/static/img/projects/pyvo.svg" alt="Pyvo meetups" height="100">
+                        <h3>Pyvo meetups</h3>
+                    </div>
+                    <div class="project-info">
+                        <p class="project-url">
+                            <a href="https://pyvo.cz/">pyvo.cz</a>
+                        </p>
+                        <p>Informal developer meetups focused on talks on advanced topics, networking, or education. Organized monthly.</p>
+                        <p class="project-pyvec-help">
+                            <strong>How Pyvec helps:</strong>
+                            
+                                
+                                    Reimbursing equipment,
+                            
+                                
+                                    interconnection of local groups
+                            
+                        </p>
+                    </div>
+                </li>
+                
+                    <div class="w-100 d-block d-md-none"></div>
+                
+                
+            
+                <li class="list-item project col">
+                    <div class="project-header project-header-pyworking">
+                        <img class="project-logo rounded-circle" src="/static/img/projects/pyworking.svg" alt="PyWorking" height="100">
+                        <h3>PyWorking</h3>
+                    </div>
+                    <div class="project-info">
+                        <p class="project-url">
+                            <a href="https://pyworking.cz/">pyworking.cz</a>
+                        </p>
+                        <p>Hands-on meetups for intermediate Python developers where anyone can come and consult their solutions or try out anything they like. In Prague these are complemented by occasional day-long workshops.</p>
+                        <p class="project-pyvec-help">
+                            <strong>How Pyvec helps:</strong>
+                            
+                                
+                                    Reimbursing equipment,
+                            
+                                
+                                    contracts
+                            
+                        </p>
+                    </div>
+                </li>
+                
+                
+            
+                <li class="list-item project col">
+                    <div class="project-header project-header-pydata">
+                        <img class="project-logo rounded-circle" src="/static/img/projects/pydata.svg" alt="PyData Prague" height="100">
+                        <h3>PyData Prague</h3>
+                    </div>
+                    <div class="project-info">
+                        <p class="project-url">
+                            <a href="https://pydata.cz/">pydata.cz</a>
+                        </p>
+                        <p>Irregular meetups with talks for lovers of data, Python and other languages, part of the <a href="https://pydata.org">PyData</a> international educational programme.</p>
+                        <p class="project-pyvec-help">
+                            <strong>How Pyvec helps:</strong>
+                            
+                                
+                                    Contracts
+                            
+                        </p>
+                    </div>
+                </li>
+                
+                    <div class="w-100 d-block d-md-none"></div>
+                
+                
+                    <div class="w-100 d-none d-md-block d-lg-block d-xl-block"></div>
+                
+            
+                <li class="list-item project col">
+                    <div class="project-header project-header-pythoncz">
+                        <img class="project-logo rounded-circle" src="/static/img/projects/python.svg" alt="python.cz" height="100">
+                        <h3>python.cz</h3>
+                    </div>
+                    <div class="project-info">
+                        <p class="project-url">
+                            <a href="https://python.cz/">python.cz</a>
+                        </p>
+                        <p>The main portal and source of information of the Czech Python user group.</p>
+                        <p class="project-pyvec-help">
+                            <strong>How Pyvec helps:</strong>
+                            
+                                
+                                    Operations
+                            
+                        </p>
+                    </div>
+                </li>
+                
+                
+            
+                <li class="list-item project col">
+                    <div class="project-header project-header-blog">
+                        <img class="project-logo rounded-circle" src="/static/img/projects/python.svg" alt="Community blog" height="100">
+                        <h3>Community blog</h3>
+                    </div>
+                    <div class="project-info">
+                        <p class="project-url">
+                            <a href="http://blog.python.cz/">blog.python.cz</a>
+                        </p>
+                        <p>Czech Python user group news. Anyone can contribute with their article.</p>
+                        <p class="project-pyvec-help">
+                            <strong>How Pyvec helps:</strong>
+                            
+                                
+                                    Operations
+                            
+                        </p>
+                    </div>
+                </li>
+                
+                    <div class="w-100 d-block d-md-none"></div>
+                
+                
+            
+                <li class="list-item project col">
+                    <div class="project-header project-header-docs">
+                        <img class="project-logo rounded-circle" src="/static/img/projects/python.svg" alt="Community docs" height="100">
+                        <h3>Community docs</h3>
+                    </div>
+                    <div class="project-info">
+                        <p class="project-url">
+                            <a href="https://docs.pyvec.org">docs.pyvec.org</a>
+                        </p>
+                        <p>A documentation of community operations, which also sums up know-how for organizers of user group events, such as meetups, workshops, courses, etc.</p>
+                        <p class="project-pyvec-help">
+                            <strong>How Pyvec helps:</strong>
+                            
+                                
+                                    Operations
+                            
+                        </p>
+                    </div>
+                </li>
+                
+                
+                    <div class="w-100 d-none d-md-block d-lg-block d-xl-block"></div>
+                
+            
+            </ul>
+
+            <h2 id="supporters">Long-term supporters</h2>
+            <div class="media">
+                <div class="media-image">
+                    <i class="fa fa-credit-card" aria-hidden="true"></i>
+                </div>
+                <div class="media-body">
+                    <h3>Supporter</h3>
+                    <p>Thanks to our efforts, <strong>there are more programmers</strong> on the Czech market.
+Financial support of Pyvec is your <strong>investment in education</strong>, <strong>healthier
+job market</strong> and the growth of the Python community. Use our
+<a href="https://ib.fio.cz/ib/transparent?a=2600260438&amp;lng=ENGLISH">transparent bank account</a>,
+<a href="https://causes.benevity.org/causes/203-5781337120921_0a4a">Benevity</a>,
+or e-mail us at <a href="mailto:info@pyvec.org">info@pyvec.org</a>.</p>
+                </div>
+            </div>
+            <ul class="list row">
+                
+                <li class="list-item logo col">
+                    <a href="https://fragaria.cz/" title="Fragaria">
+                        <img src="/static/img/supporters/fragaria.svg" alt="Fragaria" height="50">
+                    </a>
+                </li>
+                
+                <li class="list-item logo col">
+                    <a href="https://lynt.cz/" title="Lynt services">
+                        <img src="/static/img/supporters/lynt-logo.svg" alt="Lynt services" height="50">
+                    </a>
+                </li>
+                
+                <li class="list-item logo col">
+                    <a href="https://jobs.redhat.com/" title="Red Hat">
+                        <img src="/static/img/supporters/redhat.svg" alt="Red Hat" height="50">
+                    </a>
+                </li>
+                
+                <li class="list-item logo col">
+                    <a href="https://rosti.cz/" title="Roští.cz">
+                        <img src="/static/img/supporters/rosticz.png" alt="Roští.cz" height="50">
+                    </a>
+                </li>
+                
+            </ul>
+
+            <h2 id="partners">Cooperating with</h2>
+            <ul class="list row">
+                
+                <li class="list-item logo col">
+                    <a href="https://djangogirls.org/foundation/" title="Django Girls Foundation">
+                        <img src="/static/img/partners/djangogirls.svg" alt="Django Girls Foundation" height="50">
+                    </a>
+                </li>
+                
+                <li class="list-item logo col">
+                    <a href="https://numfocus.org" title="NumFOCUS">
+                        <img src="/static/img/partners/numfocus.png" alt="NumFOCUS" height="50">
+                    </a>
+                </li>
+                
+                <li class="list-item logo col">
+                    <a href="http://www.pyladies.com/" title="PyLadies">
+                        <img src="/static/img/partners/pyladies.svg" alt="PyLadies" height="50">
+                    </a>
+                </li>
+                
+                <li class="list-item logo col">
+                    <a href="https://www.python.org/psf/" title="Python Software Foundation">
+                        <img src="/static/img/partners/psf.svg" alt="Python Software Foundation" height="50">
+                    </a>
+                </li>
+                
+            </ul>
+
+            <h2 id="members">Who is Pyvec</h2>
+            <div class="media">
+                <div class="media-image">
+                    <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                </div>
+                <div class="media-body">
+                    <h3>Organization</h3>
+                    <p>Pyvec is a nonprofit founded in <strong>spring 2012</strong>.
+The board takes care of financial matters and makes decisions on other important issues.
+<a href="https://docs.pyvec.org/operations/runbooks.html#jak-clenstvi">Become a member</a>
+and influence how Pyvec supports the Czech Python user group!</p>
+                </div>
+            </div>
+            
+                <ul class="list row members">
+                    
+
+                    <li class="list-item member col">
+                        <img src="/static/img/avatars/barbora-drbohlavova.png" alt="Bára Drbohlavová" width="100" class="rounded-circle member-avatar">
+                        <p class="member-profiles">
+                            
+                            <a href="https://github.com/baradrb" title="GitHub" class="icon">
+                                <i class="fa fa-github" aria-hidden="true"></i><!--
+                                --><span>GitHub</span><!--
+                            --></a>
+                            
+                            
+                            
+                            <a href="https://twitter.com/baradrb" title="Twitter" class="icon">
+                                <i class="fa fa-twitter" aria-hidden="true"></i><!--
+                                --><span>Twitter</span><!--
+                            --></a>
+                            
+                            
+                            <a href="https://linkedin.com/in/baradrb" title="LinkedIn" class="icon">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i><!--
+                                --><span>LinkedIn</span><!--
+                            --></a>
+                            
+                        </p>
+                        <p class="member-info">
+                            <strong class="member-name">Bára Drbohlavová</strong><br>
+                            <small class="member-role">chairman</small><br>
+                        </p>
+                    </li>
+                    
+                    
+                    
+
+                    
+
+                    <li class="list-item member col">
+                        <img src="/static/img/avatars/jan-javorek.png" alt="Honza Javorek" width="100" class="rounded-circle member-avatar">
+                        <p class="member-profiles">
+                            
+                            <a href="https://github.com/honzajavorek" title="GitHub" class="icon">
+                                <i class="fa fa-github" aria-hidden="true"></i><!--
+                                --><span>GitHub</span><!--
+                            --></a>
+                            
+                            
+                            <a href="https://mastodonczech.cz/@honzajavorek" title="Mastodon" class="icon">
+                                <i class="fa fa-mastodon" aria-hidden="true"></i><!--
+                                --><span>Mastodon</span><!--
+                            --></a>
+                            
+                            
+                            <a href="https://twitter.com/honzajavorek" title="Twitter" class="icon">
+                                <i class="fa fa-twitter" aria-hidden="true"></i><!--
+                                --><span>Twitter</span><!--
+                            --></a>
+                            
+                            
+                            <a href="https://linkedin.com/in/honzajavorek" title="LinkedIn" class="icon">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i><!--
+                                --><span>LinkedIn</span><!--
+                            --></a>
+                            
+                        </p>
+                        <p class="member-info">
+                            <strong class="member-name">Honza Javorek</strong><br>
+                            <small class="member-role">board member</small><br>
+                        </p>
+                    </li>
+                    
+                        <div class="w-100 d-block d-sm-none"></div>
+                    
+                    
+                    
+
+                    
+
+                    <li class="list-item member col">
+                        <img src="/static/img/avatars/anezka-muller.png" alt="Anežka Müller" width="100" class="rounded-circle member-avatar">
+                        <p class="member-profiles">
+                            
+                            <a href="https://github.com/anezkamll" title="GitHub" class="icon">
+                                <i class="fa fa-github" aria-hidden="true"></i><!--
+                                --><span>GitHub</span><!--
+                            --></a>
+                            
+                            
+                            <a href="https://mastodon.social/@anezkamll" title="Mastodon" class="icon">
+                                <i class="fa fa-mastodon" aria-hidden="true"></i><!--
+                                --><span>Mastodon</span><!--
+                            --></a>
+                            
+                            
+                            <a href="https://twitter.com/anezkamll" title="Twitter" class="icon">
+                                <i class="fa fa-twitter" aria-hidden="true"></i><!--
+                                --><span>Twitter</span><!--
+                            --></a>
+                            
+                            
+                            <a href="https://linkedin.com/in/anezkamll" title="LinkedIn" class="icon">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i><!--
+                                --><span>LinkedIn</span><!--
+                            --></a>
+                            
+                        </p>
+                        <p class="member-info">
+                            <strong class="member-name">Anežka Müller</strong><br>
+                            <small class="member-role">board member</small><br>
+                        </p>
+                    </li>
+                    
+                    
+                        <div class="w-100 d-none d-sm-block d-md-none"></div>
+                    
+                    
+
+                    
+
+                    <li class="list-item member col">
+                        <img src="/static/img/avatars/jan-cermak.png" alt="Kokoška P. T." width="100" class="rounded-circle member-avatar">
+                        <p class="member-profiles">
+                            
+                            <a href="https://github.com/sairon" title="GitHub" class="icon">
+                                <i class="fa fa-github" aria-hidden="true"></i><!--
+                                --><span>GitHub</span><!--
+                            --></a>
+                            
+                            
+                            <a href="https://mastodon.social/@sairon" title="Mastodon" class="icon">
+                                <i class="fa fa-mastodon" aria-hidden="true"></i><!--
+                                --><span>Mastodon</span><!--
+                            --></a>
+                            
+                            
+                            
+                            <a href="https://linkedin.com/in/sairon" title="LinkedIn" class="icon">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i><!--
+                                --><span>LinkedIn</span><!--
+                            --></a>
+                            
+                        </p>
+                        <p class="member-info">
+                            <strong class="member-name">Kokoška P. T.</strong><br>
+                            <small class="member-role">board member</small><br>
+                        </p>
+                    </li>
+                    
+                        <div class="w-100 d-block d-sm-none"></div>
+                    
+                    
+                    
+
+                    
+
+                    <li class="list-item member col">
+                        <img src="/static/img/avatars/jakub-vysoky.png" alt="Jakub Vysoký" width="100" class="rounded-circle member-avatar">
+                        <p class="member-profiles">
+                            
+                            <a href="https://github.com/kvbik" title="GitHub" class="icon">
+                                <i class="fa fa-github" aria-hidden="true"></i><!--
+                                --><span>GitHub</span><!--
+                            --></a>
+                            
+                            
+                            
+                            <a href="https://twitter.com/kvbik" title="Twitter" class="icon">
+                                <i class="fa fa-twitter" aria-hidden="true"></i><!--
+                                --><span>Twitter</span><!--
+                            --></a>
+                            
+                            
+                            <a href="https://linkedin.com/in/jakubvysoky" title="LinkedIn" class="icon">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i><!--
+                                --><span>LinkedIn</span><!--
+                            --></a>
+                            
+                        </p>
+                        <p class="member-info">
+                            <strong class="member-name">Jakub Vysoký</strong><br>
+                            <small class="member-role">board member</small><br>
+                        </p>
+                    </li>
+                    
+                    
+                    
+                        <div class="w-100 d-none d-md-block d-lg-block d-xl-block"></div>
+                    
+
+                    
+                </ul>
+                <p class="note">
+                    Total count of all members: <strong>36</strong><br>
+                    The following members consented with being listed publicly.
+                </p>
+                <ul class="list row members">
+                    
+
+                    <li class="list-item member col">
+                        <img src="/static/img/avatars/jiri-bajer.png" alt="Jirka Bajer" width="100" class="rounded-circle member-avatar">
+                        <p class="member-profiles">
+                            
+                            
+                            
+                            
+                            <a href="https://linkedin.com/in/jiribajer" title="LinkedIn" class="icon">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i><!--
+                                --><span>LinkedIn</span><!--
+                            --></a>
+                            
+                        </p>
+                        <p class="member-info">
+                            <strong class="member-name">Jirka Bajer</strong><br>
+                        </p>
+                    </li>
+                    
+                    
+                    
+
+                    
+
+                    <li class="list-item member col">
+                        <img src="/static/img/avatars/mia-bajic.png" alt="Mia Bajić" width="100" class="rounded-circle member-avatar">
+                        <p class="member-profiles">
+                            
+                            <a href="https://github.com/clytaemnestra" title="GitHub" class="icon">
+                                <i class="fa fa-github" aria-hidden="true"></i><!--
+                                --><span>GitHub</span><!--
+                            --></a>
+                            
+                            
+                            
+                            
+                            <a href="https://linkedin.com/in/mia-bajic" title="LinkedIn" class="icon">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i><!--
+                                --><span>LinkedIn</span><!--
+                            --></a>
+                            
+                        </p>
+                        <p class="member-info">
+                            <strong class="member-name">Mia Bajić</strong><br>
+                        </p>
+                    </li>
+                    
+                        <div class="w-100 d-block d-sm-none"></div>
+                    
+                    
+                    
+
+                    
+
+                    <li class="list-item member col">
+                        <img src="/static/img/avatars/lumir-balhar.png" alt="Lumír Balhar" width="100" class="rounded-circle member-avatar">
+                        <p class="member-profiles">
+                            
+                            <a href="https://github.com/frenzymadness" title="GitHub" class="icon">
+                                <i class="fa fa-github" aria-hidden="true"></i><!--
+                                --><span>GitHub</span><!--
+                            --></a>
+                            
+                            
+                            <a href="https://mastodonczech.cz/@frenzy" title="Mastodon" class="icon">
+                                <i class="fa fa-mastodon" aria-hidden="true"></i><!--
+                                --><span>Mastodon</span><!--
+                            --></a>
+                            
+                            
+                            <a href="https://twitter.com/lumirbalhar" title="Twitter" class="icon">
+                                <i class="fa fa-twitter" aria-hidden="true"></i><!--
+                                --><span>Twitter</span><!--
+                            --></a>
+                            
+                            
+                            <a href="https://linkedin.com/in/lum%C3%ADr-balhar-b173833a" title="LinkedIn" class="icon">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i><!--
+                                --><span>LinkedIn</span><!--
+                            --></a>
+                            
+                        </p>
+                        <p class="member-info">
+                            <strong class="member-name">Lumír Balhar</strong><br>
+                        </p>
+                    </li>
+                    
+                    
+                        <div class="w-100 d-none d-sm-block d-md-none"></div>
+                    
+                    
+
+                    
+
+                    <li class="list-item member col">
+                        <img src="/static/img/avatars/jiri-barton.png" alt="Jiří Bartoň" width="100" class="rounded-circle member-avatar">
+                        <p class="member-profiles">
+                            
+                            <a href="https://github.com/whiskybar" title="GitHub" class="icon">
+                                <i class="fa fa-github" aria-hidden="true"></i><!--
+                                --><span>GitHub</span><!--
+                            --></a>
+                            
+                            
+                            
+                            <a href="https://twitter.com/lurkingideas" title="Twitter" class="icon">
+                                <i class="fa fa-twitter" aria-hidden="true"></i><!--
+                                --><span>Twitter</span><!--
+                            --></a>
+                            
+                            
+                        </p>
+                        <p class="member-info">
+                            <strong class="member-name">Jiří Bartoň</strong><br>
+                        </p>
+                    </li>
+                    
+                        <div class="w-100 d-block d-sm-none"></div>
+                    
+                    
+                    
+
+                    
+
+                    <li class="list-item member col">
+                        <img src="/static/img/avatars/jakub-beranek.png" alt="Kuba Beránek" width="100" class="rounded-circle member-avatar">
+                        <p class="member-profiles">
+                            
+                            <a href="https://github.com/kobzol" title="GitHub" class="icon">
+                                <i class="fa fa-github" aria-hidden="true"></i><!--
+                                --><span>GitHub</span><!--
+                            --></a>
+                            
+                            
+                            
+                            <a href="https://twitter.com/Beranek1582" title="Twitter" class="icon">
+                                <i class="fa fa-twitter" aria-hidden="true"></i><!--
+                                --><span>Twitter</span><!--
+                            --></a>
+                            
+                            
+                            <a href="https://linkedin.com/in/jakub-beranek" title="LinkedIn" class="icon">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i><!--
+                                --><span>LinkedIn</span><!--
+                            --></a>
+                            
+                        </p>
+                        <p class="member-info">
+                            <strong class="member-name">Kuba Beránek</strong><br>
+                        </p>
+                    </li>
+                    
+                    
+                    
+                        <div class="w-100 d-none d-md-block d-lg-block d-xl-block"></div>
+                    
+
+                    
+
+                    <li class="list-item member col">
+                        <img src="/static/img/avatars/martin-bilek.png" alt="Martin Bílek" width="100" class="rounded-circle member-avatar">
+                        <p class="member-profiles">
+                            
+                            <a href="https://github.com/martinbilek" title="GitHub" class="icon">
+                                <i class="fa fa-github" aria-hidden="true"></i><!--
+                                --><span>GitHub</span><!--
+                            --></a>
+                            
+                            
+                            
+                            <a href="https://twitter.com/ajtea" title="Twitter" class="icon">
+                                <i class="fa fa-twitter" aria-hidden="true"></i><!--
+                                --><span>Twitter</span><!--
+                            --></a>
+                            
+                            
+                            <a href="https://linkedin.com/in/martin-b%C3%ADlek-47699542" title="LinkedIn" class="icon">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i><!--
+                                --><span>LinkedIn</span><!--
+                            --></a>
+                            
+                        </p>
+                        <p class="member-info">
+                            <strong class="member-name">Martin Bílek</strong><br>
+                        </p>
+                    </li>
+                    
+                        <div class="w-100 d-block d-sm-none"></div>
+                    
+                    
+                        <div class="w-100 d-none d-sm-block d-md-none"></div>
+                    
+                    
+
+                    
+
+                    <li class="list-item member col">
+                        <img src="/static/img/avatars/ondrej-caletka.png" alt="Ondřej Caletka" width="100" class="rounded-circle member-avatar">
+                        <p class="member-profiles">
+                            
+                            <a href="https://github.com/oskar456" title="GitHub" class="icon">
+                                <i class="fa fa-github" aria-hidden="true"></i><!--
+                                --><span>GitHub</span><!--
+                            --></a>
+                            
+                            
+                            <a href="https://mastodon.social/@Oskar456" title="Mastodon" class="icon">
+                                <i class="fa fa-mastodon" aria-hidden="true"></i><!--
+                                --><span>Mastodon</span><!--
+                            --></a>
+                            
+                            
+                            <a href="https://twitter.com/oskar456" title="Twitter" class="icon">
+                                <i class="fa fa-twitter" aria-hidden="true"></i><!--
+                                --><span>Twitter</span><!--
+                            --></a>
+                            
+                            
+                            <a href="https://linkedin.com/in/caletkao" title="LinkedIn" class="icon">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i><!--
+                                --><span>LinkedIn</span><!--
+                            --></a>
+                            
+                        </p>
+                        <p class="member-info">
+                            <strong class="member-name">Ondřej Caletka</strong><br>
+                        </p>
+                    </li>
+                    
+                    
+                    
+
+                    
+
+                    <li class="list-item member col">
+                        <img src="/static/img/avatars/iva-fingerova.png" alt="Iva Fingerová" width="100" class="rounded-circle member-avatar">
+                        <p class="member-profiles">
+                            
+                            <a href="https://github.com/IvaFingerova" title="GitHub" class="icon">
+                                <i class="fa fa-github" aria-hidden="true"></i><!--
+                                --><span>GitHub</span><!--
+                            --></a>
+                            
+                            
+                            
+                            <a href="https://twitter.com/ivafingerova" title="Twitter" class="icon">
+                                <i class="fa fa-twitter" aria-hidden="true"></i><!--
+                                --><span>Twitter</span><!--
+                            --></a>
+                            
+                            
+                            <a href="https://linkedin.com/in/ivafingerova" title="LinkedIn" class="icon">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i><!--
+                                --><span>LinkedIn</span><!--
+                            --></a>
+                            
+                        </p>
+                        <p class="member-info">
+                            <strong class="member-name">Iva Fingerová</strong><br>
+                        </p>
+                    </li>
+                    
+                        <div class="w-100 d-block d-sm-none"></div>
+                    
+                    
+                    
+
+                    
+
+                    <li class="list-item member col">
+                        <img src="/static/img/avatars/peter-hozak.png" alt="Peter Hozák" width="100" class="rounded-circle member-avatar">
+                        <p class="member-profiles">
+                            
+                            <a href="https://github.com/Aprillion" title="GitHub" class="icon">
+                                <i class="fa fa-github" aria-hidden="true"></i><!--
+                                --><span>GitHub</span><!--
+                            --></a>
+                            
+                            
+                            
+                            <a href="https://twitter.com/aprillion0042" title="Twitter" class="icon">
+                                <i class="fa fa-twitter" aria-hidden="true"></i><!--
+                                --><span>Twitter</span><!--
+                            --></a>
+                            
+                            
+                            <a href="https://linkedin.com/in/hozak" title="LinkedIn" class="icon">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i><!--
+                                --><span>LinkedIn</span><!--
+                            --></a>
+                            
+                        </p>
+                        <p class="member-info">
+                            <strong class="member-name">Peter Hozák</strong><br>
+                        </p>
+                    </li>
+                    
+                    
+                        <div class="w-100 d-none d-sm-block d-md-none"></div>
+                    
+                    
+
+                    
+
+                    <li class="list-item member col">
+                        <img src="/static/img/avatars/tomas-hrnciar.png" alt="Tomáš Hrnčiar" width="100" class="rounded-circle member-avatar">
+                        <p class="member-profiles">
+                            
+                            <a href="https://github.com/hrnciar" title="GitHub" class="icon">
+                                <i class="fa fa-github" aria-hidden="true"></i><!--
+                                --><span>GitHub</span><!--
+                            --></a>
+                            
+                            
+                            
+                            
+                            <a href="https://linkedin.com/in/tom%C3%A1%C5%A1-hrn%C4%8Diar-8b4bba68" title="LinkedIn" class="icon">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i><!--
+                                --><span>LinkedIn</span><!--
+                            --></a>
+                            
+                        </p>
+                        <p class="member-info">
+                            <strong class="member-name">Tomáš Hrnčiar</strong><br>
+                        </p>
+                    </li>
+                    
+                        <div class="w-100 d-block d-sm-none"></div>
+                    
+                    
+                    
+                        <div class="w-100 d-none d-md-block d-lg-block d-xl-block"></div>
+                    
+
+                    
+
+                    <li class="list-item member col">
+                        <img src="/static/img/avatars/miroslav-hroncok.png" alt="Miro Hrončok" width="100" class="rounded-circle member-avatar">
+                        <p class="member-profiles">
+                            
+                            <a href="https://github.com/hroncok" title="GitHub" class="icon">
+                                <i class="fa fa-github" aria-hidden="true"></i><!--
+                                --><span>GitHub</span><!--
+                            --></a>
+                            
+                            
+                            <a href="https://floss.social/@hroncok" title="Mastodon" class="icon">
+                                <i class="fa fa-mastodon" aria-hidden="true"></i><!--
+                                --><span>Mastodon</span><!--
+                            --></a>
+                            
+                            
+                            
+                        </p>
+                        <p class="member-info">
+                            <strong class="member-name">Miro Hrončok</strong><br>
+                        </p>
+                    </li>
+                    
+                    
+                    
+
+                    
+
+                    <li class="list-item member col">
+                        <img src="/static/img/avatars/zuzana-javorkova.png" alt="Zuzka Javorková" width="100" class="rounded-circle member-avatar">
+                        <p class="member-profiles">
+                            
+                            <a href="https://github.com/zuzejk" title="GitHub" class="icon">
+                                <i class="fa fa-github" aria-hidden="true"></i><!--
+                                --><span>GitHub</span><!--
+                            --></a>
+                            
+                            
+                            
+                            
+                        </p>
+                        <p class="member-info">
+                            <strong class="member-name">Zuzka Javorková</strong><br>
+                        </p>
+                    </li>
+                    
+                        <div class="w-100 d-block d-sm-none"></div>
+                    
+                    
+                        <div class="w-100 d-none d-sm-block d-md-none"></div>
+                    
+                    
+
+                    
+
+                    <li class="list-item member col">
+                        <img src="/static/img/avatars/jan-kral.png" alt="Honza Král" width="100" class="rounded-circle member-avatar">
+                        <p class="member-profiles">
+                            
+                            <a href="https://github.com/HonzaKral" title="GitHub" class="icon">
+                                <i class="fa fa-github" aria-hidden="true"></i><!--
+                                --><span>GitHub</span><!--
+                            --></a>
+                            
+                            
+                            <a href="https://fosstodon.org/@honzakral" title="Mastodon" class="icon">
+                                <i class="fa fa-mastodon" aria-hidden="true"></i><!--
+                                --><span>Mastodon</span><!--
+                            --></a>
+                            
+                            
+                            
+                            <a href="https://linkedin.com/in/honzakral" title="LinkedIn" class="icon">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i><!--
+                                --><span>LinkedIn</span><!--
+                            --></a>
+                            
+                        </p>
+                        <p class="member-info">
+                            <strong class="member-name">Honza Král</strong><br>
+                        </p>
+                    </li>
+                    
+                    
+                    
+
+                    
+
+                    <li class="list-item member col">
+                        <img src="/static/img/avatars/stepanka-lucinova.png" alt="Štěpánka Lucinová" width="100" class="rounded-circle member-avatar">
+                        <p class="member-profiles">
+                            
+                            <a href="https://github.com/tystar86" title="GitHub" class="icon">
+                                <i class="fa fa-github" aria-hidden="true"></i><!--
+                                --><span>GitHub</span><!--
+                            --></a>
+                            
+                            
+                            
+                            <a href="https://twitter.com/tystarcz" title="Twitter" class="icon">
+                                <i class="fa fa-twitter" aria-hidden="true"></i><!--
+                                --><span>Twitter</span><!--
+                            --></a>
+                            
+                            
+                            <a href="https://linkedin.com/in/stepankalucinova" title="LinkedIn" class="icon">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i><!--
+                                --><span>LinkedIn</span><!--
+                            --></a>
+                            
+                        </p>
+                        <p class="member-info">
+                            <strong class="member-name">Štěpánka Lucinová</strong><br>
+                        </p>
+                    </li>
+                    
+                        <div class="w-100 d-block d-sm-none"></div>
+                    
+                    
+                    
+
+                    
+
+                    <li class="list-item member col">
+                        <img src="/static/img/avatars/petr-messner.png" alt="Petr Messner" width="100" class="rounded-circle member-avatar">
+                        <p class="member-profiles">
+                            
+                            <a href="https://github.com/messa" title="GitHub" class="icon">
+                                <i class="fa fa-github" aria-hidden="true"></i><!--
+                                --><span>GitHub</span><!--
+                            --></a>
+                            
+                            
+                            
+                            <a href="https://twitter.com/messa_cz" title="Twitter" class="icon">
+                                <i class="fa fa-twitter" aria-hidden="true"></i><!--
+                                --><span>Twitter</span><!--
+                            --></a>
+                            
+                            
+                        </p>
+                        <p class="member-info">
+                            <strong class="member-name">Petr Messner</strong><br>
+                        </p>
+                    </li>
+                    
+                    
+                        <div class="w-100 d-none d-sm-block d-md-none"></div>
+                    
+                    
+                        <div class="w-100 d-none d-md-block d-lg-block d-xl-block"></div>
+                    
+
+                    
+
+                    <li class="list-item member col">
+                        <img src="/static/img/avatars/magdalena-grassi-morong.png" alt="Magdaléna Grassi Morong" width="100" class="rounded-circle member-avatar">
+                        <p class="member-profiles">
+                            
+                            <a href="https://github.com/gryffinfox" title="GitHub" class="icon">
+                                <i class="fa fa-github" aria-hidden="true"></i><!--
+                                --><span>GitHub</span><!--
+                            --></a>
+                            
+                            
+                            
+                            
+                            <a href="https://linkedin.com/in/magdalena-grassi-morong/" title="LinkedIn" class="icon">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i><!--
+                                --><span>LinkedIn</span><!--
+                            --></a>
+                            
+                        </p>
+                        <p class="member-info">
+                            <strong class="member-name">Magdaléna Grassi Morong</strong><br>
+                        </p>
+                    </li>
+                    
+                        <div class="w-100 d-block d-sm-none"></div>
+                    
+                    
+                    
+
+                    
+
+                    <li class="list-item member col">
+                        <img src="/static/img/avatars/tomas-orsava.png" alt="Tomáš Orsava" width="100" class="rounded-circle member-avatar">
+                        <p class="member-profiles">
+                            
+                            <a href="https://github.com/torsava" title="GitHub" class="icon">
+                                <i class="fa fa-github" aria-hidden="true"></i><!--
+                                --><span>GitHub</span><!--
+                            --></a>
+                            
+                            
+                            
+                            
+                            <a href="https://linkedin.com/in/tom%C3%A1%C5%A1-orsava-56284b57" title="LinkedIn" class="icon">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i><!--
+                                --><span>LinkedIn</span><!--
+                            --></a>
+                            
+                        </p>
+                        <p class="member-info">
+                            <strong class="member-name">Tomáš Orsava</strong><br>
+                        </p>
+                    </li>
+                    
+                    
+                    
+
+                    
+
+                    <li class="list-item member col">
+                        <img src="/static/img/avatars/martin-pavlasek.png" alt="Martin Pavlásek" width="100" class="rounded-circle member-avatar">
+                        <p class="member-profiles">
+                            
+                            <a href="https://github.com/mpavlase" title="GitHub" class="icon">
+                                <i class="fa fa-github" aria-hidden="true"></i><!--
+                                --><span>GitHub</span><!--
+                            --></a>
+                            
+                            
+                            
+                            
+                            <a href="https://linkedin.com/in/martin-pavlasek" title="LinkedIn" class="icon">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i><!--
+                                --><span>LinkedIn</span><!--
+                            --></a>
+                            
+                        </p>
+                        <p class="member-info">
+                            <strong class="member-name">Martin Pavlásek</strong><br>
+                        </p>
+                    </li>
+                    
+                        <div class="w-100 d-block d-sm-none"></div>
+                    
+                    
+                        <div class="w-100 d-none d-sm-block d-md-none"></div>
+                    
+                    
+
+                    
+
+                    <li class="list-item member col">
+                        <img src="/static/img/avatars/radka-plankova.png" alt="Radka Planková" width="100" class="rounded-circle member-avatar">
+                        <p class="member-profiles">
+                            
+                            <a href="https://github.com/radusaaa" title="GitHub" class="icon">
+                                <i class="fa fa-github" aria-hidden="true"></i><!--
+                                --><span>GitHub</span><!--
+                            --></a>
+                            
+                            
+                            
+                            
+                            <a href="https://linkedin.com/in/radkaplankova" title="LinkedIn" class="icon">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i><!--
+                                --><span>LinkedIn</span><!--
+                            --></a>
+                            
+                        </p>
+                        <p class="member-info">
+                            <strong class="member-name">Radka Planková</strong><br>
+                        </p>
+                    </li>
+                    
+                    
+                    
+
+                    
+
+                    <li class="list-item member col">
+                        <img src="/static/img/avatars/vitezslav-pliska.png" alt="Vítek Pliska" width="100" class="rounded-circle member-avatar">
+                        <p class="member-profiles">
+                            
+                            <a href="https://github.com/whit" title="GitHub" class="icon">
+                                <i class="fa fa-github" aria-hidden="true"></i><!--
+                                --><span>GitHub</span><!--
+                            --></a>
+                            
+                            
+                            
+                            <a href="https://twitter.com/whiteck" title="Twitter" class="icon">
+                                <i class="fa fa-twitter" aria-hidden="true"></i><!--
+                                --><span>Twitter</span><!--
+                            --></a>
+                            
+                            
+                            <a href="https://linkedin.com/in/vitekpliska" title="LinkedIn" class="icon">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i><!--
+                                --><span>LinkedIn</span><!--
+                            --></a>
+                            
+                        </p>
+                        <p class="member-info">
+                            <strong class="member-name">Vítek Pliska</strong><br>
+                        </p>
+                    </li>
+                    
+                        <div class="w-100 d-block d-sm-none"></div>
+                    
+                    
+                    
+                        <div class="w-100 d-none d-md-block d-lg-block d-xl-block"></div>
+                    
+
+                    
+
+                    <li class="list-item member col">
+                        <img src="/static/img/avatars/jiri-psotka.png" alt="Jiří Psotka" width="100" class="rounded-circle member-avatar">
+                        <p class="member-profiles">
+                            
+                            <a href="https://github.com/jpsotka" title="GitHub" class="icon">
+                                <i class="fa fa-github" aria-hidden="true"></i><!--
+                                --><span>GitHub</span><!--
+                            --></a>
+                            
+                            
+                            
+                            <a href="https://twitter.com/JiriPsotka" title="Twitter" class="icon">
+                                <i class="fa fa-twitter" aria-hidden="true"></i><!--
+                                --><span>Twitter</span><!--
+                            --></a>
+                            
+                            
+                            <a href="https://linkedin.com/in/jiripsotka" title="LinkedIn" class="icon">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i><!--
+                                --><span>LinkedIn</span><!--
+                            --></a>
+                            
+                        </p>
+                        <p class="member-info">
+                            <strong class="member-name">Jiří Psotka</strong><br>
+                        </p>
+                    </li>
+                    
+                    
+                        <div class="w-100 d-none d-sm-block d-md-none"></div>
+                    
+                    
+
+                    
+
+                    <li class="list-item member col">
+                        <img src="/static/img/avatars/jan-smitka.png" alt="Honza Smitka" width="100" class="rounded-circle member-avatar">
+                        <p class="member-profiles">
+                            
+                            <a href="https://github.com/jsmitka" title="GitHub" class="icon">
+                                <i class="fa fa-github" aria-hidden="true"></i><!--
+                                --><span>GitHub</span><!--
+                            --></a>
+                            
+                            
+                            <a href="https://fosstodon.org/@jansmitka" title="Mastodon" class="icon">
+                                <i class="fa fa-mastodon" aria-hidden="true"></i><!--
+                                --><span>Mastodon</span><!--
+                            --></a>
+                            
+                            
+                            <a href="https://twitter.com/jansmitka" title="Twitter" class="icon">
+                                <i class="fa fa-twitter" aria-hidden="true"></i><!--
+                                --><span>Twitter</span><!--
+                            --></a>
+                            
+                            
+                            <a href="https://linkedin.com/in/jansmitka" title="LinkedIn" class="icon">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i><!--
+                                --><span>LinkedIn</span><!--
+                            --></a>
+                            
+                        </p>
+                        <p class="member-info">
+                            <strong class="member-name">Honza Smitka</strong><br>
+                        </p>
+                    </li>
+                    
+                        <div class="w-100 d-block d-sm-none"></div>
+                    
+                    
+                    
+
+                    
+
+                    <li class="list-item member col">
+                        <img src="/static/img/avatars/karolina-surma.png" alt="Karolina Surma" width="100" class="rounded-circle member-avatar">
+                        <p class="member-profiles">
+                            
+                            <a href="https://github.com/befeleme" title="GitHub" class="icon">
+                                <i class="fa fa-github" aria-hidden="true"></i><!--
+                                --><span>GitHub</span><!--
+                            --></a>
+                            
+                            
+                            <a href="https://floss.social/@karo" title="Mastodon" class="icon">
+                                <i class="fa fa-mastodon" aria-hidden="true"></i><!--
+                                --><span>Mastodon</span><!--
+                            --></a>
+                            
+                            
+                            
+                            <a href="https://linkedin.com/in/karolina-surma-950452b7" title="LinkedIn" class="icon">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i><!--
+                                --><span>LinkedIn</span><!--
+                            --></a>
+                            
+                        </p>
+                        <p class="member-info">
+                            <strong class="member-name">Karolina Surma</strong><br>
+                        </p>
+                    </li>
+                    
+                    
+                    
+
+                    
+
+                    <li class="list-item member col">
+                        <img src="/static/img/avatars/timothy-vladimir-hobbs.png" alt="Tim" width="100" class="rounded-circle member-avatar">
+                        <p class="member-profiles">
+                            
+                            <a href="https://github.com/timthelion" title="GitHub" class="icon">
+                                <i class="fa fa-github" aria-hidden="true"></i><!--
+                                --><span>GitHub</span><!--
+                            --></a>
+                            
+                            
+                            
+                            
+                        </p>
+                        <p class="member-info">
+                            <strong class="member-name">Tim</strong><br>
+                        </p>
+                    </li>
+                    
+                        <div class="w-100 d-block d-sm-none"></div>
+                    
+                    
+                        <div class="w-100 d-none d-sm-block d-md-none"></div>
+                    
+                    
+
+                    
+
+                    <li class="list-item member col">
+                        <img src="/static/img/avatars/jakub-urban.png" alt="Kuba Urban" width="100" class="rounded-circle member-avatar">
+                        <p class="member-profiles">
+                            
+                            <a href="https://github.com/coobas" title="GitHub" class="icon">
+                                <i class="fa fa-github" aria-hidden="true"></i><!--
+                                --><span>GitHub</span><!--
+                            --></a>
+                            
+                            
+                            
+                            <a href="https://twitter.com/coobas" title="Twitter" class="icon">
+                                <i class="fa fa-twitter" aria-hidden="true"></i><!--
+                                --><span>Twitter</span><!--
+                            --></a>
+                            
+                            
+                            <a href="https://linkedin.com/in/urbanj" title="LinkedIn" class="icon">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i><!--
+                                --><span>LinkedIn</span><!--
+                            --></a>
+                            
+                        </p>
+                        <p class="member-info">
+                            <strong class="member-name">Kuba Urban</strong><br>
+                        </p>
+                    </li>
+                    
+                    
+                    
+                        <div class="w-100 d-none d-md-block d-lg-block d-xl-block"></div>
+                    
+
+                    
+
+                    <li class="list-item member col">
+                        <img src="/static/img/avatars/petr-viktorin.png" alt="Petr Viktorin" width="100" class="rounded-circle member-avatar">
+                        <p class="member-profiles">
+                            
+                            <a href="https://github.com/encukou" title="GitHub" class="icon">
+                                <i class="fa fa-github" aria-hidden="true"></i><!--
+                                --><span>GitHub</span><!--
+                            --></a>
+                            
+                            
+                            <a href="https://mastodon.social/@encukou" title="Mastodon" class="icon">
+                                <i class="fa fa-mastodon" aria-hidden="true"></i><!--
+                                --><span>Mastodon</span><!--
+                            --></a>
+                            
+                            
+                            <a href="https://twitter.com/encukou" title="Twitter" class="icon">
+                                <i class="fa fa-twitter" aria-hidden="true"></i><!--
+                                --><span>Twitter</span><!--
+                            --></a>
+                            
+                            
+                            <a href="https://linkedin.com/in/petr-viktorin-a5043a14" title="LinkedIn" class="icon">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i><!--
+                                --><span>LinkedIn</span><!--
+                            --></a>
+                            
+                        </p>
+                        <p class="member-info">
+                            <strong class="member-name">Petr Viktorin</strong><br>
+                        </p>
+                    </li>
+                    
+                        <div class="w-100 d-block d-sm-none"></div>
+                    
+                    
+                    
+
+                    
+
+                    <li class="list-item member col">
+                        <img src="/static/img/avatars/jaroslav-vysoky.png" alt="Jarda Vysoký" width="100" class="rounded-circle member-avatar">
+                        <p class="member-profiles">
+                            
+                            <a href="https://github.com/JerryFox" title="GitHub" class="icon">
+                                <i class="fa fa-github" aria-hidden="true"></i><!--
+                                --><span>GitHub</span><!--
+                            --></a>
+                            
+                            
+                            
+                            <a href="https://twitter.com/jarda57" title="Twitter" class="icon">
+                                <i class="fa fa-twitter" aria-hidden="true"></i><!--
+                                --><span>Twitter</span><!--
+                            --></a>
+                            
+                            
+                        </p>
+                        <p class="member-info">
+                            <strong class="member-name">Jarda Vysoký</strong><br>
+                        </p>
+                    </li>
+                    
+                    
+                        <div class="w-100 d-none d-sm-block d-md-none"></div>
+                    
+                    
+
+                    
+
+                    <li class="list-item member col">
+                        <img src="/static/img/avatars/ales-zoulek.png" alt="Aleš Zoulek" width="100" class="rounded-circle member-avatar">
+                        <p class="member-profiles">
+                            
+                            <a href="https://github.com/aleszoulek" title="GitHub" class="icon">
+                                <i class="fa fa-github" aria-hidden="true"></i><!--
+                                --><span>GitHub</span><!--
+                            --></a>
+                            
+                            
+                            
+                            <a href="https://twitter.com/aleszoulek" title="Twitter" class="icon">
+                                <i class="fa fa-twitter" aria-hidden="true"></i><!--
+                                --><span>Twitter</span><!--
+                            --></a>
+                            
+                            
+                            <a href="https://linkedin.com/in/zoulek" title="LinkedIn" class="icon">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i><!--
+                                --><span>LinkedIn</span><!--
+                            --></a>
+                            
+                        </p>
+                        <p class="member-info">
+                            <strong class="member-name">Aleš Zoulek</strong><br>
+                        </p>
+                    </li>
+                    
+                        <div class="w-100 d-block d-sm-none"></div>
+                    
+                    
+                    
+
+                    
+
+                    <li class="list-item member col">
+                        <img src="/static/img/avatars/jan-florian.png" alt="stařenka" width="100" class="rounded-circle member-avatar">
+                        <p class="member-profiles">
+                            
+                            <a href="https://github.com/starenka" title="GitHub" class="icon">
+                                <i class="fa fa-github" aria-hidden="true"></i><!--
+                                --><span>GitHub</span><!--
+                            --></a>
+                            
+                            
+                            <a href="https://witter.cz/@starenka" title="Mastodon" class="icon">
+                                <i class="fa fa-mastodon" aria-hidden="true"></i><!--
+                                --><span>Mastodon</span><!--
+                            --></a>
+                            
+                            
+                            <a href="https://twitter.com/starenka" title="Twitter" class="icon">
+                                <i class="fa fa-twitter" aria-hidden="true"></i><!--
+                                --><span>Twitter</span><!--
+                            --></a>
+                            
+                            
+                            <a href="https://linkedin.com/in/janflorian" title="LinkedIn" class="icon">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i><!--
+                                --><span>LinkedIn</span><!--
+                            --></a>
+                            
+                        </p>
+                        <p class="member-info">
+                            <strong class="member-name">stařenka</strong><br>
+                        </p>
+                    </li>
+                    
+                    
+                    
+
+                    
+
+                    <li class="list-item member col">
+                        <img src="/static/img/avatars/jakub-cervinka.png" alt="Kuba Červinka" width="100" class="rounded-circle member-avatar">
+                        <p class="member-profiles">
+                            
+                            <a href="https://github.com/JakubDotPy" title="GitHub" class="icon">
+                                <i class="fa fa-github" aria-hidden="true"></i><!--
+                                --><span>GitHub</span><!--
+                            --></a>
+                            
+                            
+                            
+                            <a href="https://twitter.com/JakubDotPy" title="Twitter" class="icon">
+                                <i class="fa fa-twitter" aria-hidden="true"></i><!--
+                                --><span>Twitter</span><!--
+                            --></a>
+                            
+                            
+                            <a href="https://linkedin.com/in/jakub-%C4%8Dervinka-2972079b" title="LinkedIn" class="icon">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i><!--
+                                --><span>LinkedIn</span><!--
+                            --></a>
+                            
+                        </p>
+                        <p class="member-info">
+                            <strong class="member-name">Kuba Červinka</strong><br>
+                        </p>
+                    </li>
+                    
+                        <div class="w-100 d-block d-sm-none"></div>
+                    
+                    
+                        <div class="w-100 d-none d-sm-block d-md-none"></div>
+                    
+                    
+                        <div class="w-100 d-none d-md-block d-lg-block d-xl-block"></div>
+                    
+
+                    
+                </ul>
+            
+        </div>
+        
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col address">
+                        <h3>Address</h3>
+                        <p>Pyvec, z.s.<br> Korunní&nbsp;2569/108<br> 101&nbsp;00 Prague&nbsp;10<br> Czech Republic, EU</p>
+                        <p>
+                            Reg. No.: <a href="https://or.justice.cz/ias/ui/vypis-sl-firma?subjektId=760829">22746668</a><br>
+                            “Datová schránka”: t94cfya
+                        </p>
+                        <p>E-mail: <a href="mailto:info@pyvec.org">info@pyvec.org</a></p>
+                    </div>
+                    <div class="w-100 d-block d-md-none"></div>
+                    <div class="col address">
+                        <h3>Downloads</h3>
+                        <p class="downloads">
+                            <a href="/static/bylaws-2024-01-23.pdf">
+                                <i class="link-icon fa fa-file-pdf-o" aria-hidden="true"></i>bylaws.pdf
+                                
+                            </a>
+                            <br>
+
+                            <a href="https://docs.pyvec.org/operations/bylaws.html">
+                                <i class="link-icon fa fa-file-o" aria-hidden="true"></i>bylaws
+                            </a>
+                            <br>
+
+                            <a href="https://or.justice.cz/ias/ui/vypis-sl-firma?subjektId=760829">
+                                <i class="link-icon fa fa-archive" aria-hidden="true"></i>filing history
+                            </a>
+                            <br>
+
+                            <a href="https://github.com/pyvec/resources">
+                                <i class="link-icon fa fa-file-image-o" aria-hidden="true"></i>resources
+                            </a>
+                            <br>
+
+                            <a href="/en/api.json">
+                                <i class="link-icon fa fa-file-code-o" aria-hidden="true"></i>this page as JSON
+                            </a>
+                        </p>
+                    </div>
+                    <div class="w-100 d-block d-md-none"></div>
+                    <div class="col address">
+                        <h3>Transparent account</h3>
+                        <p>
+                            
+                                IBAN: CZ5020100000002600260438<br>
+                                SWIFT: FIOBCZPP<br>
+                                Fio banka, a.s., V Celnici 1028/10, Prague<br>
+                                <a href="https://ib.fio.cz/ib/transparent?a=2600260438&amp;l=ENGLISH">Transaction history</a>
+                            
+                        </p>
+                    </div>
+                    <div class="w-100 d-block d-md-none"></div>
+                    <div class="col">
+                        <ul class="list profiles col d-flex justify-content-end">
+                            
+                            <li class="list-item icon">
+                                <a href="https://twitter.com/pyvec/" title="Twitter">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    <span>Twitter</span>
+                                </a>
+                            </li>
+                            
+                            <li class="list-item icon">
+                                <a href="https://www.youtube.com/user/pyvec" title="YouTube">
+                                    <i class="fa fa-youtube" aria-hidden="true"></i>
+                                    <span>YouTube</span>
+                                </a>
+                            </li>
+                            
+                            <li class="list-item icon">
+                                <a href="https://github.com/pyvec/" title="GitHub">
+                                    <i class="fa fa-github" aria-hidden="true"></i>
+                                    <span>GitHub</span>
+                                </a>
+                            </li>
+                            
+                            <li class="list-item icon">
+                                <a href="https://pyvec.slack.com/" title="Slack">
+                                    <i class="fa fa-slack" aria-hidden="true"></i>
+                                    <span>Slack</span>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        <p class="extra-pages">
+                            <a href="/en/privacy-policy/">Privacy Policy</a>
+                        </p>
+                        <p class="extra-pages">
+                            <a href="/en/coc/">Code of Conduct</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
