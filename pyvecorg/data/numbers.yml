@@ -3,7 +3,7 @@ heading:
   en: Our impact
 
 entries:
-  # last update: March 2018
+  # last update: April 2025
 
   - text:
       cs:
@@ -34,7 +34,7 @@ entries:
         - konference
         - konferencí
       en: conferences
-    value: 4  # 2015, 2016, 2017, 2018
+    value: 6  # 2015, 2016, 2017, 2018, 2019, 2023
     exactly: true
     hint:
       cs: Počet všech pořádaných PyCon CZ konferencí
@@ -47,7 +47,7 @@ entries:
         - diskutujících
       en: participants
     icon: slack
-    value: 158  # https://pyvec.slack.com/admin
+    value: 613  # https://pyvec.slack.com/admin
     hint:
       cs: Počet členů na Pyvec Slacku vyhrazeném pro organizátory
       en: Members on Pyvec Slack dedicated to organizators
@@ -72,8 +72,8 @@ entries:
       en: participants
     icon: facebook
     sum: [
-      1896,  # https://www.facebook.com/groups/pyonieri/
-      186,  # https://www.facebook.com/groups/800923800012580/
+      7898,  # https://www.facebook.com/groups/pyonieri/
+      1468,  # https://www.facebook.com/groups/800923800012580/
     ]
     hint:
       cs: Součet členů hlavních FB skupin české Python komunity
@@ -86,9 +86,12 @@ entries:
         - kurzů
       en: courses
     sum: [
-      8,  # http://pyladies.cz/praha_course/ "Začátečnický kurz"
-      10,  # http://pyladies.cz/brno_course/ "Začátečnický kurz"
-      4,  # http://pyladies.cz/ostrava_course/ "Začátečnický kurz"
+      26,  # http://pyladies.cz/praha/ "Začátečnický kurz"
+      28,  # http://pyladies.cz/brno/ "Začátečnický kurz"
+      11,  # http://pyladies.cz/ostrava/ "Začátečnický kurz"
+      6,   # http://pyladies.cz/plzen/ "Začátečnický kurz"
+      5,   # http://pyladies.cz/olomouc/ "Začátečnický kurz"
+      3,   # https://pyladies.cz/hradec/ "Začátečnický kurz"
     ]
     hint:
       cs: Počet všech několikaměsíčních kurzů pro začátečníky konaných PyLadies, ve všech městech
