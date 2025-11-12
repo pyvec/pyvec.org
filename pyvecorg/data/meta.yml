@@ -46,17 +46,25 @@ databox_no:
     en: “Datová schránka”
   value: t94cfya
 
-bank_account:
-  heading:
-    cs: Transparentní účet
-    en: Transparent account
-  number: 2600260438
-  bank_branch: 2010
-  iban: CZ5020100000002600260438
-  swift: FIOBCZPP
-  bank_name:
-    cs: Fio banka, a.s., V Celnici 1028/10, Praha 1
-    en: Fio banka, a.s., V Celnici 1028/10, Prague
+bank_accounts:
+  - heading:
+      cs: Transparentní účet
+      en: Transparent account
+    number: 2600260438
+    bank_branch: 2010
+    iban: CZ5020100000002600260438
+    swift: FIOBCZPP
+    bank_name:
+      cs: Fio banka, a.s., V Celnici 1028/10, Praha 1
+      en: Fio banka, a.s., V Celnici 1028/10, Prague
+  - heading:
+      cs: Spořící účet
+      en: Savings account
+    number: 2903292736
+    bank_branch: 2010
+    bank_name:
+      cs: Fio banka, a.s., V Celnici 1028/10, Praha 1
+      en: Fio banka, a.s., V Celnici 1028/10, Prague
 
 downloads:
   heading:
