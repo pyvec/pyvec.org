@@ -44,26 +44,29 @@
       },
       "additionalProperties": false
     },
-    "bank_account": {
-      "type": "object",
-      "properties": {
-        "heading": {
-          "$ref": "definitions/translated_text_schema.json#"
-        },
-        "number": {
-          "type": "number"
-        },
-        "bank_branch": {
-          "type": "number"
-        },
-        "iban": {
-          "type": "string"
-        },
-        "swift": {
-          "type": "string"
-        },
-        "bank_name": {
-          "$ref": "definitions/translated_text_schema.json#"
+    "bank_accounts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "heading": {
+            "$ref": "definitions/translated_text_schema.json#"
+          },
+          "number": {
+            "type": "number"
+          },
+          "bank_branch": {
+            "type": "number"
+          },
+          "iban": {
+            "type": "string"
+          },
+          "swift": {
+            "type": "string"
+          },
+          "bank_name": {
+            "$ref": "definitions/translated_text_schema.json#"
+          }
         }
       }
     },

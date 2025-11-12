@@ -323,18 +323,24 @@
                     </div>
                     <div class="w-100 d-block d-md-none"></div>
                     <div class="col address">
-                        <h3>{{ meta.bank_account.heading }}</h3>
-                        <p>
-                            {% if lang == 'cs' %}
-                                <a href="https://ib.fio.cz/ib/transparent?a={{ meta.bank_account.number }}">{{ meta.bank_account.number }}/{{ meta.bank_account.bank_branch }}</a><br>
-                                {{ meta.bank_account.bank_name }}
-                            {% else %}
-                                IBAN: {{ meta.bank_account.iban }}<br>
-                                SWIFT: {{ meta.bank_account.swift }}<br>
-                                {{ meta.bank_account.bank_name }}<br>
-                                <a href="https://ib.fio.cz/ib/transparent?a={{ meta.bank_account.number }}&amp;l=ENGLISH">Transaction history</a>
-                            {% endif %}
-                        </p>
+                        {% for bank_account in meta.bank_accounts %}
+                            <h3>{{ bank_account.heading }}</h3>
+                            <p>
+                                {% if lang == 'cs' %}
+                                    <a href="https://ib.fio.cz/ib/transparent?a={{ bank_account.number }}">{{ bank_account.number }}/{{ bank_account.bank_branch }}</a><br>
+                                    {{ bank_account.bank_name }}
+                                {% else %}
+                                    {% if bank_account.iban is defined %}
+                                        IBAN: {{ bank_account.iban }}<br>
+                                    {% endif %}
+                                    {% if bank_account.swift is defined %}
+                                        SWIFT: {{ bank_account.swift }}<br>
+                                        {{ bank_account.bank_name }}<br>
+                                    {% endif %}
+                                    <a href="https://ib.fio.cz/ib/transparent?a={{ bank_account.number }}&amp;l=ENGLISH">Transaction history</a>
+                                {% endif %}
+                            </p>
+                        {% endfor %}
                     </div>
                     <div class="w-100 d-block d-md-none"></div>
                     <div class="col">
