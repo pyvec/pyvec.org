@@ -28,6 +28,7 @@ pipfile = "*"
 pylama = "*"
 pytest = "*"
 jsonschema = "*"
+setuptools = "<82"  # pylama uses pkg_resources
 
 [requires]
 python_version = "3.9"
