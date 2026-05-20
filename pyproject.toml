@@ -27,7 +27,6 @@ dev = [
     "pytest",
     "pytest-ruff",
     "ruff",
-    "setuptools<82",
 ]
 
 [tool.pytest.ini_options]
