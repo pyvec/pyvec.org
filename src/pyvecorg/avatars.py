@@ -31,7 +31,7 @@ def get_gravatar_url(email):
     try:
         requests.head(url).raise_for_status()
         return url
-    except:
+    except requests.RequestException:
         return None
 
 

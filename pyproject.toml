@@ -24,10 +24,14 @@ pyvecorg = "pyvecorg.__main__:main"
 [dependency-groups]
 dev = [
     "jsonschema",
-    "pylama",
     "pytest",
+    "pytest-ruff",
+    "ruff",
     "setuptools<82",
 ]
+
+[tool.pytest.ini_options]
+addopts = "--ruff"
 
 [tool.uv]
 default-groups = ["dev"]

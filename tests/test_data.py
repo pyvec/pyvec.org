@@ -14,7 +14,7 @@ from pyvecorg.data import (load_data, select_language,
 
 STATIC_PATH = os.path.join(DATA_PATH, '..', 'static')
 RE_MISSING_LANG = re.compile(
-    f"'(" +
+    "'(" +
     '|'.join([re.escape(lang) for lang in SUPPORTED_LANGS]) +
     ")' is a required property"
 )
