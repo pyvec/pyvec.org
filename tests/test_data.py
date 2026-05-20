@@ -14,15 +14,15 @@ from pyvecorg.data import (load_data, select_language,
 
 STATIC_PATH = os.path.join(DATA_PATH, '..', 'static')
 RE_MISSING_LANG = re.compile(
-    f"'(" +
+    "'(" +
     '|'.join([re.escape(lang) for lang in SUPPORTED_LANGS]) +
     ")' is a required property"
 )
 DATA = load_data()
 
-# If you run 'pipenv run build', memebers_list.yml gets generated and it will
-# be tested. If you don't have the file present, the relevant tests will be
-# skipped
+# If you run 'uv run pyvecorg build', memebers_list.yml gets
+# generated and it will be tested. If you don't have the file
+# present, the relevant tests will be skipped
 DATA_BOARD = DATA.get('members_list', {}).get('board', [])
 DATA_PUBLIC_MEMBERS = DATA.get('members_list', {}).get('public_members', [])
 DATA_ALL_MEMBERS = DATA_BOARD + DATA_PUBLIC_MEMBERS

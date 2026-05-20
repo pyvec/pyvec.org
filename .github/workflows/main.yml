@@ -8,26 +8,26 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python 3.9
-      uses: actions/setup-python@v2
+    - uses: actions/checkout@v4
+    - name: Set up Python 3.14
+      uses: actions/setup-python@v5
       with:
-        python-version: 3.9
+        python-version: "3.14"
+    - name: Set up uv
+      uses: astral-sh/setup-uv@v6
     - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pipenv
-        pipenv install --dev
+      run: uv sync
     - if: ${{ github.ref == 'refs/heads/master' }}
       name: Build data
-      run: pipenv run build
+      run: uv run pyvecorg build
       env:
         GOOGLE_SERVICE_ACCOUNT: ${{ secrets.GOOGLE_SERVICE_ACCOUNT }}
     - name: Run tests
-      run: pipenv run test -v
+      run: uv run pytest -v
     - name: Build HTML
-      run: pipenv run freeze
+      run: uv run pyvecorg freeze
     - if: ${{ github.ref == 'refs/heads/master' }}
       name: Deploy
-      run: pipenv run deploy
+      run: uv run pyvecorg deploy
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

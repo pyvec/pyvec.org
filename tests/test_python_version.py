@@ -1,8 +1,8 @@
-import os
+import re
 from pathlib import Path
+import tomllib
 
 import yaml
-import pipfile
 
 
 def test_python_version_is_consistent_accross_all_configuration_and_readme():
@@ -18,10 +18,11 @@ def test_python_version_is_consistent_accross_all_configuration_and_readme():
             ci_py_name_version = step['name'].split(' ')[-1]
             break
 
-    pipfile_data = pipfile.load(os.path.join(project_dir, 'Pipfile')).data
-    pipfile_py_version = pipfile_data['_meta']['requires']['python_version']
+    pyproject_data = tomllib.loads((project_dir / 'pyproject.toml').read_text())
+    pyproject_requires_python = pyproject_data['project']['requires-python']
+    pyproject_py_version = re.search(r'\d+\.\d+', pyproject_requires_python).group(0)
 
     readme = (project_dir / 'README.md').read_text()
 
-    assert str(ci_py_version) == str(pipfile_py_version) == ci_py_name_version
+    assert str(ci_py_version) == str(pyproject_py_version) == ci_py_name_version
     assert f'Python {ci_py_version}' in readme

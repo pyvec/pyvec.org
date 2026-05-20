@@ -11,9 +11,9 @@
 .pytest_cache
 
 # Generated
-/pyvecorg/_build
-/pyvecorg/data/members_list.yml
-/pyvecorg/static/img/avatars
+/src/pyvecorg/_build
+/src/pyvecorg/data/members_list.yml
+/src/pyvecorg/static/img/avatars
 
 # Private
-google_service_account.json
+/src/pyvecorg/google_service_account.json

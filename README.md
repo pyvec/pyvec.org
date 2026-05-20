@@ -4,20 +4,20 @@ Pyvec homepage.
 
 ## Installation
 
-The code is **Python 3.9**
+The code is **Python 3.14**
 
 ```sh
-$ pipenv install
+$ uv sync
 ```
 
 ## Development
 
 The site uses [elsa](https://github.com/pyvec/elsa).
 
-- Installation: `pipenv install --dev`
-- Download data from external sources: `pipenv run build`
-- Tests: `pipenv run test`
-- Development server: `pipenv run serve`
+- Installation: `uv sync`
+- Download data from external sources: `uv run pyvecorg build`
+- Tests: `uv run pytest`
+- Development server: `uv run pyvecorg serve`
 
 ### Data and tests
 
@@ -39,7 +39,7 @@ logical rules which cannot be easily expressed by JSON Schema.
 ### External sources
 
 Some data cannot be stored statically in a YAML file. There is a command
-`pipenv run build`, which downloads them from external sources and generates
+`uv run pyvecorg build`, which downloads them from external sources and generates
 respective static YAML files. This is a separate step, which needs to be done
 before developing or deploying the site, otherwise it won't work properly.
 
@@ -47,13 +47,13 @@ before developing or deploying the site, otherwise it won't work properly.
 
 Pyvec members are tracked in an internal Google Spreadsheet. The future
 intention is to have the list of members public, but we're not there yet (GDPR).
-So far only board members are being listed publicly. The `pipenv run build`
+So far only board members are being listed publicly. The `uv run pyvecorg build`
 command downloads the spreadsheet as CSV and generates the `members_list.yml`
 file. It also downloads and caches avatars.
 
 ### Numbers
 
-There are stats numbers in [numbers.yml](pyvecorg/data/numbers.yml). They are
+There are stats numbers in [numbers.yml](src/pyvecorg/data/numbers.yml). They are
 not calculated on the fly, because for many of them it's either complicated
 or impossible. They need to be updated manually from time to time. Comments
 in the YAML file should give you guidance on when the last update has happened.
@@ -71,7 +71,7 @@ the number,
 1.  Follow the steps in the [gspread guide](https://gspread.readthedocs.io/en/latest/oauth2.html). Instead of Google Drive API, enable Google Sheets API.
 1.  Save the obtained JSON file into the `pyvecorg` package as `google_service_account.json`
 1.  Make sure it is ignored by Git
-1.  Run `cat pyvecorg/google_service_account.json | pbcopy` to copy the JSON into your clipboard (macOS)
+1.  Run `cat src/pyvecorg/google_service_account.json | pbcopy` to copy the JSON into your clipboard (macOS)
 1.  Go to [settings of secrets](https://github.com/pyvec/pyvec.org/settings/secrets)
 1.  Add `GOOGLE_SERVICE_ACCOUNT` secret and paste the JSON from your clipboard as a value
 
