@@ -15,9 +15,9 @@ $ uv sync
 The site uses [elsa](https://github.com/pyvec/elsa).
 
 - Installation: `uv sync`
-- Download data from external sources: `uv run python -m pyvecorg.build`
-- Tests: `uv run pytest`
-- Development server: `uv run python -m pyvecorg serve`
+- Download data from external sources: `make build`
+- Tests: `make test`
+- Development server: `make serve`
 
 ### Data and tests
 
@@ -39,7 +39,7 @@ logical rules which cannot be easily expressed by JSON Schema.
 ### External sources
 
 Some data cannot be stored statically in a YAML file. There is a command
-`uv run python -m pyvecorg.build`, which downloads them from external sources and generates
+`make build`, which downloads them from external sources and generates
 respective static YAML files. This is a separate step, which needs to be done
 before developing or deploying the site, otherwise it won't work properly.
 
@@ -47,7 +47,7 @@ before developing or deploying the site, otherwise it won't work properly.
 
 Pyvec members are tracked in an internal Google Spreadsheet. The future
 intention is to have the list of members public, but we're not there yet (GDPR).
-So far only board members are being listed publicly. The `uv run python -m pyvecorg.build`
+So far only board members are being listed publicly. The `make build`
 command downloads the spreadsheet as CSV and generates the `members_list.yml`
 file. It also downloads and caches avatars.
 
