@@ -18,6 +18,9 @@ dependencies = [
     "werkzeug<3",
 ]
 
+[project.scripts]
+pyvecorg = "pyvecorg.__main__:main"
+
 [dependency-groups]
 dev = [
     "jsonschema",

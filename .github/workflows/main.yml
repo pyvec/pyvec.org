@@ -19,15 +19,15 @@ jobs:
       run: uv sync
     - if: ${{ github.ref == 'refs/heads/master' }}
       name: Build data
-      run: uv run python -m pyvecorg build
+      run: uv run pyvecorg build
       env:
         GOOGLE_SERVICE_ACCOUNT: ${{ secrets.GOOGLE_SERVICE_ACCOUNT }}
     - name: Run tests
       run: uv run pytest -v
     - name: Build HTML
-      run: uv run python -m pyvecorg freeze
+      run: uv run pyvecorg freeze
     - if: ${{ github.ref == 'refs/heads/master' }}
       name: Deploy
-      run: uv run python -m pyvecorg deploy
+      run: uv run pyvecorg deploy
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -3,4 +3,9 @@ from elsa import cli
 from pyvecorg import app
 
 
-cli(app, base_url='http://pyvec.org')
+def main():
+	cli(app, base_url='http://pyvec.org')
+
+
+if __name__ == '__main__':
+	main()
