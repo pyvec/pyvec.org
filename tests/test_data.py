@@ -20,7 +20,8 @@ RE_MISSING_LANG = re.compile(
 )
 DATA = load_data()
 
-# If you run 'pipenv run build', memebers_list.yml gets generated and it will
+# If you run 'uv run python -m pyvecorg build', memebers_list.yml gets
+# generated and it will
 # be tested. If you don't have the file present, the relevant tests will be
 # skipped
 DATA_BOARD = DATA.get('members_list', {}).get('board', [])
