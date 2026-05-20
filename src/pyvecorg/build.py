@@ -65,7 +65,7 @@ def generate_yaml(data):
     yaml_contents = dedent('''\
         #
         #  This file has been generated from external sources
-        #  using `uv run pyvecorg build`. Do not edit
+        #  using `uv run python -m pyvecorg.build`. Do not edit
         #  it manually!
         #
     ''')
