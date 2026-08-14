@@ -17,3 +17,6 @@
 
 # Private
 /src/pyvecorg/google_service_account.json
+
+# Python
+__pycache__/
