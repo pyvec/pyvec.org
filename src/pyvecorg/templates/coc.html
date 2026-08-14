@@ -2,9 +2,27 @@
 
 {% block cover %}{% endblock %}
 
+{% macro coc_contact_list() -%}
+    <ul>
+        {% for member in members_list.board %}
+            {% if 'coc_mail' in member %}
+                <li>
+                    {{ member.name }}:
+                    <a href="mailto:{{ member.coc_mail }}">
+                        {{ member.coc_mail }}
+                    </a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+{%- endmacro %}
+
 {% block content %}
     <div class="container">
         <h2 id="coc">{{ coc.heading }}</h2>
-        {{ coc.text|markdown }}
+        {{ coc.text
+           | markdown
+           | replace('{COC_MEMBER_LIST}', coc_contact_list())
+        }}
     </div>
 {% endblock %}
