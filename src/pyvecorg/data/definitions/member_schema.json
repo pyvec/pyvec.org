@@ -22,6 +22,9 @@
     },
     "avatar_filename": {
       "type": "string"
+    },
+    "coc_mail": {
+      "type": "string"
     }
   },
   "additionalProperties": false,
