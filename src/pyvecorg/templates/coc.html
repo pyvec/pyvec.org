@@ -4,16 +4,18 @@
 
 {% macro coc_contact_list() -%}
     <ul>
-        {% for member in members_list.board %}
-            {% if 'coc_mail' in member %}
-                <li>
-                    {{ member.name }}:
-                    <a href="mailto:{{ member.coc_mail }}">
-                        {{ member.coc_mail }}
-                    </a>
-                </li>
-            {% endif %}
-        {% endfor %}
+        {% if members_list %}
+            {% for member in members_list.board %}
+                {% if 'coc_mail' in member %}
+                    <li>
+                        {{ member.name }}:
+                        <a href="mailto:{{ member.coc_mail }}">
+                            {{ member.coc_mail }}
+                        </a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
     </ul>
 {%- endmacro %}
 
