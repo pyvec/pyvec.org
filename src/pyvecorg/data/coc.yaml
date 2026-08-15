@@ -66,8 +66,8 @@ text:
     Hlášení a stížnosti posílejte na následující kontakty:
 
     * Pokud má akce (např. konference) vlastní seznam kontaktů, využijte ten.
-    * Pokud nemá nebo ho nechcete využít (např. se obáváte střetu zájmů), pošlete stížnost na email [board@pyvec.org](mailto:board@pyvec.org?subject=Stížnost ohledně kodexu chování). Stížnost přijde všem členům výboru spolku Pyvec.
-    * Nechcete-li aby stížnost četl celý výbor, můžete se obrátit na jeho jednotlivé členy:
+    * Pokud nemá, nebo ho nechcete využít (např. se obáváte střetu zájmů), pošlete stížnost na e-mail [board@pyvec.org](mailto:board@pyvec.org?subject=Stížnost ohledně kodexu chování). Stížnost přijde všem členům výboru spolku Pyvec.
+    * Nechcete-li, aby stížnost četl celý výbor, můžete se obrátit na tyto jeho jednotlivé členy:
         {COC_MEMBER_LIST}
 
     ## Inspirace
@@ -137,7 +137,7 @@ text:
     Please send reports and grievances to the following contacts:
 
     * If the event (for example, a conference) publishes a Code of Conduct contacts, notify them.
-    * Otherwise, or if you want to use those contacts (for example, you are worried about a conflict of interest), send an email to [board@pyvec.org](mailto:board@pyvec.org?subject=Code of Conduct). The message will reach the Pyvec Board of directors.
+    * Otherwise, or if you don't want to use those contacts (for example, you are worried about a conflict of interest), send an email to [board@pyvec.org](mailto:board@pyvec.org?subject=Code of Conduct). The message will reach the Pyvec Board of directors.
     * If you do not want the whole Board to read your message, you can contact its members individually:
         {COC_MEMBER_LIST}
 
