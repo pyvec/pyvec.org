@@ -43,7 +43,7 @@ def parse_members(rows):
 
 
 def coerce_member(member):
-    return {
+    result = {
         'name': strip_whitespace(member.get('nickname', member.get('name'))),
         'role': strip_whitespace(member.get('role', 'member')),
         'github': strip_whitespace(member.get('github')),
@@ -52,6 +52,10 @@ def coerce_member(member):
         'linkedin': strip_whitespace(member.get('linkedin')),
         'avatar_filename': strip_whitespace(member.get('avatar_filename')),
     }
+    if coc_mail := strip_whitespace(member.get('coc_mail')):
+        result['coc_mail'] = coc_mail
+    return result
+
 
 
 def strip_whitespace(value):

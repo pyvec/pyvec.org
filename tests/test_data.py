@@ -195,6 +195,12 @@ def test_coerce_member_whitespace():
     assert coerce_member(member)['mastodon'] == '@pyconcz@floss.social'
 
 
+def test_coerce_member_coc_mail():
+    member = {'coc_mail': ' inbox@example.com'}
+
+    assert coerce_member(member)['coc_mail'] == 'inbox@example.com'
+
+
 @pytest.mark.parametrize('value, expected', [
     (None, None),
     ('', None),

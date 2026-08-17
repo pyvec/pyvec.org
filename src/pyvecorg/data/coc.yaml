@@ -47,7 +47,7 @@ text:
 
     ## Co dělat, když jste svědky nebo oběťmi nepřijatelného chování
 
-    Pokud jste obětí nebo svědkem nepřijatelného chování, nebo máte jakékoliv jiné obavy, co nejdříve to nahlaste organizátorům akce.
+    Pokud jste obětí nebo svědkem nepřijatelného chování, nebo máte jakékoliv jiné obavy, co nejdříve to nahlaste na jeden z kontaktů uvedený níže.
 
     Náš tým se postará o to, abyste byli v bezpečí. Jakmile budete v bezpečí, požádáme vás o podrobnosti o tom, co se stalo. Chápeme, že to může být nepříjemné, ale budeme s vámi jednat s respektem a můžete si přivést někoho na podporu. Nebudeme vás nutit konfrontovat nikoho osobně a vaše identita zůstane anonymní.
 
@@ -57,9 +57,18 @@ text:
 
     ## Řešení stížností
 
-    Pokud máte pocit, že jste byli neprávem obviněni z porušení tohoto Kodexu chování, můžete se obrátit na jednoho z organizátorů akce s popisem vaší stížnosti.
+    Pokud máte pocit, že jste byli neprávem obviněni z porušení tohoto Kodexu chování, můžete se obrátit na kontakty níže.
 
     Vaše stížnost bude vyřešena v souladu s našimi vnitřními pravidly.
+
+    ## Kontakty
+
+    Hlášení a stížnosti posílejte na následující kontakty:
+
+    * Pokud má akce (např. konference) vlastní seznam kontaktů, využijte ten.
+    * Pokud nemá, nebo ho nechcete využít (např. se obáváte střetu zájmů), pošlete stížnost na e-mail [board@pyvec.org](mailto:board@pyvec.org?subject=Kodex chování). Stížnost přijde všem členům výboru spolku Pyvec.
+    * Nechcete-li, aby stížnost četl celý výbor, můžete se obrátit na tyto jeho jednotlivé členy:
+        {COC_MEMBER_LIST}
 
     ## Inspirace
 
@@ -109,7 +118,7 @@ text:
 
     ## If You Witness or Are Subject to Unacceptable Behavior
 
-    If you are subject to or witness unacceptable behavior, or have any other concerns, please notify a community organizer as soon as possible.
+    If you are subject to or witness unacceptable behavior, or have any other concerns, please notify one of the contacts listed below.
 
     Our staff will ensure you are safe. Once safe, we’ll ask you to tell us about what happened. This can be upsetting, but we’ll handle it as respectfully as possible, and you can bring someone to support you. You won’t be asked to confront anyone and we won’t tell anyone who you are.
 
@@ -119,9 +128,18 @@ text:
 
     ## Addressing Grievances
 
-    If you feel you have been falsely or unfairly accused of violating this Code of Conduct, you should notify one of the event organizers with a concise description of your grievance.
+    If you feel you have been falsely or unfairly accused of violating this Code of Conduct, you should notify one of the contacts below with a concise description of your grievance.
 
     Your grievance will be handled in accordance with our existing governing policies.
+
+    ## Contacts
+
+    Please send reports and grievances to the following contacts:
+
+    * If the event (for example, a conference) publishes a Code of Conduct contacts, notify them.
+    * Otherwise, or if you don't want to use those contacts (for example, you are worried about a conflict of interest), send an email to [board@pyvec.org](mailto:board@pyvec.org?subject=Code of Conduct). The message will reach the Pyvec Board of directors.
+    * If you do not want the whole Board to read your message, you can contact its members individually:
+        {COC_MEMBER_LIST}
 
     ## Credits
 
