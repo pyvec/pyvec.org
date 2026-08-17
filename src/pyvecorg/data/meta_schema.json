@@ -29,6 +29,18 @@
       },
       "additionalProperties": false
     },
+    "tax_id": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "$ref": "definitions/translated_text_schema.json#"
+        },
+        "value": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
     "databox_no": {
       "type": "object",
       "properties": {

@@ -36,9 +36,15 @@ address:
 reg_no:
   label:
     cs: IČO
-    en: Reg. No.
+    en: Reg. No. (IČO)
   value: 22746668
   link: https://or.justice.cz/ias/ui/vypis-sl-firma?subjektId=760829
+
+tax_id:
+  label:
+    cs: DIČ
+    en: Tax ID (DIČ)
+  value: "CZ22746668"
 
 databox_no:
   label:
