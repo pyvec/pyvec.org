@@ -1,0 +1,345 @@
+a, a:hover, a:focus {
+    color: rgba(0, 151, 223, 1);
+    text-decoration: underline;
+}
+
+a:hover, a:focus {
+    text-decoration-thickness: 0.12em;
+}
+
+.lang {
+    margin: 0;
+    line-height: 4rem;
+    vertical-align: middle;
+}
+
+.header {
+    background-color: #232f36;
+}
+
+.footer {
+    margin-top: 10rem;
+    background: #212529;
+}
+
+.header, .header a, .header a:hover, .header a:focus,
+.footer, .footer a, .footer a:hover, .footer a:focus,
+.claim, .claim a, .claim a:hover, .claim a:focus {
+    color: #FFF;
+}
+
+.header h1 a, .header h1 a:hover, .header h1 a:focus {
+    box-shadow: none;
+}
+
+h1 img {
+    height: 2rem;
+}
+
+h1 {
+    margin: 0;
+    padding: 1rem 0;
+    line-height: 2rem;
+    vertical-align: middle;
+}
+
+.page-index h2 {
+    font-size: 0.8rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.3em;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #212529;
+}
+
+.page-index h3,
+.page h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0 0 0.5rem 0;
+}
+
+.page-index h2,
+.page h2 {
+    margin: 5rem 0;
+}
+
+h4 {
+    font-size: 1.3rem;
+    margin-bottom: 0 0 0.5rem 0;
+}
+
+.lang {
+    text-align: right;
+}
+
+.list, .list-item {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cover {
+    position: relative;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url('img/cover.jpg');
+}
+
+.cover-black {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: rgba(35, 47, 54, 0.7);
+    padding-bottom: 3rem;
+}
+
+.claim {
+    text-align: center;
+    font-size: clamp(1.5rem, 1.2500rem + 1.2500vw, 2rem);
+    padding: 5rem 10%;
+    padding-bottom: 0;
+}
+
+.cover,
+.cover h2 {
+    color: #FFF;
+    border-color: #FFF;
+}
+
+.objective {
+    font-size: 1.6rem;
+}
+
+.objective p {
+    margin: 0;
+}
+
+.objective {
+    border: none;
+    background: none;
+    text-align: center;
+    font-size: 110%;
+}
+
+.objective h3 {
+    font-size: 3rem;
+    line-height: 92px;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid #FFF;
+    margin: 0 auto;
+    color: #0097df;
+}
+
+.logo {
+    width: 200px;
+    text-align: center;
+    margin: 0.5rem;
+}
+
+.logo a {
+    filter: grayscale(100%);
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+.logo a:hover, .logo a:focus {
+    filter: none;
+    opacity: 1;
+    box-shadow: none;
+}
+
+a.icon, a.icon:hover, a.icon:focus,
+.icon a, .icon:hover a, .icon:focus a,
+a i.link-icon, a:hover i.link-icon, a:focus i.link-icon {
+    text-decoration: none;
+    box-shadow: none;
+}
+
+a i.link-icon {
+    margin-right: 1ex;
+}
+
+.icon span {
+    display: none;
+}
+
+.project {
+    min-width: 250px;
+}
+
+.project-header {
+    text-align: center;
+    background-color: #AAA;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 6px solid #FFF;
+    border-top: 0;
+    border-bottom: 0;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.project-header-pyconcz { background-image: url('img/projects/pyconcz.jpg') }
+.project-header-pyladies { background-image: url('img/projects/pyladies.jpg') }
+.project-header-naucse { background-image: url('img/projects/naucse.jpg') }
+.project-header-pyvo { background-image: url('img/projects/pyvo.jpg') }
+.project-header-djangogirls { background-image: url('img/projects/djangogirls.jpg') }
+.project-header-pyworking { background-image: url('img/projects/pyworking.jpg') }
+.project-header-pythoncz { background-image: url('img/projects/pythoncz.jpg') }
+.project-header-pydata { background-image: url('img/projects/pydata.jpg') }
+.project-header-blog { background-image: url('img/projects/blog.jpg') }
+.project-header-docs { background-image: url('img/projects/docs.jpg') }
+
+.project-header h3 {
+    background-color: #FFF;
+    padding: 3.5rem 0 0 0;
+    margin: 0;
+}
+
+.project-logo {
+    width: 100px;
+    height: 100px;
+    background-color: #FFF;
+    padding: 0.3rem;
+    margin: 4rem 0 0 0;
+    object-fit: contain;
+    position: relative;
+    bottom: -2.5rem;
+    border: 2px solid #DDD;
+}
+
+.project-logo[src$="python.svg"] {
+    padding: 1rem;
+}
+
+.project-url {
+    font-size: 0.8rem;
+    font-weight: normal;
+    text-align: center;
+    padding: 0;
+    margin: 0 0 2rem 0;
+}
+
+.project-info {
+    padding: 0.3rem 1rem 2rem 1rem;
+}
+
+.members {
+    margin-bottom: -2rem;
+}
+
+.member {
+    margin: 0 1.5rem 2rem 1.5rem;
+    text-align: center;
+}
+
+.member p {
+    margin: 0.3rem 0 0 0;
+}
+
+.member-avatar {
+    width: 100px;
+    height: 100px;
+    background-color: #FFF;
+    padding: 0.3rem;
+    border: 2px solid #DDD;
+}
+
+.member-profiles a.icon {
+    font-size: 1rem;
+    color: #AAA;
+}
+
+.member-profiles a.icon:hover, .member-profiles a.icon:focus {
+    color: #212529;
+}
+
+.address {
+    font-size: 80%;
+    padding: 2rem 1rem 2rem 0.5rem;
+}
+
+/*
+ Decrease vertical paddings on mobile to give more condensed look.
+ max-width breakpoint taken from Bootstrap Docs:
+
+ https://getbootstrap.com/docs/4.6/layout/overview/#responsive-breakpoints
+ (see We occasionally use media queries that go in the other direction (the given screen size or smaller):)
+ */
+@media (max-width: 767.98px) {
+    .address {
+        padding-top: 1rem;
+        padding-bottom: 0rem;
+    }
+}
+
+.address h3 {
+    font-weight: normal;
+}
+
+.profiles .icon {
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+.extra-pages {
+    font-size: 80%;
+    text-align: right;
+}
+
+.downloads a {
+    margin-right: 0.3rem;
+}
+
+.numbers {
+    text-align: center;
+}
+
+.numbers .fa {
+    margin-right: 0.3rem;
+}
+
+.number {
+    font-size: clamp(1.5rem, 1.2500rem + 1.2500vw, 2rem);
+    margin: 0.3rem;
+    color: #FFF;
+    background-color: #3b4f5a;
+}
+
+.number[title] {
+    cursor: help;
+}
+
+.number-twitter { background-color: #1DA1F2; }
+.number-facebook { background-color: #3b5998; }
+.number-github { background-color: #000; }
+.number-slack { background-color: #2ab27b; }
+
+.media {
+    margin: 5rem 0 5rem 0;
+}
+
+.media-image {
+    font-size: 4rem;
+    width: 4rem;
+    text-align: center;
+    margin: 0 2rem 0.5rem 2rem;
+    line-height: normal;
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+.note {
+    text-align: center;
+    margin: 4rem 0;
+}
